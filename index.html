@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rankiq – SEO That Actually Ranks</title>
+<title>Rankiq – SEO That Actually Works</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -38,7 +38,7 @@ body {
     transform: translateY(0);
 }
 
-/* Hero text animation */
+/* Hero animation */
 .hero-title {
     animation: heroFade 1.2s ease forwards;
 }
@@ -47,12 +47,12 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Card hover */
-.service-card:hover img {
-    transform: scale(1.05);
-}
+/* Service card hover */
 .service-card img {
     transition: transform 0.4s ease;
+}
+.service-card:hover img {
+    transform: scale(1.05);
 }
 </style>
 </head>
@@ -87,12 +87,15 @@ body {
     <h1 class="hero-title text-4xl md:text-6xl font-extrabold leading-tight mb-6">
         SEO That Gets You Found <br> Not Just Promised
     </h1>
-    <p class="max-w-2xl mx-auto text-gray-600 text-sm md:text-base mb-10">
-        Rankiq helps Indian businesses rank higher on Google using proven SEO, keyword intelligence, and conversion-focused content.
+    <p class="max-w-2xl mx-auto text-gray-600 text-sm md:text-base mb-8">
+        Rankiq helps Indian businesses rank higher on Google using ethical SEO, keyword intelligence, and conversion-focused content.
     </p>
     <a href="#services" class="bg-blue-600 text-white px-10 py-4 rounded font-bold shadow-lg hover:bg-blue-700 transition">
         Start Ranking Better
     </a>
+    <p class="text-xs text-gray-500 mt-6">
+        ✔ Serving Indian Businesses • ✔ Ethical SEO • ✔ No Fake Traffic
+    </p>
 </section>
 
 <!-- ABOUT -->
@@ -100,11 +103,11 @@ body {
     <div class="md:w-1/2">
         <h2 class="text-3xl font-bold mb-5">Why Businesses Trust Rankiq</h2>
         <p class="text-gray-500 text-sm leading-relaxed mb-6">
-            We focus on sustainable SEO. No shortcuts. No fake traffic. Just long-term growth that brings real customers.
+            We focus on sustainable SEO. No shortcuts. No fake promises. Just long-term growth that brings real customers.
         </p>
         <ul class="space-y-4 text-sm">
             <li class="flex gap-3"><i class="fa-solid fa-check text-blue-600"></i> Data-driven SEO strategies</li>
-            <li class="flex gap-3"><i class="fa-solid fa-check text-blue-600"></i> Local + national keyword targeting</li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-blue-600"></i> Local & national keyword targeting</li>
             <li class="flex gap-3"><i class="fa-solid fa-check text-blue-600"></i> Transparent reporting</li>
         </ul>
     </div>
@@ -114,31 +117,89 @@ body {
     </div>
 </section>
 
+<!-- WHO IT'S FOR -->
+<section class="reveal py-20 px-6 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold mb-12">Who Rankiq Helps</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-sm">
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+            <h3 class="font-bold mb-2">Local Businesses</h3>
+            <p class="text-gray-500">Clinics, consultants, shops who want calls and leads.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+            <h3 class="font-bold mb-2">Personal Brands</h3>
+            <p class="text-gray-500">Professionals building authority and visibility.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+            <h3 class="font-bold mb-2">Small Companies</h3>
+            <p class="text-gray-500">Businesses focused on ROI, not vanity traffic.</p>
+        </div>
+    </div>
+</section>
+
 <!-- SERVICES -->
 <section id="services" class="reveal py-24 px-6 text-center bg-white">
-    <h2 class="text-3xl font-bold mb-3">Our SEO Services</h2>
+    <h2 class="text-3xl font-bold mb-3">SEO Services</h2>
     <p class="text-gray-400 text-sm mb-14">Everything your website needs to rank and convert.</p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
         <div class="service-card bg-gray-50 p-6 rounded-3xl shadow-sm hover:-translate-y-2 transition">
-            <h3 class="font-bold mb-2">Technical SEO</h3>
-            <p class="text-xs text-gray-500 mb-5">Site speed, indexing, structure, and Google-friendly foundations.</p>
+            <h3 class="font-bold mb-3">Technical SEO</h3>
+            <p class="text-xs text-gray-500 mb-5">
+                ✔ Improves Google visibility<br>
+                ✔ Fixes SEO errors<br>
+                ✔ Long-term ranking stability
+            </p>
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop"
                  class="rounded-xl h-48 w-full object-cover">
         </div>
 
         <div class="service-card bg-gray-50 p-6 rounded-3xl shadow-sm hover:-translate-y-2 transition">
-            <h3 class="font-bold mb-2">Keyword Strategy</h3>
-            <p class="text-xs text-gray-500 mb-5">High-intent keywords that bring customers, not just traffic.</p>
+            <h3 class="font-bold mb-3">Keyword Strategy</h3>
+            <p class="text-xs text-gray-500 mb-5">
+                ✔ High-intent keywords<br>
+                ✔ Competitor analysis<br>
+                ✔ Buyer-focused traffic
+            </p>
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop"
                  class="rounded-xl h-48 w-full object-cover">
         </div>
 
         <div class="service-card bg-gray-50 p-6 rounded-3xl shadow-sm hover:-translate-y-2 transition">
-            <h3 class="font-bold mb-2">Content SEO</h3>
-            <p class="text-xs text-gray-500 mb-5">Content that ranks, engages, and converts readers into leads.</p>
+            <h3 class="font-bold mb-3">Content SEO</h3>
+            <p class="text-xs text-gray-500 mb-5">
+                ✔ Content that ranks<br>
+                ✔ Engages users<br>
+                ✔ Converts visitors
+            </p>
             <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=500&auto=format&fit=crop"
                  class="rounded-xl h-48 w-full object-cover">
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="reveal py-24 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-14">How Rankiq Works</h2>
+    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto text-sm">
+        <div>
+            <div class="text-blue-600 font-bold text-xl mb-2">01</div>
+            <p class="font-semibold">Audit</p>
+            <p class="text-gray-500">Website & competitor analysis</p>
+        </div>
+        <div>
+            <div class="text-blue-600 font-bold text-xl mb-2">02</div>
+            <p class="font-semibold">Strategy</p>
+            <p class="text-gray-500">Keyword & content roadmap</p>
+        </div>
+        <div>
+            <div class="text-blue-600 font-bold text-xl mb-2">03</div>
+            <p class="font-semibold">Execution</p>
+            <p class="text-gray-500">SEO & content implementation</p>
+        </div>
+        <div>
+            <div class="text-blue-600 font-bold text-xl mb-2">04</div>
+            <p class="font-semibold">Growth</p>
+            <p class="text-gray-500">Traffic, leads & tracking</p>
         </div>
     </div>
 </section>
@@ -146,13 +207,13 @@ body {
 <!-- CONTACT -->
 <section id="contact" class="reveal max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row gap-14">
     <div class="md:w-1/2">
-        <h2 class="text-3xl font-bold mb-8">Let’s Grow Your Traffic</h2>
+        <h2 class="text-3xl font-bold mb-8">Get a Free SEO Review</h2>
         <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
             <input required placeholder="Name" class="w-full border-b py-2 outline-none">
             <input required type="email" placeholder="Email" class="w-full border-b py-2 outline-none">
-            <textarea required placeholder="Your Requirement" class="w-full border-b py-2 outline-none"></textarea>
+            <textarea required placeholder="Tell us about your business" class="w-full border-b py-2 outline-none"></textarea>
             <button class="bg-blue-600 text-white px-10 py-3 rounded font-bold hover:bg-blue-700">
-                Send Message
+                Get Free SEO Review
             </button>
         </form>
     </div>
@@ -164,7 +225,9 @@ body {
 
 <!-- FOOTER -->
 <footer class="text-center py-12 border-t text-xs text-gray-500">
-    © 2026 Rankiq. Built to rank. Not to decorate.
+    <div class="font-bold italic mb-2">Rankiq</div>
+    <p>Ethical SEO • Long-term rankings • Measurable growth</p>
+    <p class="mt-4">© 2026 Rankiq. All rights reserved.</p>
 </footer>
 
 <script>
