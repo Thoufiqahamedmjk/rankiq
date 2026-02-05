@@ -1,158 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rankiq - Expert SEO Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .gradient-bg { background: linear-gradient(180deg, #f8f9ff 0%, #ffffff 100%); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rankiq – SEO That Actually Ranks</title>
 
-        /* Floating Animation for Contact Icons */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        .float-icon { animation: float 3s ease-in-out infinite; }
-        .float-icon-delay-1 { animation: float 3s ease-in-out infinite 0.5s; }
-        .float-icon-delay-2 { animation: float 3s ease-in-out infinite 1s; }
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        /* Scroll Reveal Effect */
-        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-    </style>
+<style>
+body {
+    font-family: Inter, system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Background */
+.gradient-bg {
+    background: radial-gradient(circle at top, #eef2ff, #ffffff);
+}
+
+/* Floating icons */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+.float { animation: float 3s ease-in-out infinite; }
+
+/* Reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero text animation */
+.hero-title {
+    animation: heroFade 1.2s ease forwards;
+}
+@keyframes heroFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card hover */
+.service-card:hover img {
+    transform: scale(1.05);
+}
+.service-card img {
+    transition: transform 0.4s ease;
+}
+</style>
 </head>
+
 <body class="text-gray-800">
 
-    <header class="flex justify-between items-center px-6 py-4 bg-white sticky top-0 z-50 shadow-sm">
-        <nav class="flex space-x-4 text-xs md:text-sm font-medium">
-            <a href="#home" class="hover:text-blue-600 transition">Home</a>
-            <a href="#about" class="hover:text-blue-600 transition">About</a>
-            <a href="#services" class="hover:text-blue-600 transition">Services</a>
-        </nav>
-        <div class="flex items-center space-x-4">
-            <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded text-xs font-semibold hover:bg-blue-700 transition">Contact</a>
-            <div class="flex items-center space-x-1 font-bold italic">
-                <img src="https://img.icons8.com/color/48/sun.png" class="w-5 h-5" alt="logo">
-                <span>Rankiq</span>
-            </div>
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-white shadow-sm px-6 py-4 flex justify-between items-center">
+    <nav class="flex gap-5 text-sm font-semibold">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+    </nav>
+    <div class="flex items-center gap-4">
+        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded text-xs font-bold hover:bg-blue-700">Contact</a>
+        <div class="flex items-center gap-1 font-bold italic">
+            <img src="https://img.icons8.com/color/48/sun.png" class="w-5">
+            Rankiq
         </div>
-    </header>
-
-    <div class="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col space-y-3 z-50">
-        <a href="tel:+919884795585" class="float-icon bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition"><i class="fa-solid fa-phone"></i></a>
-        <a href="mailto:contact@thoufiqahamed.in" class="float-icon-delay-1 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://wa.me/919884795585" class="float-icon-delay-2 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
+</header>
 
-    <section id="home" class="text-center py-24 px-6 gradient-bg">
-        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
-            Rankiq Delivers Expert SEO Services to <br> Boost Visibility
-        </h1>
-        <p class="text-gray-600 max-w-2xl mx-auto mb-8 text-sm md:text-base">
-            Enhance your online presence with SEO optimization and strategic keyword analysis tailored for small Indian businesses.
+<!-- FLOATING CONTACT -->
+<div class="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
+    <a href="tel:+919884795585" class="float bg-blue-600 text-white p-3 rounded-full shadow"><i class="fa-solid fa-phone"></i></a>
+    <a href="mailto:contact@thoufiqahamed.in" class="float bg-blue-600 text-white p-3 rounded-full shadow" style="animation-delay:.4s"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://wa.me/919884795585" class="float bg-blue-600 text-white p-3 rounded-full shadow" style="animation-delay:.8s"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<!-- HERO -->
+<section id="home" class="gradient-bg text-center py-28 px-6">
+    <h1 class="hero-title text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+        SEO That Gets You Found <br> Not Just Promised
+    </h1>
+    <p class="max-w-2xl mx-auto text-gray-600 text-sm md:text-base mb-10">
+        Rankiq helps Indian businesses rank higher on Google using proven SEO, keyword intelligence, and conversion-focused content.
+    </p>
+    <a href="#services" class="bg-blue-600 text-white px-10 py-4 rounded font-bold shadow-lg hover:bg-blue-700 transition">
+        Start Ranking Better
+    </a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="reveal max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row gap-12 items-center">
+    <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-5">Why Businesses Trust Rankiq</h2>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+            We focus on sustainable SEO. No shortcuts. No fake traffic. Just long-term growth that brings real customers.
         </p>
-        <a href="#services" class="bg-blue-600 text-white px-8 py-3 rounded font-bold text-sm hover:bg-blue-700 transition inline-block shadow-lg">Boost Your Rank</a>
-    </section>
+        <ul class="space-y-4 text-sm">
+            <li class="flex gap-3"><i class="fa-solid fa-check text-blue-600"></i> Data-driven SEO strategies</li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-blue-600"></i> Local + national keyword targeting</li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-blue-600"></i> Transparent reporting</li>
+        </ul>
+    </div>
+    <div class="md:w-1/2">
+        <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000&auto=format&fit=crop"
+             class="rounded-2xl shadow-xl">
+    </div>
+</section>
 
-    <section id="about" class="reveal px-6 py-12 flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto">
-        <div class="w-full md:w-1/2">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4">Trusted SEO Partner</h2>
-            <p class="text-gray-500 text-sm mb-6 leading-relaxed">Rankiq delivers expert SEO solutions tailored for small Indian businesses to enhance online presence and growth.</p>
-            <div class="space-y-4">
-                <div class="flex items-center space-x-3"><i class="fa-solid fa-circle-check text-blue-600"></i><span class="font-bold">Vision</span></div>
-                <p class="text-xs text-gray-500 ml-7">Empowering Indian businesses to rank higher online.</p>
-                <div class="flex items-center space-x-3"><i class="fa-solid fa-circle-check text-blue-600"></i><span class="font-bold">Mission</span></div>
-                <p class="text-xs text-gray-500 ml-7">Delivering quality results through data and strategic insights.</p>
-            </div>
-        </div>
-        <div class="w-full md:w-1/2">
-            <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000&auto=format&fit=crop" class="rounded-2xl shadow-xl w-full" alt="SEO Analysis">
-        </div>
-    </section>
+<!-- SERVICES -->
+<section id="services" class="reveal py-24 px-6 text-center bg-white">
+    <h2 class="text-3xl font-bold mb-3">Our SEO Services</h2>
+    <p class="text-gray-400 text-sm mb-14">Everything your website needs to rank and convert.</p>
 
-    <section id="services" class="reveal py-20 px-6 bg-white text-center">
-        <h2 class="text-2xl md:text-3xl font-bold mb-2">SEO Services</h2>
-        <p class="text-gray-400 text-xs mb-10">Expert SEO services tailored for small businesses to improve online presence and grow sales.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-sm hover:-translate-y-2 transition duration-300">
-                <div class="bg-blue-100 w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-blue-600 text-xs">1</div>
-                <h3 class="font-bold mb-2">SEO Optimized</h3>
-                <p class="text-xs text-gray-500 mb-6">Tailored SEO strategies optimized to enhance search performance.</p>
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop" class="rounded-xl h-48 w-full object-cover">
-            </div>
-            <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-sm hover:-translate-y-2 transition duration-300">
-                <div class="bg-blue-100 w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-blue-600 text-xs">2</div>
-                <h3 class="font-bold mb-2">Targeted Keywords</h3>
-                <p class="text-xs text-gray-500 mb-6">Detailed analysis to target the right audience effectively.</p>
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop" class="rounded-xl h-48 w-full object-cover">
-            </div>
-            <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-sm hover:-translate-y-2 transition duration-300">
-                <div class="bg-blue-100 w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-blue-600 text-xs">3</div>
-                <h3 class="font-bold mb-2">Content Strategy</h3>
-                <p class="text-xs text-gray-500 mb-6">Strategic content plans that engage and convert visitors.</p>
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=500&auto=format&fit=crop" class="rounded-xl h-48 w-full object-cover">
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div class="service-card bg-gray-50 p-6 rounded-3xl shadow-sm hover:-translate-y-2 transition">
+            <h3 class="font-bold mb-2">Technical SEO</h3>
+            <p class="text-xs text-gray-500 mb-5">Site speed, indexing, structure, and Google-friendly foundations.</p>
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop"
+                 class="rounded-xl h-48 w-full object-cover">
         </div>
-    </section>
 
-    <section class="reveal py-16 px-6 bg-gray-50">
-        <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Inside Rankiq's SEO World</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-6xl mx-auto">
-            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=400&auto=format&fit=crop" class="rounded-lg h-56 w-full object-cover shadow-sm">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400&auto=format&fit=crop" class="rounded-lg h-56 w-full object-cover shadow-sm">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=400&auto=format&fit=crop" class="rounded-lg h-56 w-full object-cover shadow-sm">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=400&auto=format&fit=crop" class="rounded-lg h-56 w-full object-cover shadow-sm">
+        <div class="service-card bg-gray-50 p-6 rounded-3xl shadow-sm hover:-translate-y-2 transition">
+            <h3 class="font-bold mb-2">Keyword Strategy</h3>
+            <p class="text-xs text-gray-500 mb-5">High-intent keywords that bring customers, not just traffic.</p>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop"
+                 class="rounded-xl h-48 w-full object-cover">
         </div>
-    </section>
 
-    <section id="contact" class="reveal py-16 px-6 flex flex-col md:flex-row gap-12 max-w-6xl mx-auto">
-        <div class="w-full md:w-1/2">
-            <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
-            <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
-                <input type="text" name="name" placeholder="Name *" required class="w-full border-b py-2 text-sm outline-none border-gray-200 focus:border-blue-600 transition">
-                <input type="email" name="email" placeholder="Email *" required class="w-full border-b py-2 text-sm outline-none border-gray-200 focus:border-blue-600 transition">
-                <input type="tel" name="phone" placeholder="Phone Number *" required class="w-full border-b py-2 text-sm outline-none border-gray-200 focus:border-blue-600 transition">
-                <textarea name="message" placeholder="Message *" required class="w-full border-b py-2 text-sm outline-none border-gray-200 focus:border-blue-600 transition"></textarea>
-                <button type="submit" class="bg-blue-600 text-white px-10 py-3 rounded text-sm mt-4 font-bold hover:bg-blue-700 shadow-md transition">Submit</button>
-            </form>
+        <div class="service-card bg-gray-50 p-6 rounded-3xl shadow-sm hover:-translate-y-2 transition">
+            <h3 class="font-bold mb-2">Content SEO</h3>
+            <p class="text-xs text-gray-500 mb-5">Content that ranks, engages, and converts readers into leads.</p>
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=500&auto=format&fit=crop"
+                 class="rounded-xl h-48 w-full object-cover">
         </div>
-        <div class="w-full md:w-1/2">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" class="rounded-3xl w-full h-full object-cover shadow-xl min-h-[400px]">
-        </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="py-12 text-center border-t border-gray-100">
-        <div class="flex justify-center items-center space-x-1 font-bold italic mb-6">
-            <img src="https://img.icons8.com/color/48/sun.png" class="w-6 h-6" alt="logo">
-            <span class="text-xl">Rankiq</span>
-        </div>
-        <div class="flex justify-center space-x-8 text-xs font-semibold text-gray-500">
-            <a href="#home" class="hover:text-blue-600">Home</a>
-            <a href="#about" class="hover:text-blue-600">About</a>
-            <a href="#services" class="hover:text-blue-600">Services</a>
-            <a href="#contact" class="hover:text-blue-600">Contact</a>
-        </div>
-        <p class="text-[10px] text-gray-400 mt-10 uppercase tracking-widest">© 2026 Rankiq. All rights reserved.</p>
-    </footer>
+<!-- CONTACT -->
+<section id="contact" class="reveal max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row gap-14">
+    <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-8">Let’s Grow Your Traffic</h2>
+        <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
+            <input required placeholder="Name" class="w-full border-b py-2 outline-none">
+            <input required type="email" placeholder="Email" class="w-full border-b py-2 outline-none">
+            <textarea required placeholder="Your Requirement" class="w-full border-b py-2 outline-none"></textarea>
+            <button class="bg-blue-600 text-white px-10 py-3 rounded font-bold hover:bg-blue-700">
+                Send Message
+            </button>
+        </form>
+    </div>
+    <div class="md:w-1/2">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop"
+             class="rounded-3xl shadow-xl h-full object-cover">
+    </div>
+</section>
 
-    <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
+<!-- FOOTER -->
+<footer class="text-center py-12 border-t text-xs text-gray-500">
+    © 2026 Rankiq. Built to rank. Not to decorate.
+</footer>
+
+<script>
+function reveal() {
+    document.querySelectorAll('.reveal').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+            el.classList.add('active');
         }
-        window.addEventListener("scroll", reveal);
-        reveal();
-    </script>
+    });
+}
+window.addEventListener('scroll', reveal);
+reveal();
+</script>
+
 </body>
 </html>
