@@ -1,162 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RankIQ – SEO That Brings Calls</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rankiq – SEO That Actually Works</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    body { scroll-behavior: smooth; }
-    .reveal { opacity: 0; transform: translateY(40px); transition: 0.8s ease; }
-    .reveal.active { opacity: 1; transform: translateY(0); }
+<style>
+body {
+    font-family: Inter, system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
 
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .float { animation: float 3s ease-in-out infinite; }
-  </style>
+/* Background */
+.gradient-bg {
+    background: radial-gradient(circle at top, #eef2ff, #ffffff);
+}
+
+/* Floating icons */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+.float { animation: float 3s ease-in-out infinite; }
+
+/* Reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero animation */
+.hero-title {
+    animation: heroFade 1.2s ease forwards;
+}
+@keyframes heroFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Service card hover */
+.service-card img {
+    transition: transform 0.4s ease;
+}
+.service-card:hover img {
+    transform: scale(1.05);
+}
+</style>
 </head>
 
-<body class="text-gray-800 bg-white">
+<body class="text-gray-800">
 
 <!-- HEADER -->
-<header class="sticky top-0 bg-white z-50 shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <span class="font-bold text-xl">RankIQ</span>
-    <nav class="space-x-6 text-sm font-medium hidden md:block">
-      <a href="#home" class="hover:text-blue-600">Home</a>
-      <a href="#services" class="hover:text-blue-600">Services</a>
-      <a href="#contact" class="hover:text-blue-600">Contact</a>
+<header class="sticky top-0 z-50 bg-white shadow-sm px-6 py-4 flex justify-between items-center">
+    <nav class="flex gap-5 text-sm font-semibold">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
     </nav>
-  </div>
+    <div class="flex items-center gap-4">
+        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded text-xs font-bold hover:bg-blue-700">
+            Contact
+        </a>
+        <div class="flex items-center gap-1 font-bold italic">
+            <img src="https://img.icons8.com/color/48/sun.png" class="w-5">
+            Rankiq
+        </div>
+    </div>
 </header>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/919884795585" target="_blank"
-   class="fixed bottom-6 right-6 bg-green-600 text-white px-5 py-3 rounded-full shadow-xl font-semibold z-50 float">
-   💬 Chat on WhatsApp
-</a>
+<!-- FLOATING CONTACT -->
+<div class="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
+    <a href="tel:+919884795585" class="float bg-blue-600 text-white p-3 rounded-full shadow">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="mailto:contact@thoufiqahamed.in" class="float bg-blue-600 text-white p-3 rounded-full shadow" style="animation-delay:.4s">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://wa.me/919884795585" class="float bg-blue-600 text-white p-3 rounded-full shadow" style="animation-delay:.8s">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</div>
 
 <!-- HERO -->
-<section id="home" class="text-center py-28 px-6 bg-gradient-to-b from-slate-50 to-white">
-  <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
-    SEO That Turns Google Searches<br/>Into Real Phone Calls
-  </h1>
-
-  <p class="max-w-2xl mx-auto text-gray-600 mb-8">
-    RankIQ helps small Indian businesses get found, trusted, and contacted.
-  </p>
-
-  <div class="flex flex-col sm:flex-row gap-4 justify-center">
-    <a href="https://wa.me/919884795585" target="_blank"
-       class="bg-green-600 text-white px-8 py-4 rounded-full font-semibold shadow hover:bg-green-700">
-       Chat on WhatsApp
+<section id="home" class="gradient-bg text-center py-28 px-6">
+    <h1 class="hero-title text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+        SEO That Gets You Found <br> Not Just Promised
+    </h1>
+    <p class="max-w-2xl mx-auto text-gray-600 text-sm md:text-base mb-8">
+        Rankiq helps Indian businesses rank higher on Google using ethical SEO,
+        keyword intelligence, and conversion-focused content.
+    </p>
+    <a href="#services" class="bg-blue-600 text-white px-10 py-4 rounded font-bold shadow-lg hover:bg-blue-700 transition">
+        Start Ranking Better
     </a>
-    <a href="#contact"
-       class="border border-gray-400 px-8 py-4 rounded-full font-semibold hover:bg-gray-100">
-       Free SEO Check
-    </a>
-  </div>
-
-  <p class="text-xs text-gray-500 mt-4">
-    No spam. No pressure. Just clarity.
-  </p>
+    <p class="text-xs text-gray-500 mt-6">
+        ✔ Indian Businesses • ✔ Ethical SEO • ✔ No Fake Traffic
+    </p>
 </section>
 
-<!-- WHY -->
-<section class="reveal py-20 px-6 bg-gray-100 text-center">
-  <h2 class="text-3xl font-bold mb-4">Why RankIQ?</h2>
-  <p class="max-w-2xl mx-auto text-gray-600 text-sm">
-    We don’t sell SEO packages.  
-    We fix what blocks your growth and focus only on what actually moves rankings.
-  </p>
+<!-- ABOUT -->
+<section id="about" class="reveal max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row gap-12 items-center">
+    <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-5">Why Businesses Trust Rankiq</h2>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+            SEO is not tricks. It’s systems. We focus on sustainable growth that brings
+            real visitors and real leads.
+        </p>
+        <ul class="space-y-4 text-sm">
+            <li class="flex gap-3"><i class="fa-solid fa-check text-blue-600"></i> Data-driven decisions</li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-blue-600"></i> Local & national SEO</li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-blue-600"></i> Clear reporting</li>
+        </ul>
+    </div>
+    <div class="md:w-1/2">
+        <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000&auto=format&fit=crop"
+             class="rounded-2xl shadow-xl">
+    </div>
+</section>
+
+<!-- WHO IT HELPS -->
+<section class="reveal py-20 px-6 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold mb-12">Who Rankiq Helps</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-sm">
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+            <h3 class="font-bold mb-2">Local Businesses</h3>
+            <p class="text-gray-500">Clinics, consultants, shops who need calls and leads.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+            <h3 class="font-bold mb-2">Personal Brands</h3>
+            <p class="text-gray-500">Professionals building authority online.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+            <h3 class="font-bold mb-2">Small Companies</h3>
+            <p class="text-gray-500">Businesses focused on ROI, not vanity metrics.</p>
+        </div>
+    </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="reveal py-24 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-10">What We Do</h2>
+<section id="services" class="reveal py-24 px-6 text-center bg-white">
+    <h2 class="text-3xl font-bold mb-3">SEO Services</h2>
+    <p class="text-gray-400 text-sm mb-14">Everything required to rank and convert.</p>
 
-  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <div class="p-6 rounded-2xl border shadow-sm hover:-translate-y-2 transition">
-      <h3 class="font-bold mb-3">SEO Fixes</h3>
-      <p class="text-sm text-gray-600">
-        Technical, on-page, and local SEO fixes that unblock rankings.
-      </p>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div class="service-card bg-gray-50 p-6 rounded-3xl shadow-sm hover:-translate-y-2 transition">
+            <h3 class="font-bold mb-3">Technical SEO</h3>
+            <p class="text-xs text-gray-500 mb-5">
+                ✔ Fix SEO errors<br>
+                ✔ Improve site speed<br>
+                ✔ Strong foundation
+            </p>
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop"
+                 class="rounded-xl h-48 w-full object-cover">
+        </div>
+
+        <div class="service-card bg-gray-50 p-6 rounded-3xl shadow-sm hover:-translate-y-2 transition">
+            <h3 class="font-bold mb-3">Keyword Strategy</h3>
+            <p class="text-xs text-gray-500 mb-5">
+                ✔ Buyer-intent keywords<br>
+                ✔ Competitor research<br>
+                ✔ Traffic that converts
+            </p>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop"
+                 class="rounded-xl h-48 w-full object-cover">
+        </div>
+
+        <div class="service-card bg-gray-50 p-6 rounded-3xl shadow-sm hover:-translate-y-2 transition">
+            <h3 class="font-bold mb-3">Content SEO</h3>
+            <p class="text-xs text-gray-500 mb-5">
+                ✔ Ranking content<br>
+                ✔ User engagement<br>
+                ✔ Lead-focused writing
+            </p>
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=500&auto=format&fit=crop"
+                 class="rounded-xl h-48 w-full object-cover">
+        </div>
     </div>
-
-    <div class="p-6 rounded-2xl border shadow-sm hover:-translate-y-2 transition">
-      <h3 class="font-bold mb-3">Keyword Strategy</h3>
-      <p class="text-sm text-gray-600">
-        Targeting searches that bring buyers, not just traffic.
-      </p>
-    </div>
-
-    <div class="p-6 rounded-2xl border shadow-sm hover:-translate-y-2 transition">
-      <h3 class="font-bold mb-3">Content Direction</h3>
-      <p class="text-sm text-gray-600">
-        Clear content plans that Google understands and users trust.
-      </p>
-    </div>
-  </div>
-
-  <p class="text-xs text-gray-500 mt-10">
-    Questions already? <a href="https://wa.me/919884795585" class="text-blue-600 font-semibold">Chat now</a>
-  </p>
 </section>
 
-<!-- SCROLL TRAP -->
-<section class="py-20 bg-black text-white text-center">
-  <h3 class="text-2xl font-bold mb-4">Still scrolling?</h3>
-  <p class="text-gray-400 mb-6">
-    Your competitors already fixed their SEO.
-  </p>
-  <a href="https://wa.me/919884795585"
-     class="bg-green-600 px-8 py-4 rounded-full font-semibold hover:bg-green-700">
-     Talk to RankIQ
-  </a>
+<!-- HOW RANKIQ WORKS – IMAGING STYLE -->
+<section class="reveal py-24 px-6 text-center bg-gray-50">
+    <h2 class="text-3xl font-bold mb-6">How Rankiq Works</h2>
+    <p class="text-gray-500 text-sm mb-16 max-w-2xl mx-auto">
+        SEO is not magic. It’s a system. Here’s how we move your website from invisible to visible.
+    </p>
+
+    <div class="grid md:grid-cols-4 gap-10 max-w-6xl mx-auto text-sm">
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+            <div class="text-blue-600 font-bold text-2xl mb-3">01</div>
+            <h3 class="font-semibold mb-2">Deep Audit</h3>
+            <p class="text-gray-500">
+                Like a doctor checking vitals, we analyze speed, errors,
+                competitors, and missed opportunities.
+            </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+            <div class="text-blue-600 font-bold text-2xl mb-3">02</div>
+            <h3 class="font-semibold mb-2">Smart Strategy</h3>
+            <p class="text-gray-500">
+                Like choosing the fastest Google Maps route,
+                we plan keywords and content that convert.
+            </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+            <div class="text-blue-600 font-bold text-2xl mb-3">03</div>
+            <h3 class="font-semibold mb-2">Focused Execution</h3>
+            <p class="text-gray-500">
+                SEO fixes, optimization, and structure changes —
+                only what moves rankings.
+            </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+            <div class="text-blue-600 font-bold text-2xl mb-3">04</div>
+            <h3 class="font-semibold mb-2">Measured Growth</h3>
+            <p class="text-gray-500">
+                Rankings, traffic, and leads tracked clearly —
+                so growth is visible, not guessed.
+            </p>
+        </div>
+    </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="reveal py-24 px-6 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-bold mb-8 text-center">Get Free SEO Review</h2>
-
-  <form class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow">
-    <input type="text" placeholder="Your Name"
-           class="w-full mb-4 p-3 border rounded-lg" required>
-    <input type="email" placeholder="Email"
-           class="w-full mb-4 p-3 border rounded-lg" required>
-    <input type="text" placeholder="Website URL"
-           class="w-full mb-6 p-3 border rounded-lg" required>
-
-    <button type="submit"
-            class="w-full bg-black text-white py-3 rounded-lg font-semibold">
-      Send Request
-    </button>
-
-    <p class="text-xs text-gray-500 mt-4 text-center">
-      You’ll hear from a real human.
-    </p>
-  </form>
+<section id="contact" class="reveal max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row gap-14">
+    <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-8">Get a Free SEO Review</h2>
+        <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
+            <input required placeholder="Name" class="w-full border-b py-2 outline-none">
+            <input required type="email" placeholder="Email" class="w-full border-b py-2 outline-none">
+            <textarea required placeholder="Tell us about your business" class="w-full border-b py-2 outline-none"></textarea>
+            <button class="bg-blue-600 text-white px-10 py-3 rounded font-bold hover:bg-blue-700">
+                Get Free SEO Review
+            </button>
+        </form>
+    </div>
+    <div class="md:w-1/2">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop"
+             class="rounded-3xl shadow-xl h-full object-cover">
+    </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="border-t py-10 text-center text-xs text-gray-500">
-  © 2026 RankIQ. Built for clarity, not noise.
+<footer class="text-center py-12 border-t text-xs text-gray-500">
+    <div class="font-bold italic mb-2">Rankiq</div>
+    <p>Ethical SEO • Long-term rankings • Measurable growth</p>
+    <p class="mt-4">© 2026 Rankiq. All rights reserved.</p>
 </footer>
 
 <script>
-  function reveal() {
+function reveal() {
     document.querySelectorAll('.reveal').forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) el.classList.add('active');
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+            el.classList.add('active');
+        }
     });
-  }
-  window.addEventListener('scroll', reveal);
-  reveal();
+}
+window.addEventListener('scroll', reveal);
+reveal();
 </script>
 
 </body>
