@@ -3,43 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rankiq – SEO That Actually Works</title>
+<title>Rankiq – Ethical SEO That Works</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body {
-  font-family: Inter, system-ui, sans-serif;
-  scroll-behavior: smooth;
+body{
+  font-family:Inter,system-ui,sans-serif;
+  scroll-behavior:smooth;
+  background:#f5f7ff;
 }
 
-.gradient-bg {
-  background: radial-gradient(circle at top, #eef2ff, #ffffff);
+/* ---------- AMBIENT GRADIENT ---------- */
+.hero-bg{
+  position:relative;
+  overflow:hidden;
+  background:radial-gradient(circle at top,#e0e7ff,#ffffff);
+}
+.blob{
+  position:absolute;
+  width:420px;height:420px;
+  border-radius:50%;
+  filter:blur(90px);
+  opacity:.35;
+  animation:blobMove 18s infinite alternate ease-in-out;
+}
+.blob.blue{background:#6366f1;top:-120px;left:-120px;}
+.blob.purple{background:#8b5cf6;bottom:-150px;right:-120px;animation-delay:5s;}
+
+@keyframes blobMove{
+  from{transform:translate(0,0)}
+  to{transform:translate(90px,70px)}
 }
 
-.glass {
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.4);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6),
-              0 20px 40px rgba(0,0,0,0.08);
+/* ---------- GLASS ---------- */
+.glass{
+  background:rgba(255,255,255,.75);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.6),
+    0 20px 40px rgba(0,0,0,.08);
 }
 
-.glossy-btn {
-  background: linear-gradient(135deg,#3b82f6,#6366f1);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.4),
-              0 14px 30px rgba(59,130,246,.35);
+/* ---------- FLOAT ---------- */
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-14px)}
+  100%{transform:translateY(0)}
+}
+.float{animation:float 7s ease-in-out infinite}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(40px);transition:.9s ease}
+.reveal.active{opacity:1;transform:translateY(0)}
+
+/* ---------- BUTTON ---------- */
+.glossy-btn{
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.45),
+    0 16px 34px rgba(79,70,229,.4);
+}
+.glossy-btn:hover{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.6),
+    0 24px 48px rgba(79,70,229,.55);
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all .9s ease;
+/* ---------- CARD ---------- */
+.card{
+  transition:.4s ease;
 }
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 60px rgba(0,0,0,.12);
 }
 </style>
 </head>
@@ -48,141 +87,191 @@ body {
 
 <!-- HEADER -->
 <header class="sticky top-0 z-50 glass px-6 py-4 flex justify-between items-center">
-  <div class="font-bold italic">Rankiq</div>
+  <div class="font-bold italic text-lg">Rankiq</div>
 
-  <nav class="flex gap-6 text-sm font-semibold">
-    <a href="#home" data-en="Home" data-ta="முகப்பு"></a>
-    <a href="#about" data-en="About" data-ta="எங்களை பற்றி"></a>
-    <a href="#services" data-en="Services" data-ta="சேவைகள்"></a>
-    <a href="#contact" data-en="Contact" data-ta="தொடர்பு"></a>
-  </nav>
+  <div class="flex items-center gap-6 text-sm font-semibold">
+    <nav class="flex gap-5">
+      <a href="#home" data-i18n="nav_home">Home</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
 
-  <!-- LANGUAGE SWITCH (TOP) -->
-  <div class="flex gap-2 text-xs font-bold">
-    <button onclick="setLang('en')" class="px-3 py-1 border rounded">EN</button>
-    <button onclick="setLang('ta')" class="px-3 py-1 border rounded">தமிழ்</button>
+    <!-- LANGUAGE TOGGLE -->
+    <div class="flex gap-2 text-xs font-bold">
+      <button onclick="setLang('en')" class="px-2">EN</button> |
+      <button onclick="setLang('ta')" class="px-2">தமிழ்</button>
+    </div>
   </div>
 </header>
 
+<!-- FLOATING CONTACT -->
+<div class="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
+  <a href="tel:+919884795585" class="glass p-3 rounded-full text-indigo-600 float">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+  <a href="mailto:contact@thoufiqahamed.in" class="glass p-3 rounded-full text-indigo-600 float" style="animation-delay:.4s">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+  <a href="https://wa.me/919884795585" class="glass p-3 rounded-full text-indigo-600 float" style="animation-delay:.8s">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+
 <!-- HERO -->
-<section id="home" class="gradient-bg text-center py-28 px-6">
-  <h1 class="text-4xl md:text-6xl font-extrabold mb-6 reveal"
-      data-en="SEO That Gets You Found, Not Just Promised"
-      data-ta="வாக்குறுதி மட்டும் அல்ல — உங்களை கண்டுபிடிக்க வைக்கும் SEO">
+<section id="home" class="hero-bg text-center py-32 px-6">
+  <div class="blob blue"></div>
+  <div class="blob purple"></div>
+
+  <h1 class="text-4xl md:text-6xl font-extrabold mb-6 reveal" data-i18n="hero_title">
+    SEO That Gets You Found, Not Just Promised
   </h1>
 
-  <p class="max-w-3xl mx-auto text-gray-600 mb-8 reveal"
-     data-en="Rankiq helps businesses grow steadily on Google using ethical, system-driven SEO."
-     data-ta="Rankiq என்பது நம்பகமான, முறையான SEO மூலம் Google-ல் உங்கள் வணிகத்தை நிலையாக வளர்க்கும் ஆலோசனை நிறுவனம்.">
+  <p class="max-w-3xl mx-auto text-gray-600 mb-10 reveal" data-i18n="hero_desc">
+    Rankiq helps Indian businesses improve Google visibility, generate genuine enquiries,
+    and build long-term organic growth through ethical SEO systems.
   </p>
 
-  <a href="#contact"
-     class="glossy-btn text-white px-10 py-4 rounded font-bold reveal"
-     data-en="Get Free SEO Review"
-     data-ta="இலவச SEO மதிப்பாய்வு பெறுங்கள்">
+  <a href="#contact" class="glossy-btn text-white px-10 py-4 rounded font-bold reveal" data-i18n="hero_cta">
+    Get Free SEO Review
   </a>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="max-w-6xl mx-auto px-6 py-20 text-center">
-  <h2 class="text-3xl font-bold mb-4 reveal"
-      data-en="Why Businesses Trust Rankiq"
-      data-ta="ஏன் வணிகங்கள் Rankiq-ஐ நம்புகின்றன">
-  </h2>
+<section id="about" class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-14 items-center">
+  <div class="reveal">
+    <h2 class="text-3xl font-bold mb-4" data-i18n="about_title">Why Businesses Trust Rankiq</h2>
+    <p class="text-gray-500 leading-relaxed" data-i18n="about_desc">
+      Rankiq focuses on sustainable SEO growth. We avoid shortcuts and instead build
+      strong foundations that bring consistent traffic, trust, and enquiries over time.
+    </p>
+  </div>
 
-  <p class="text-gray-500 max-w-3xl mx-auto reveal"
-     data-en="We focus on long-term SEO foundations, not shortcuts or ranking tricks."
-     data-ta="தற்காலிக யுக்திகளுக்கு பதிலாக, நீண்டகால வளர்ச்சியளிக்கும் SEO அடித்தளங்களை Rankiq உருவாக்குகிறது.">
-  </p>
+  <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000"
+       class="rounded-3xl shadow-xl float reveal">
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-24 px-6 bg-gray-50 text-center">
-  <h2 class="text-3xl font-bold mb-6 reveal"
-      data-en="SEO Services"
-      data-ta="SEO சேவைகள்">
-  </h2>
+<section id="services" class="py-28 px-6 bg-gradient-to-b from-indigo-50 to-white text-center">
+  <h2 class="text-3xl font-bold mb-4 reveal" data-i18n="services_title">SEO Services</h2>
+  <p class="text-gray-500 max-w-3xl mx-auto mb-16 reveal" data-i18n="services_desc">
+    Our SEO services cover technical fixes, keyword planning, and content strategies
+    designed to convert visitors into customers.
+  </p>
 
   <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-    <div class="glass p-6 rounded-3xl reveal"
-         data-en="Technical SEO fixes that help Google understand your website."
-         data-ta="Google உங்கள் இணையதளத்தை சரியாக புரிந்துகொள்ள உதவும் தொழில்நுட்ப SEO தீர்வுகள்.">
+    <div class="glass card p-6 rounded-3xl reveal">
+      <h3 class="font-bold mb-3" data-i18n="service1_title">Technical SEO</h3>
+      <p class="text-sm text-gray-500" data-i18n="service1_desc">
+        Improving site speed, structure, and crawlability so Google can rank your website better.
+      </p>
     </div>
 
-    <div class="glass p-6 rounded-3xl reveal"
-         data-en="Keyword strategies focused on real business enquiries."
-         data-ta="உண்மையான வணிக விசாரணைகளை கொண்டு வரும் முக்கிய சொல் திட்டமிடல்.">
+    <div class="glass card p-6 rounded-3xl reveal">
+      <h3 class="font-bold mb-3" data-i18n="service2_title">Keyword Strategy</h3>
+      <p class="text-sm text-gray-500" data-i18n="service2_desc">
+        Identifying high-intent keywords that attract users who are ready to enquire or buy.
+      </p>
     </div>
 
-    <div class="glass p-6 rounded-3xl reveal"
-         data-en="Content SEO built to rank and convert visitors."
-         data-ta="தரவரிசை பெறவும், வாடிக்கையாளர்களாக மாற்றவும் உருவாக்கப்பட்ட உள்ளடக்க SEO.">
+    <div class="glass card p-6 rounded-3xl reveal">
+      <h3 class="font-bold mb-3" data-i18n="service3_title">Content SEO</h3>
+      <p class="text-sm text-gray-500" data-i18n="service3_desc">
+        Creating and optimizing content that ranks, educates users, and builds trust.
+      </p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="max-w-4xl mx-auto px-6 py-24 text-center">
-  <h2 class="text-3xl font-bold mb-4 reveal"
-      data-en="Get a Free SEO Review"
-      data-ta="இலவச SEO மதிப்பாய்வு பெறுங்கள்">
-  </h2>
+<section id="contact" class="py-28 px-6 bg-gradient-to-t from-violet-50 to-white">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+    <div class="reveal">
+      <h2 class="text-3xl font-bold mb-4" data-i18n="contact_title">Get a Free SEO Review</h2>
+      <p class="text-gray-500 mb-8" data-i18n="contact_desc">
+        Share your website details and we’ll send you a clear SEO review
+        with actionable improvements.
+      </p>
 
-  <p class="text-gray-500 mb-8 reveal"
-     data-en="No sales pressure. Just clear SEO insights."
-     data-ta="விற்பனை அழுத்தம் இல்லை. தெளிவான SEO ஆலோசனைகள் மட்டுமே.">
-  </p>
-
-  <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
-    <input name="name" required class="w-full border-b py-2 outline-none"
-           data-en-placeholder="Name"
-           data-ta-placeholder="பெயர்">
-
-    <input name="email" type="email" required class="w-full border-b py-2 outline-none"
-           data-en-placeholder="Email"
-           data-ta-placeholder="மின்னஞ்சல்">
-
-    <textarea name="message" required class="w-full border-b py-2 outline-none"
-           data-en-placeholder="Tell us about your business"
-           data-ta-placeholder="உங்கள் வணிகத்தை பற்றி கூறுங்கள்"></textarea>
-
-    <button class="glossy-btn text-white px-10 py-3 rounded font-bold"
-            data-en="Submit"
-            data-ta="அனுப்பவும்">
-    </button>
-  </form>
+      <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
+        <input required placeholder="Name" class="w-full border-b py-2 bg-transparent outline-none">
+        <input required type="email" placeholder="Email" class="w-full border-b py-2 bg-transparent outline-none">
+        <textarea required placeholder="Tell us about your business" class="w-full border-b py-2 bg-transparent outline-none"></textarea>
+        <button class="glossy-btn text-white px-10 py-3 rounded font-bold">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
 </section>
 
 <footer class="text-center py-10 text-xs text-gray-500 border-t">
   © 2026 Rankiq. All rights reserved.
 </footer>
 
-<!-- LANGUAGE SCRIPT -->
 <script>
-function setLang(lang) {
-  document.querySelectorAll('[data-en]').forEach(el => {
-    el.textContent = el.getAttribute('data-' + lang);
-  });
+/* ---------- LANGUAGE DATA ---------- */
+const content={
+  en:{
+    nav_home:"Home",nav_about:"About",nav_services:"Services",nav_contact:"Contact",
+    hero_title:"SEO That Gets You Found, Not Just Promised",
+    hero_desc:"Rankiq helps Indian businesses improve Google visibility, generate genuine enquiries, and build long-term organic growth through ethical SEO systems.",
+    hero_cta:"Get Free SEO Review",
+    about_title:"Why Businesses Trust Rankiq",
+    about_desc:"Rankiq focuses on sustainable SEO growth. We avoid shortcuts and instead build strong foundations that bring consistent traffic, trust, and enquiries over time.",
+    services_title:"SEO Services",
+    services_desc:"Our SEO services cover technical fixes, keyword planning, and content strategies designed to convert visitors into customers.",
+    service1_title:"Technical SEO",
+    service1_desc:"Improving site speed, structure, and crawlability so Google can rank your website better.",
+    service2_title:"Keyword Strategy",
+    service2_desc:"Identifying high-intent keywords that attract users who are ready to enquire or buy.",
+    service3_title:"Content SEO",
+    service3_desc:"Creating and optimizing content that ranks, educates users, and builds trust.",
+    contact_title:"Get a Free SEO Review",
+    contact_desc:"Share your website details and we’ll send you a clear SEO review with actionable improvements."
+  },
+  ta:{
+    nav_home:"முகப்பு",nav_about:"எங்களை பற்றி",nav_services:"சேவைகள்",nav_contact:"தொடர்பு",
+    hero_title:"உங்களை கண்டுபிடிக்க உதவும் SEO — வெறும் வாக்குறுதி அல்ல",
+    hero_desc:"Rankiq இந்திய நிறுவனங்களுக்கு Google-ல் பார்வை அதிகரிக்க, உண்மையான விசாரணைகள் பெற, நீண்டகால வளர்ச்சியை உருவாக்க உதவுகிறது.",
+    hero_cta:"இலவச SEO மதிப்பாய்வு",
+    about_title:"ஏன் Rankiq-ஐ நிறுவனங்கள் நம்புகின்றன",
+    about_desc:"Rankiq குறுக்குவழிகளை தவிர்த்து நிலையான SEO வளர்ச்சியை உருவாக்குகிறது. நம்பகத்தன்மை மற்றும் தொடர்ச்சியான வருகையை மையமாகக் கொள்கிறது.",
+    services_title:"SEO சேவைகள்",
+    services_desc:"தொழில்நுட்ப மேம்பாடு, முக்கிய சொல் திட்டமிடல் மற்றும் உள்ளடக்க SEO மூலம் மாற்றங்களை உருவாக்குகிறோம்.",
+    service1_title:"தொழில்நுட்ப SEO",
+    service1_desc:"வேகம், அமைப்பு மற்றும் crawl திறனை மேம்படுத்து Google தரவரிசையை உயர்த்துதல்.",
+    service2_title:"முக்கிய சொல் திட்டம்",
+    service2_desc:"வாங்கத் தயாராக உள்ள பயனர்களை ஈர்க்கும் முக்கிய சொற்கள்.",
+    service3_title:"உள்ளடக்க SEO",
+    service3_desc:"தரவரிசை பெறவும் நம்பிக்கை உருவாக்கவும் வடிவமைக்கப்பட்ட உள்ளடக்கம்.",
+    contact_title:"இலவச SEO மதிப்பாய்வு",
+    contact_desc:"உங்கள் இணையதள விவரங்களை பகிருங்கள். தெளிவான SEO பரிந்துரைகளை வழங்குகிறோம்."
+  }
+};
 
-  document.querySelectorAll('[data-en-placeholder]').forEach(el => {
-    el.placeholder = el.getAttribute('data-' + lang + '-placeholder');
+/* ---------- LANGUAGE SWITCH ---------- */
+function setLang(lang){
+  localStorage.setItem("lang",lang);
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    el.textContent=content[lang][el.dataset.i18n];
   });
-
-  localStorage.setItem('lang', lang);
 }
 
-const savedLang = localStorage.getItem('lang') || 'en';
+/* ---------- INIT ---------- */
+const savedLang=localStorage.getItem("lang")||"en";
 setLang(savedLang);
 
-// reveal animation
-function reveal() {
-  document.querySelectorAll('.reveal').forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+/* ---------- REVEAL ---------- */
+function reveal(){
+  document.querySelectorAll('.reveal').forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){
       el.classList.add('active');
     }
   });
 }
-window.addEventListener('scroll', reveal);
+window.addEventListener('scroll',reveal);
 reveal();
 </script>
 
