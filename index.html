@@ -21,23 +21,23 @@ body {
 
 /* Glass / Glossy */
 .glass {
-  background: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.7);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.4);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.6),
     0 20px 40px rgba(0,0,0,0.08);
 }
 
 /* Floating */
-@keyframes softFloat {
-  0% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(-14px) translateX(4px); }
-  100% { transform: translateY(0) translateX(0); }
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
 }
-.soft-float { animation: softFloat 6s ease-in-out infinite; }
-.soft-float-slow { animation: softFloat 9s ease-in-out infinite; }
+.float { animation: float 6s ease-in-out infinite; }
+.float-slow { animation: float 9s ease-in-out infinite; }
 
 /* Reveal */
 .reveal,
@@ -49,43 +49,31 @@ body {
 .reveal { transform: translateY(40px); }
 .reveal-left { transform: translateX(-40px); }
 .reveal-right { transform: translateX(40px); }
-
-.reveal.active,
-.reveal-left.active,
-.reveal-right.active {
+.active {
   opacity: 1;
   transform: translate(0);
 }
 
-/* Hero */
-.hero-title {
-  animation: heroFade 1.2s ease forwards;
-}
-@keyframes heroFade {
-  from { opacity:0; transform: translateY(20px); }
-  to { opacity:1; transform: translateY(0); }
-}
-
-/* Cards */
-.service-card {
-  transition: transform .4s ease, box-shadow .4s ease;
-}
-.service-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0,0,0,.08);
-}
-
-/* Glossy button */
+/* Buttons */
 .glossy-btn {
   background: linear-gradient(135deg,#3b82f6,#6366f1);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.4),
-    0 12px 25px rgba(59,130,246,.35);
+    0 14px 30px rgba(59,130,246,.35);
 }
 .glossy-btn:hover {
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.5),
-    0 18px 35px rgba(59,130,246,.45);
+    0 20px 40px rgba(59,130,246,.45);
+}
+
+/* Cards */
+.card {
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
 }
 </style>
 </head>
@@ -94,98 +82,141 @@ body {
 
 <!-- HEADER -->
 <header class="sticky top-0 z-50 glass px-6 py-4 flex justify-between items-center">
-  <nav class="flex gap-5 text-sm font-semibold">
-    <a href="#home" class="hover:text-blue-600">Home</a>
-    <a href="#about" class="hover:text-blue-600">About</a>
-    <a href="#services" class="hover:text-blue-600">Services</a>
-    <a href="#contact" class="hover:text-blue-600">Contact</a>
+  <nav class="flex gap-6 text-sm font-semibold">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
   </nav>
   <div class="font-bold italic">Rankiq</div>
 </header>
 
 <!-- FLOATING CONTACT -->
 <div class="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
-  <a href="tel:+919884795585" class="glass soft-float p-3 rounded-full text-blue-600">
+  <a href="tel:+919884795585" class="glass float p-3 rounded-full text-blue-600">
     <i class="fa-solid fa-phone"></i>
   </a>
-  <a href="mailto:contact@thoufiqahamed.in" class="glass soft-float p-3 rounded-full text-blue-600" style="animation-delay:.3s">
+  <a href="mailto:contact@thoufiqahamed.in" class="glass float p-3 rounded-full text-blue-600" style="animation-delay:.3s">
     <i class="fa-solid fa-envelope"></i>
   </a>
-  <a href="https://wa.me/919884795585" class="glass soft-float p-3 rounded-full text-blue-600" style="animation-delay:.6s">
+  <a href="https://wa.me/919884795585" class="glass float p-3 rounded-full text-blue-600" style="animation-delay:.6s">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 </div>
 
 <!-- HERO -->
-<section id="home" class="relative overflow-hidden gradient-bg text-center py-28 px-6">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="w-40 h-40 bg-blue-200/30 rounded-full blur-3xl absolute top-20 left-1/4 soft-float-slow"></div>
-    <div class="w-52 h-52 bg-indigo-200/30 rounded-full blur-3xl absolute bottom-10 right-1/4 soft-float"></div>
-  </div>
-
-  <h1 class="hero-title text-4xl md:text-6xl font-extrabold mb-6">
+<section id="home" class="gradient-bg text-center py-28 px-6">
+  <h1 class="text-4xl md:text-6xl font-extrabold mb-6 reveal">
     SEO That Gets You Found<br>Not Just Promised
   </h1>
-  <p class="max-w-2xl mx-auto text-gray-600 mb-8">
-    Ethical SEO. Real traffic. Measurable growth.
+
+  <p class="max-w-3xl mx-auto text-gray-600 text-sm md:text-base mb-8 reveal">
+    Rankiq is an SEO consultancy helping Indian businesses increase online visibility,
+    inbound enquiries, and long-term organic growth through ethical, system-driven SEO.
   </p>
-  <a href="#services" class="glossy-btn text-white px-10 py-4 rounded font-bold transition">
+
+  <a href="#services" class="glossy-btn text-white px-10 py-4 rounded font-bold reveal">
     Start Ranking Better
   </a>
+
+  <p class="text-xs text-gray-500 mt-6 reveal">
+    Ethical SEO • Real Traffic • Measurable Growth
+  </p>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row gap-12 items-center">
   <div class="md:w-1/2 reveal-left">
-    <h2 class="text-3xl font-bold mb-4">Why Rankiq</h2>
-    <p class="text-gray-500">
-      SEO is systems, not tricks. We build visibility that lasts.
+    <h2 class="text-3xl font-bold mb-4">Why Businesses Trust Rankiq</h2>
+    <p class="text-gray-500 text-sm leading-relaxed">
+      We work with businesses that want predictable growth from Google.
+      Instead of shortcuts or inflated metrics, Rankiq builds SEO foundations
+      that compound results over time.
     </p>
   </div>
   <div class="md:w-1/2 reveal-right">
     <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000"
-      class="rounded-2xl shadow-xl soft-float">
+      class="rounded-2xl shadow-xl float">
   </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="py-24 px-6 bg-gray-50 text-center">
-  <h2 class="text-3xl font-bold mb-12">Services</h2>
+  <h2 class="text-3xl font-bold mb-4 reveal">SEO Services</h2>
+  <p class="text-gray-500 text-sm max-w-3xl mx-auto mb-14 reveal">
+    Our services cover the complete SEO lifecycle—from fixing technical issues
+    to attracting high-intent traffic and converting it into enquiries.
+  </p>
+
   <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-    <div class="service-card glass p-6 rounded-3xl reveal">
+    <div class="glass card p-6 rounded-3xl reveal">
       <h3 class="font-bold mb-3">Technical SEO</h3>
+      <p class="text-xs text-gray-500 mb-4">
+        We remove technical barriers that prevent Google from properly understanding
+        and ranking your website.
+      </p>
       <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500"
-        class="rounded-xl h-40 w-full object-cover soft-float">
+        class="rounded-xl h-40 w-full object-cover float">
     </div>
-    <div class="service-card glass p-6 rounded-3xl reveal">
+
+    <div class="glass card p-6 rounded-3xl reveal">
       <h3 class="font-bold mb-3">Keyword Strategy</h3>
+      <p class="text-xs text-gray-500 mb-4">
+        We focus on buyer-intent keywords that bring enquiries—not empty traffic.
+      </p>
       <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500"
-        class="rounded-xl h-40 w-full object-cover soft-float-slow">
+        class="rounded-xl h-40 w-full object-cover float-slow">
     </div>
-    <div class="service-card glass p-6 rounded-3xl reveal">
+
+    <div class="glass card p-6 rounded-3xl reveal">
       <h3 class="font-bold mb-3">Content SEO</h3>
+      <p class="text-xs text-gray-500 mb-4">
+        Content optimized to rank, engage users, and support consistent lead generation.
+      </p>
       <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=500"
-        class="rounded-xl h-40 w-full object-cover soft-float">
+        class="rounded-xl h-40 w-full object-cover float">
     </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-24 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-6 reveal">How Rankiq Works</h2>
+  <p class="text-gray-500 text-sm max-w-2xl mx-auto mb-16 reveal">
+    SEO success comes from a clear system. Rankiq follows a structured workflow
+    to ensure every action contributes to measurable growth.
+  </p>
+
+  <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto text-sm">
+    <div class="glass p-6 rounded-2xl reveal">Deep SEO Audit</div>
+    <div class="glass p-6 rounded-2xl reveal">Smart Keyword Planning</div>
+    <div class="glass p-6 rounded-2xl reveal">Focused Execution</div>
+    <div class="glass p-6 rounded-2xl reveal">Measured Growth</div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row gap-12">
   <div class="md:w-1/2 reveal-left">
-    <h2 class="text-3xl font-bold mb-6">Free SEO Review</h2>
+    <h2 class="text-3xl font-bold mb-4">Get a Free SEO Review</h2>
+    <p class="text-gray-500 text-sm mb-8">
+      Share your website details. We’ll review your SEO health and respond
+      with clear, actionable insights—no sales pressure.
+    </p>
+
     <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
       <input required placeholder="Name" class="w-full border-b py-2 outline-none">
       <input required type="email" placeholder="Email" class="w-full border-b py-2 outline-none">
-      <textarea required placeholder="About your business" class="w-full border-b py-2 outline-none"></textarea>
+      <textarea required placeholder="Tell us about your business" class="w-full border-b py-2 outline-none"></textarea>
       <button class="glossy-btn text-white px-10 py-3 rounded font-bold">
         Submit
       </button>
     </form>
   </div>
+
   <div class="md:w-1/2 reveal-right">
     <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800"
-      class="rounded-3xl shadow-xl soft-float-slow">
+      class="rounded-3xl shadow-xl float-slow">
   </div>
 </section>
 
