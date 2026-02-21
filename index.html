@@ -1,398 +1,365 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-1488001824666458">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rankiq – Ethical SEO That Works</title>
+  <title>Rankiq – Search Engine Optimization Systems</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://unpkg.com/split-type"></script>
 
   <style>
-    body{
-      font-family:Inter,system-ui,sans-serif;
-      scroll-behavior:smooth;
-      background:#f6f7ff;
+    :root { --accent: #6366f1; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #ffffff; color: #0f172a; overflow-x: hidden; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1);
+      will-change: transform, opacity;
+    }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    .title-clip { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+    .char, .word { transform: translateY(110%); display: inline-block; }
+
+    .hero-bg {
+      position: relative;
+      background: radial-gradient(circle at top right, #f5f3ff, #ffffff);
+    }
+    .blob {
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
     }
 
-    /* ===== BACKGROUND ===== */
-    .hero-bg{
-      position:relative;
-      overflow:hidden;
-      background:radial-gradient(circle at top,#e0e7ff,#ffffff);
-    }
-    .blob{
-      position:absolute;
-      width:420px;height:420px;
-      border-radius:50%;
-      filter:blur(100px);
-      opacity:.35;
-      animation:blob 10s infinite alternate ease-in-out;
-    }
-    .blob.blue{background:#6366f1;top:-120px;left:-120px;}
-    .blob.purple{background:#8b5cf6;bottom:-150px;right:-120px;animation-delay:3s;}
-
-    @keyframes blob{
-      from{transform:translate(0,0)}
-      to{transform:translate(80px,60px)}
+    .glass {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(226, 232, 240, 0.6);
     }
 
-    /* ===== GLASS ===== */
-    .glass{
-      background:rgba(255,255,255,.78);
-      backdrop-filter:blur(14px);
-      border:1px solid rgba(255,255,255,.45);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.6),
-        0 20px 40px rgba(0,0,0,.08);
+    .btn-primary {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      box-shadow: 0 10px 25px -10px rgba(79, 70, 229, 0.5);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 35px -10px rgba(79, 70, 229, 0.6); }
+    
+    .card-hover { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
+    .card-hover:hover { transform: translateY(-8px); border-color: #6366f1; background: #ffffff; }
+
+    .roi-input {
+        @apply w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 outline-none focus:border-indigo-500 transition-all text-sm font-bold;
     }
 
-    /* ===== FLOAT ===== */
-    @keyframes float{
-      0%{transform:translateY(0)}
-      50%{transform:translateY(-14px)}
-      100%{transform:translateY(0)}
-    }
-    .float{animation:float 7s ease-in-out infinite}
-
-    /* ===== REVEAL ===== */
-    .reveal{opacity:0;transform:translateY(40px);transition:.6s ease}
-    .reveal.active{opacity:1;transform:translateY(0)}
-
-    /* ===== BUTTON ===== */
-    .glossy-btn{
-      background:linear-gradient(135deg,#2563eb,#7c3aed);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.45),
-        0 18px 36px rgba(79,70,229,.4);
-    }
-    .glossy-btn:hover{
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.6),
-        0 26px 52px rgba(79,70,229,.55);
-    }
-
-    /* ===== CARD ===== */
-    .card{transition:.2s ease}
-    .card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 30px 60px rgba(0,0,0,.12);
-    }
-
-    /* CINEMATIC TEXT REVEAL CSS */
-    .title-clip {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    .char, .word {
-        transform: translateY(115%);
-        display: inline-block;
-    }
+    .myth-pill { @apply bg-rose-50 text-rose-600 px-3 py-1 rounded-full text-[10px] font-black uppercase mb-2 inline-block; }
+    .truth-pill { @apply bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-[10px] font-black uppercase mb-2 inline-block; }
+    
+    .check-item { @apply flex items-center gap-3 text-sm text-slate-600 border-b border-slate-100 py-3; }
+    .check-item i { @apply text-indigo-500; }
   </style>
 </head>
+<body>
 
-<body class="text-gray-800">
-
-<header class="sticky top-0 z-50 glass px-6 py-4 flex justify-between items-center">
-  <div class="font-bold italic text-lg">Rankiq</div>
-
-  <div class="flex items-center gap-6 text-sm font-semibold">
-    <nav class="flex gap-5">
-      <a href="#home" data-i18n="nav_home">Home</a>
-      <a href="#about" data-i18n="nav_about">About</a>
-      <a href="#services" data-i18n="nav_services">Services</a>
-      <a href="#contact" data-i18n="nav_contact">Contact</a>
+<header class="fixed top-0 w-full z-50 glass border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="font-black text-2xl tracking-tighter text-indigo-600">RANKIQ</div>
+    
+    <nav class="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
+      <a href="#home" class="hover:text-indigo-600 transition-colors" data-i18n="n_home">Home</a>
+      <a href="#about" class="hover:text-indigo-600 transition-colors" data-i18n="n_about">About</a>
+      <a href="#services" class="hover:text-indigo-600 transition-colors" data-i18n="n_services">Services</a>
+      <a href="#contact" class="hover:text-indigo-600 transition-colors" data-i18n="n_contact">Contact</a>
     </nav>
 
-    <div class="flex gap-2 text-xs font-bold">
-      <button onclick="setLang('en')" class="hover:text-indigo-600 transition-colors">EN</button> |
-      <button onclick="setLang('ta')" class="hover:text-indigo-600 transition-colors">தமிழ்</button>
+    <div class="flex gap-1 bg-slate-100 p-1 rounded-full border border-slate-200">
+      <button onclick="setLang('en')" id="en-btn" class="px-4 py-1.5 text-[10px] font-black rounded-full transition-all">EN</button>
+      <button onclick="setLang('ta')" id="ta-btn" class="px-4 py-1.5 text-[10px] font-black rounded-full transition-all">தமிழ்</button>
     </div>
   </div>
 </header>
 
-<div class="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
-  <a href="tel:+919884795585" class="glass p-3 rounded-full text-indigo-600 float">
-    <i class="fa-solid fa-phone"></i>
-  </a>
-  <a href="mailto:contact@thoufiqahamed.in" class="glass p-3 rounded-full text-indigo-600 float" style="animation-delay:.4s">
-    <i class="fa-solid fa-envelope"></i>
-  </a>
-  <a href="https://wa.me/919884795585" class="glass p-3 rounded-full text-indigo-600 float" style="animation-delay:.8s">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-</div>
+<section id="home" class="hero-bg min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden">
+  <div class="blob" id="blob1" style="top: -10%; left: -10%;"></div>
+  <div class="blob" id="blob2" style="bottom: -10%; right: -10%;"></div>
 
-<section id="home" class="hero-bg text-center py-32 px-6">
-  <div class="blob blue"></div>
-  <div class="blob purple"></div>
-
-  <div class="title-clip">
-    <h1 id="hero-main-title" class="text-3xl md:text-6xl font-extrabold mb-5 leading-tight" data-i18n="hero_title">
-      SEO That Gets You Found,       Not Just Promised
-    </h1>
-  </div>
-
-  <p id="hero-main-desc" class="max-w-4xl mx-auto text-gray-600 text-lg md:text-xl mb-10 opacity-0" data-i18n="hero_desc">
-    Stop chasing algorithm trends and start building a digital asset. Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through transparent, ethical SEO systems.
-  </p>
-
-  <a href="#contact" id="hero-main-cta" class="glossy-btn text-white px-10 py-5 rounded-lg font-bold opacity-0 inline-block text-lg shadow-xl" data-i18n="hero_cta">
-    Claim Your Free SEO Audit
-  </a>
-</section>
-
-<section id="about" class="max-w-6xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center">
-  <div class="reveal">
-    <h2 class="text-4xl font-bold mb-6 text-indigo-900" data-i18n="about_title">Bridging Engineering Logic with Marketing Creativity</h2>
-    <p class="text-gray-600 leading-relaxed mb-6 text-lg" data-i18n="about_desc">
-      Most agencies treat SEO like a dark art. At Rankiq, we treat it like an engineering problem. Founded by Thoufiq Ahamed—a Marketer, Social media researcher and engineer—we believe that search ranking is the result of perfect technical structure meeting high-quality human storytelling.
+  <div class="max-w-5xl text-center relative z-10">
+    <div class="title-clip mb-6">
+      <h1 id="hero-title" class="text-5xl md:text-8xl font-black leading-[1.05] tracking-tight text-slate-900" data-i18n="h_title">
+        Search Engine Optimization That Gets You Found
+      </h1>
+    </div>
+    <p id="hero-desc" class="text-slate-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-0 translate-y-4" data-i18n="h_desc">
+        Stop chasing algorithm trends and start building a digital asset. Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through transparent, ethical Search Engine Optimization systems.
     </p>
-    <p class="text-gray-600 leading-relaxed text-lg" data-i18n="about_extra">
-        We don't just "do keywords." We optimize for the human on the other side of the screen. Our philosophy is simple: Build a website that Google's algorithm loves to crawl and humans love to read. 
-    </p>
-  </div>
-
-  <div class="relative">
-      <img
-        src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000"
-        referrerpolicy="no-referrer"
-        loading="lazy"
-        class="rounded-3xl shadow-2xl float"
-      >
-      <div class="absolute -bottom-6 -right-6 glass p-6 rounded-2xl hidden md:block">
-          <p class="font-bold text-indigo-600 text-3xl">100%</p>
-          <p class="text-xs text-gray-500 uppercase font-bold tracking-widest" data-i18n="badge_text">Ethical White Hat</p>
-      </div>
+    <div id="hero-cta" class="opacity-0 translate-y-4">
+      <a href="#contact" class="btn-primary text-white px-12 py-5 rounded-2xl font-black text-lg inline-block tracking-tight" data-i18n="h_cta">
+        Start My Free Audit
+      </a>
+    </div>
   </div>
 </section>
 
-<section class="max-w-6xl mx-auto px-6 py-20 border-t border-indigo-50">
-  <h2 class="text-3xl font-bold text-center mb-16 reveal" data-i18n="roadmap_title">Our Strategic Roadmap</h2>
-  <div class="grid md:grid-cols-4 gap-6 text-center">
+<section id="about" class="py-24 px-6 max-w-7xl mx-auto">
+  <div class="text-center mb-16 reveal">
+    <h2 class="text-4xl font-black mb-4 tracking-tight" data-i18n="m_title">The Science of Search Engine Optimization</h2>
+    <p class="text-slate-500 max-w-2xl mx-auto" data-i18n="m_desc">To outrank your competitors, you must first understand how Google perceives value. It is a hierarchy of technical and creative needs.</p>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-20 items-center">
     <div class="reveal">
-      <span class="text-indigo-200 text-5xl font-black italic opacity-50 block mb-2">01</span>
-      <h4 class="font-bold mb-2" data-i18n="step1_title">Audit</h4>
-      <p class="text-xs text-gray-500" data-i18n="step1_desc">We analyze 200+ technical signals to find bottlenecks.</p>
-    </div>
-    <div class="reveal" style="transition-delay: 0.1s">
-      <span class="text-indigo-200 text-5xl font-black italic opacity-50 block mb-2">02</span>
-      <h4 class="font-bold mb-2" data-i18n="step2_title">Structure</h4>
-      <p class="text-xs text-gray-500" data-i18n="step2_desc">Building a siloed architecture Google loves to crawl.</p>
-    </div>
-    <div class="reveal" style="transition-delay: 0.2s">
-      <span class="text-indigo-200 text-5xl font-black italic opacity-50 block mb-2">03</span>
-      <h4 class="font-bold mb-2" data-i18n="step3_title">Authority</h4>
-      <p class="text-xs text-gray-500" data-i18n="step3_desc">Connecting you with industry-relevant digital footprints.</p>
-    </div>
-    <div class="reveal" style="transition-delay: 0.3s">
-      <span class="text-indigo-200 text-5xl font-black italic opacity-50 block mb-2">04</span>
-      <h4 class="font-bold mb-2" data-i18n="step4_title">Growth</h4>
-      <p class="text-xs text-gray-500" data-i18n="step4_desc">Tracking enquiries, not just random traffic metrics.</p>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="py-32 px-6 bg-gradient-to-b from-indigo-50 to-white text-center">
-  <h2 class="text-4xl font-bold mb-6 reveal" data-i18n="services_title">Data-Driven SEO Services</h2>
-  <p class="text-gray-500 max-w-4xl mx-auto mb-20 text-lg reveal" data-i18n="services_desc">
-    Our approach is holistic. We don't just fix meta tags; we rebuild your site's authority from the ground up to ensure you stay at the top for years, not weeks.
-  </p>
-
-  <div class="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
-    <div class="glass card p-10 rounded-3xl reveal flex flex-col items-center">
-      <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 text-indigo-600 text-2xl">
-          <i class="fa-solid fa-gears"></i>
+      <h3 class="text-3xl font-black mb-6" data-i18n="a_title">Engineering Logic Over Mystery</h3>
+      <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
+        <p data-i18n="a_desc1">Founded by Thoufiq Ahamed, Rankiq treats Search Engine Optimization as a data science. We analyze over 200 signals to ensure your website is mathematically optimized for search crawlers while remaining delightful for human readers.</p>
+        <p data-i18n="a_desc2">We break the myth that Search Engine Optimization is a "secret trick." In reality, it is the disciplined process of making your website the most valuable resource for a user's specific query. It requires deep technical health, high-quality information, and earned digital trust.</p>
       </div>
-      <h3 class="font-bold text-xl mb-4" data-i18n="service1_title">Technical Infrastructure</h3>
-      <p class="text-gray-500 leading-relaxed" data-i18n="service1_desc">
-        We dive deep into your site's core. From fixing Core Web Vitals and Schema markup to optimizing crawl budget and site architecture. We ensure Google can find and index your best content without friction.
-      </p>
-    </div>
 
-    <div class="glass card p-10 rounded-3xl reveal flex flex-col items-center">
-        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 text-purple-600 text-2xl">
-            <i class="fa-solid fa-magnifying-glass-chart"></i>
-        </div>
-      <h3 class="font-bold text-xl mb-4" data-i18n="service2_title">Intent-Based Research</h3>
-      <p class="text-gray-500 leading-relaxed" data-i18n="service2_desc">
-        High volume doesn't always mean high profit. We find the "Money Keywords" your competitors missed. We map keywords to the buyer's journey—from awareness to the final decision.
-      </p>
+      <div class="mt-12 grid md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl bg-rose-50 border border-rose-100">
+              <span class="myth-pill" data-i18n="myth_l">Hidden Myth</span>
+              <p class="text-xs font-bold text-slate-700" data-i18n="myth_p">"SEO is just about repeating keywords to trick the system."</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-emerald-50 border border-emerald-100">
+              <span class="truth-pill" data-i18n="truth_l">Technical Reality</span>
+              <p class="text-xs font-bold text-slate-700" data-i18n="truth_p">"Modern search rewards site speed, security, and true expertise."</p>
+          </div>
+      </div>
     </div>
-
-    <div class="glass card p-10 rounded-3xl reveal flex flex-col items-center">
-        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-600 text-2xl">
-            <i class="fa-solid fa-pen-nib"></i>
-        </div>
-      <h3 class="font-bold text-xl mb-4" data-i18n="service3_title">Content Authority</h3>
-      <p class="text-gray-500 leading-relaxed" data-i18n="service3_desc">
-        SEO content shouldn't sound like a robot wrote it. We produce high-impact articles, landing pages, and guides that establish you as the undisputed expert in your industry while driving conversions.
-      </p>
+    <div class="reveal text-center">
+        
+        <p class="text-[10px] text-center mt-4 text-slate-400 font-bold uppercase tracking-widest" data-i18n="pyramid_cap">The Search Engine Optimization Priority Pyramid</p>
     </div>
   </div>
 </section>
 
-<section id="contact" class="py-28 px-6 bg-gradient-to-t from-violet-50 to-white text-center">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 items-center text-left">
-    <div class="reveal">
-      <h2 class="text-4xl font-bold mb-6" data-i18n="contact_title">Let’s Audit Your Online Presence</h2>
-      <p class="text-gray-500 mb-8 text-lg" data-i18n="contact_desc">
-        Are you tired of "SEO experts" who don't show results? Send us your URL. We’ll provide an honest breakdown of your site's current performance and a roadmap for growth. No strings attached.
-      </p>
-
-      <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
-        <input required name="full_name" id="f-name" placeholder="Your Full Name" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors">
-        <input required name="email" id="f-email" type="email" placeholder="Business Email" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors">
-        <textarea required name="message" id="f-msg" placeholder="Briefly describe your business goals and current website URL" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors h-32"></textarea>
-        <button class="glossy-btn text-white px-12 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform" data-i18n="contact_btn">
-          Get My Roadmap
-        </button>
-      </form>
+<section id="services" class="py-24 px-6 bg-slate-50/50">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-20 reveal">
+      <h2 class="text-4xl font-black mb-4 tracking-tighter" data-i18n="s_title">Full-Form Execution Roadmap</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto" data-i18n="s_desc">We educate you through every phase. Here is exactly how we rebuild your site's authority from the ground up.</p>
     </div>
-    <div class="hidden md:block reveal">
-        <div class="bg-white p-8 rounded-3xl shadow-xl border border-indigo-50">
-            <h4 class="font-bold text-indigo-900 mb-4" data-i18n="next_title">What happens next?</h4>
-            <ul class="space-y-4 text-sm text-gray-600">
-                <li class="flex gap-3"><i class="fa-solid fa-check text-green-500"></i> <span data-i18n="next_1">We analyze your site's technical health.</span></li>
-                <li class="flex gap-3"><i class="fa-solid fa-check text-green-500"></i> <span data-i18n="next_2">We check your competitor's rankings.</span></li>
-                <li class="flex gap-3"><i class="fa-solid fa-check text-green-500"></i> <span data-i18n="next_3">We hop on a 15-min call to discuss findings.</span></li>
-            </ul>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-20">
+      <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-indigo-500 flex flex-col">
+        <h3 class="text-xl font-black mb-4" data-i18n="s1_t">Phase 1: Technical Infra</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-8" data-i18n="s1_d">Before content can rank, the site must be accessible. We optimize crawl budgets and Core Web Vitals so search bots can navigate your site with zero friction.</p>
+        <div class="mb-8">
+            
+        </div>
+        <div class="mt-auto space-y-2">
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c1">Fixing 404 & Redirect Loops</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c2">Schema Markup Injection</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c3">Sitemap & Robots.txt Tuning</span></div>
+        </div>
+      </div>
+
+      <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-purple-500 flex flex-col" style="transition-delay: 0.1s">
+        <h3 class="text-xl font-black mb-4" data-i18n="s2_t">Phase 2: Intent Mapping</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-8" data-i18n="s2_d">High traffic is useless without high intent. We identify 'Money Keywords' that convert visitors into buyers by analyzing semantic search journeys.</p>
+        <div class="mb-8">
+            
+        </div>
+        <div class="mt-auto space-y-2">
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c4">Competitor Gap Analysis</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c5">Semantic Keyword Research</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c6">Search Intent Clustering</span></div>
+        </div>
+      </div>
+
+      <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-emerald-500 flex flex-col" style="transition-delay: 0.2s">
+        <h3 class="text-xl font-black mb-4" data-i18n="s3_t">Phase 3: Authority Scaling</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-8" data-i18n="s3_d">The final phase is building Trust. We earn natural mentions from industry leaders, signaling to Google that you are a legitimate market expert.</p>
+        <div class="mb-8">
+            
+        </div>
+        <div class="mt-auto space-y-2">
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c7">E-E-A-T Framework Build</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c8">Digital PR & Footprints</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c9">Conversion Rate Mastery</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-12 px-6">
+  <div class="max-w-4xl mx-auto glass p-8 md:p-12 rounded-[3rem] shadow-2xl reveal border-2 border-indigo-50">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-3xl font-black mb-4 text-slate-900" data-i18n="calc_title">The ROI of Search Engine Optimization</h2>
+            <p class="text-slate-500 text-sm mb-6" data-i18n="calc_desc">See the impact of professional Search Engine Optimization on your bottom line. We move metrics that matter.</p>
+            <div class="space-y-4">
+                <div>
+                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 block" data-i18n="calc_l1">Monthly Traffic</label>
+                    <input type="number" id="roi-traffic" value="5000" class="roi-input" oninput="calculateROI()">
+                </div>
+                <div>
+                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 block" data-i18n="calc_l2">Conversion Rate (%)</label>
+                    <input type="number" id="roi-conv" value="2" class="roi-input" oninput="calculateROI()">
+                </div>
+                <div>
+                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 block" data-i18n="calc_l3">Avg. Order Value (₹)</label>
+                    <input type="number" id="roi-val" value="5000" class="roi-input" oninput="calculateROI()">
+                </div>
+            </div>
+        </div>
+        <div class="bg-indigo-600 rounded-[2rem] p-8 text-white text-center">
+            <p class="text-indigo-200 text-xs font-bold uppercase tracking-widest mb-2" data-i18n="calc_res_tag">Projected Monthly Revenue</p>
+            <div class="text-5xl font-black mb-4">₹<span id="roi-result">5,00,000</span></div>
+            <p class="text-indigo-100 text-xs opacity-80" data-i18n="calc_note">Visibility growth via Search Engine Optimization leads to significant revenue shifts.</p>
         </div>
     </div>
   </div>
 </section>
 
-<footer class="text-center py-12 text-sm text-gray-500 border-t bg-white">
-  <p class="mb-2">© 2026 Rankiq. Designed & Crafted by Thoufiq Ahamed.</p>
-  <div class="flex justify-center gap-6 mt-4 grayscale opacity-50 text-lg">
-      <i class="fa-brands fa-google"></i>
-      <i class="fa-brands fa-linkedin"></i>
-      <i class="fa-brands fa-twitter"></i>
+<section id="contact" class="py-24 px-6 max-w-5xl mx-auto">
+  <div class="reveal text-center mb-16">
+    <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight" data-i18n="c_title">Claim Your Audit</h2>
+    <p class="text-slate-500 text-lg" data-i18n="c_desc">Submit your URL for a comprehensive technical Search Engine Optimization review. No myths, just data.</p>
   </div>
+
+  <form action="https://formspree.io/f/mwvnenkk" method="POST" class="reveal space-y-4">
+    <div class="grid md:grid-cols-2 gap-4">
+      <input id="f_name" name="name" required placeholder="Full Name" class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all">
+      <input id="f_email" name="email" required type="email" placeholder="Business Email" class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all">
+    </div>
+    <textarea id="f_msg" name="message" required placeholder="Tell us about your website goals..." class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all h-40"></textarea>
+    <button class="btn-primary w-full text-white font-black py-5 rounded-xl text-lg uppercase tracking-widest" data-i18n="c_btn">Send My Audit</button>
+  </form>
+</section>
+
+<footer class="py-12 border-t text-center text-slate-400 text-[10px] font-black uppercase tracking-widest">
+  <p>© 2026 Rankiq. Designed by Thoufiq Ahamed.</p>
 </footer>
 
 <script>
-const content={
-  en:{
-    nav_home:"Home",nav_about:"About",nav_services:"Services",nav_contact:"Contact",
-    hero_title:"SEO That Gets You Found, Not Just Promised",
-    hero_desc:"Stop chasing algorithm trends and start building a digital asset. Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through transparent, ethical SEO systems.",
-    hero_cta:"Claim Your Free SEO Audit",
-    about_title:"Bridging Engineering Logic with Marketing Creativity",
-    about_desc:"Most agencies treat SEO like a dark art. At Rankiq, we treat it like an engineering problem. Founded by Thoufiq Ahamed—a Marketer, Social media researcher and engineer—we believe that search ranking is the result of perfect technical structure meeting high-quality human storytelling.",
-    about_extra:"We don't just 'do keywords.' We optimize for the human on the other side of the screen. Our philosophy is simple: Build a website that Google's algorithm loves to crawl and humans love to read.",
-    badge_text:"Ethical White Hat",
-    roadmap_title:"Our Strategic Roadmap",
-    step1_title:"Audit", step1_desc:"We analyze 200+ technical signals to find bottlenecks.",
-    step2_title:"Structure", step2_desc:"Building a siloed architecture Google loves to crawl.",
-    step3_title:"Authority", step3_desc:"Connecting you with industry-relevant digital footprints.",
-    step4_title:"Growth", step4_desc:"Tracking enquiries, not just random traffic metrics.",
-    services_title:"Data-Driven SEO Services",
-    services_desc:"Our approach is holistic. We don't just fix meta tags; we rebuild your site's authority from the ground up to ensure you stay at the top for years, not weeks.",
-    service1_title:"Technical Infrastructure",
-    service1_desc:"We dive deep into your site's core. From fixing Core Web Vitals and Schema markup to optimizing crawl budget and site architecture. We ensure Google can find and index your best content without friction.",
-    service2_title:"Intent-Based Research",
-    service2_desc:"High volume doesn't always mean high profit. We find the 'Money Keywords' your competitors missed. We map keywords to the buyer's journey—from awareness to the final decision.",
-    service3_title:"Content Authority",
-    service3_desc:"SEO content shouldn't sound like a robot wrote it. We produce high-impact articles, landing pages, and guides that establish you as the undisputed expert in your industry while driving conversions.",
-    contact_title:"Let’s Audit Your Online Presence",
-    contact_desc:"Are you tired of 'SEO experts' who don't show results? Send us your URL. We’ll provide an honest breakdown of your site's current performance and a roadmap for growth. No strings attached.",
-    contact_btn:"Get My Roadmap",
-    ph_name:"Your Full Name", ph_email:"Business Email", ph_msg:"Briefly describe your business goals...",
-    next_title:"What happens next?",
-    next_1:"We analyze your site's technical health.",
-    next_2:"We check your competitor's rankings.",
-    next_3:"We hop on a 15-min call to discuss findings."
+const translations = {
+  en: {
+    n_home: "Home", n_about: "About", n_services: "Services", n_contact: "Contact",
+    h_title: "Search Engine Optimization That Gets You Found",
+    h_desc: "Stop chasing algorithm trends and start building a digital asset. Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through transparent, ethical Search Engine Optimization systems.",
+    h_cta: "Start My Free Audit",
+    m_title: "The Science of Search Engine Optimization",
+    m_desc: "To outrank your competitors, you must first understand how Google perceives value. It is a hierarchy of technical and creative needs.",
+    a_title: "Engineering Logic Over Mystery",
+    a_desc1: "Founded by Thoufiq Ahamed, Rankiq treats Search Engine Optimization as a data science. We analyze over 200 signals to ensure your website is mathematically optimized.",
+    a_desc2: "We break the myth that Search Engine Optimization is a 'secret trick.' In reality, it is the disciplined process of making your website the most valuable resource.",
+    myth_l: "Hidden Myth", myth_p: "'SEO is just about repeating keywords to trick the system.'",
+    truth_l: "Technical Reality", truth_p: "'Modern search rewards site speed, security, and true expertise.'",
+    pyramid_cap: "The Search Engine Optimization Priority Pyramid",
+    s_title: "Full-Form Execution Roadmap",
+    s_desc: "We educate you through every phase. Here is exactly how we rebuild your site's authority from the ground up.",
+    s1_t: "Phase 1: Technical Infra", s1_d: "Before content can rank, the site must be accessible. We optimize crawl budgets and Core Web Vitals so search bots can navigate your site.",
+    c1: "Fixing 404 & Redirect Loops", c2: "Schema Markup Injection", c3: "Sitemap & Robots.txt Tuning",
+    s2_t: "Phase 2: Intent Mapping", s2_d: "High traffic is useless without high intent. We identify 'Money Keywords' that convert visitors into buyers.",
+    c4: "Competitor Gap Analysis", c5: "Semantic Keyword Research", c6: "Search Intent Clustering",
+    s3_t: "Phase 3: Authority Scaling", s3_d: "The final phase is building Trust. We earn natural mentions from industry leaders, signaling you are a trusted expert.",
+    c7: "E-E-A-T Framework Build", c8: "Digital PR & Footprints", c9: "Conversion Rate Mastery",
+    calc_title: "The ROI of Search Engine Optimization",
+    calc_desc: "See the impact of professional Search Engine Optimization on your bottom line. We move metrics that matter.",
+    calc_l1: "Monthly Traffic", calc_l2: "Conversion Rate (%)", calc_l3: "Avg. Order Value (₹)",
+    calc_res_tag: "Projected Monthly Revenue", calc_note: "Visibility growth via Search Engine Optimization leads to significant revenue shifts.",
+    c_title: "Claim Your Audit",
+    c_desc: "Submit your URL for a comprehensive technical Search Engine Optimization review. No myths, just data.",
+    c_btn: "Send My Audit",
+    ph_name: "Full Name", ph_email: "Business Email", ph_msg: "Tell us about your website goals..."
   },
-  ta:{
-    nav_home:"முகப்பு",nav_about:"எங்களைப் பற்றி",nav_services:"சேவைகள்",nav_contact:"தொடர்பு",
-    hero_title:"உங்களைத் தேடுபவர்களுக்கு உங்களைக் காட்டும் SEO — வெறும் வாக்குறுதி அல்ல",
-    hero_desc:"அல்காரிதம் மாற்றங்களை கண்டு அஞ்சாமல், உங்கள் வணிகத்திற்கான ஒரு நிரந்தர டிஜிட்டல் சொத்தை உருவாக்குங்கள். Rankiq நேர்மையான மற்றும் வெளிப்படையான SEO முறைகள் மூலம் உங்கள் வணிக வளர்ச்சியை உறுதி செய்கிறது.",
-    hero_cta:"இலவச SEO தணிக்கையைப் பெறுங்கள்",
-    about_title:"பொறியியல் தர்க்கம் மற்றும் சந்தைப்படுத்தல் படைப்பாற்றலின் இணைப்பு",
-    about_desc:"பெரும்பாலான நிறுவனங்கள் SEO-வை ஒரு ரகசிய வித்தையாகக் கருதுகின்றன. ஆனால் Rankiq-இல், நாங்கள் அதை ஒரு பொறியியல் சவாலாக அணுகுகிறோம். சந்தைப்படுத்துபவர், சமூக ஊடக ஆராய்ச்சியாளர் மற்றும் பொறியாளரான தௌஃபிக் அகமது என்பவரால் இது தொடங்கப்பட்டது.",
-    about_extra:"நாங்கள் வெறும் 'கீவேர்டுகளை' (Keywords) மட்டும் கையாள்வதில்லை. திரைக்கு மறுபுறம் இருக்கும் மனிதர்களுக்காக இணையதளத்தை மேம்படுத்துகிறோம். கூகுள் அல்காரிதம் எளிதாகப் புரிந்துகொள்ளும் மற்றும் மனிதர்கள் விரும்பிப் படிக்கும் தளத்தை உருவாக்குவதே எங்கள் தத்துவம்.",
-    badge_text:"நேர்மையான SEO முறைகள்",
-    roadmap_title:"எங்கள் மூலோபாய திட்டவரைபடம்",
-    step1_title:"தணிக்கை", step1_desc:"உங்கள் தளத்தின் 200-க்கும் மேற்பட்ட தொழில்நுட்ப குறைகளை நாங்கள் ஆராய்வோம்.",
-    step2_title:"கட்டமைப்பு", step2_desc:"கூகுள் எளிதாகக் கண்டறியும் வகையில் தளத்தை மறுசீரமைப்போம்.",
-    step3_title:"அதிகாரம்", step3_desc:"உங்கள் துறையில் உங்களை ஒரு முக்கிய நிபுணராக அடையாளப்படுத்துவோம்.",
-    step4_title:"வளர்ச்சி", step4_desc:"வெறும் ட்ராஃபிக் மட்டுமின்றி, வாடிக்கையாளர்களின் வருகையை உறுதி செய்வோம்.",
-    services_title:"தரவு சார்ந்த SEO சேவைகள்",
-    services_desc:"எங்கள் அணுகுமுறை முழுமையானது. வெறும் மெட்டா டேகுகளை மட்டும் மாற்றாமல், உங்கள் தளத்தின் அதிகாரத்தை (Authority) ஆரம்பத்திலிருந்து கட்டமைக்கிறோம்.",
-    service1_title:"தொழில்நுட்ப உள்கட்டமைப்பு",
-    service1_desc:"இணையதள வேகம் (Core Web Vitals) முதல் கூகுள் எளிதாக உங்கள் உள்ளடக்கத்தைக் கண்டறியும் வகையில் தளத்தின் கட்டமைப்பை மேம்படுத்துவது வரை அனைத்தையும் செய்கிறோம்.",
-    service2_title:"நோக்கம் சார்ந்த ஆராய்ச்சி",
-    service2_desc:"அதிக தேடல் உள்ள சொற்களை விட, அதிக லாபம் தரும் 'Money Keywords'-களை நாங்கள் கண்டறிகிறோம். வாடிக்கையாளரின் தேடல் நோக்கத்தைப் புரிந்துகொண்டு உங்கள் வணிகத்தை அவர்களிடம் சேர்க்கிறோம்.",
-    service3_title:"உள்ளடக்க அதிகாரம்",
-    service3_desc:"SEO உள்ளடக்கம் இயந்திரத்தனமாக இருக்கக்கூடாது. உங்கள் துறையில் உங்களை ஒரு நிபுணராக நிலைநிறுத்தும் உயர்தர கட்டுரைகள் மற்றும் வழிகாட்டிகளை நாங்கள் உருவாக்குகிறோம்.",
-    contact_title:"உங்கள் இணையதளத் தணிக்கையைத் தொடங்குவோம்",
-    contact_desc:"முடிவுகளைக் காட்டாத 'SEO நிபுணர்களால்' நீங்கள் சோர்வாக இருக்கிறீர்களா? உங்கள் இணையதள முகவரியை பகிருங்கள். உங்கள் தளத்தின் தற்போதைய நிலை மற்றும் வளர்ச்சிக்கான வழிகளை நாங்கள் வழங்குகிறோம்.",
-    contact_btn:"எனது திட்டத்தைப் பெறுக",
-    ph_name:"உங்கள் பெயர்", ph_email:"மின்னஞ்சல் முகவரி", ph_msg:"உங்கள் வணிக இலக்குகளை இங்கே குறிப்பிடவும்...",
-    next_title:"அடுத்து என்ன நடக்கும்?",
-    next_1:"உங்கள் இணையதளத்தின் தொழில்நுட்ப ஆரோக்கியத்தை ஆராய்வோம்.",
-    next_2:"உங்கள் போட்டியாளர்களின் தரவரிசையை சரிபார்ப்போம்.",
-    next_3:"ஆய்வு முடிவுகளை விவாதிக்க 15 நிமிட உரையாடலை மேற்கொள்வோம்."
+  ta: {
+    n_home: "முகப்பு", n_about: "எங்களை பற்றி", n_services: "சேவைகள்", n_contact: "தொடர்பு",
+    h_title: "உங்களைத் தேடுபவர்களுக்கு உங்களைக் காட்டும் தேடல் பொறி உகப்பாக்கம்",
+    h_desc: "அல்காரிதம் மாற்றங்களை கண்டு அஞ்சாமல், உங்கள் வணிகத்திற்கான நிரந்தர டிஜிட்டல் சொத்தை உருவாக்குங்கள்.",
+    h_cta: "இலவச தணிக்கை",
+    m_title: "தேடல் பொறி உகப்பாக்கத்தின் பின்னால் உள்ள அறிவியல்",
+    m_desc: "உங்கள் போட்டியாளர்களை முந்த, கூகுள் எதை முக்கியமாகக் கருதுகிறது என்பதை நீங்கள் முதலில் புரிந்து கொள்ள வேண்டும்.",
+    a_title: "மர்மத்தை விட பொறியியல் தர்க்கமே மேலானது",
+    a_desc1: "தௌஃபிக் அகமது அவர்களால் தொடங்கப்பட்ட Rankiq, தேடல் பொறி உகப்பாக்கத்தை ஒரு தரவு சார்ந்த சவாலாக அணுகுகிறது.",
+    a_desc2: "இது ஒரு 'ரகசிய வித்தை' அல்ல; வாடிக்கையாளருக்குச் சிறந்த அனுபவத்தை வழங்குவதே இதன் அடிப்படை.",
+    myth_l: "மறைக்கப்பட்ட கற்பிதம்", myth_p: "'கீவேர்டுகளைத் திரும்பத் திரும்பப் பயன்படுத்தினால் கூகுளை ஏமாற்றலாம்.'",
+    truth_l: "தொழில்நுட்ப உண்மை", truth_p: "'நவீன தேடல் பொறிகள் வேகம், பாதுகாப்பு மற்றும் உண்மையான நிபுணத்துவத்தை விரும்புகின்றன.'",
+    pyramid_cap: "தேடல் பொறி உகப்பாக்கத்தின் முன்னுரிமை பிரமிடு",
+    s_title: "முழுமையான செயல்படுத்தல் வரைபடம்",
+    s_desc: "ஒவ்வொரு அடியிலும் நாங்கள் என்ன செய்கிறோம் என்பதை நீங்கள் அறிந்து கொள்வீர்கள்.",
+    s1_t: "நிலை 1: தொழில்நுட்பக் கட்டமைப்பு", s1_d: "கூகுள் உங்கள் தளத்தை எளிதாகக் கண்டறியும் வகையில் தொழில்நுட்பக் குறைகளைச் சரிசெய்தல்.",
+    c1: "404 மற்றும் தவறான லிங்குகளைச் சரிசெய்தல்", c2: "ஸ்க்கீமா மார்க்கப் அமைத்தல்", c3: "சைட்மேப் மற்றும் ரோபோட்ஸ் கோப்புகளைச் சீரமைத்தல்",
+    s2_t: "நிலை 2: வாடிக்கையாளர் நோக்கம்", s2_d: "வாடிக்கையாளரை ஈர்க்கும் லாபகரமான சொற்களைக் கண்டறிதல்.",
+    c4: "போட்டியாளர் ஆய்வு", c5: "கீவேர்ட் ஆராய்ச்சி", c6: "தேடல் நோக்கத்தை வரிசைப்படுத்துதல்",
+    s3_t: "நிலை 3: நம்பகத்தன்மை உயர்வு", s3_d: "உங்களை ஒரு சிறந்த நிபுணராக இணையத்தில் நிலைநிறுத்துதல்.",
+    c7: "E-E-A-T நம்பகத்தன்மை கட்டமைப்பு", c8: "டிஜிட்டல் அடையாளங்களை உருவாக்குதல்", c9: "விற்பனை மாற்றத்தை அதிகரித்தல்",
+    calc_title: "தேடல் பொறி உகப்பாக்கத்தின் வருமானம்",
+    calc_desc: "முறையான சேவையின் மூலம் உங்கள் வணிகத்தில் ஏற்படும் மாற்றத்தைக் காணுங்கள்.",
+    calc_l1: "மாதாந்திர வருகை", calc_l2: "மாற்ற விகிதம் (%)", calc_l3: "சராசரி ஆர்டர் மதிப்பு (₹)",
+    calc_res_tag: "எதிர்பார்க்கப்படும் வருவாய்", calc_note: "வருகை அதிகரிப்பு வருவாயில் பெரிய மாற்றத்தை ஏற்படுத்தும்."
   }
 };
 
-let splitInstance;
+let split;
+function animateHero() {
+  if (split) split.revert();
+  const isTa = document.documentElement.lang === 'ta';
+  split = new SplitType('#hero-title', { types: isTa ? 'words' : 'chars' });
+  const targets = isTa ? '.word' : '.char';
 
-function initHeroAnimation() {
-    if (splitInstance) splitInstance.revert();
-    const isTamil = document.documentElement.lang === 'ta';
-    splitInstance = new SplitType('#hero-main-title', { 
-        types: isTamil ? 'words' : 'chars' 
-    });
-    const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-    tl.set('#hero-main-title', { opacity: 1 });
-    const target = isTamil ? '.word' : '.char';
-    tl.to(target, { y: 0, stagger: isTamil ? 0.08 : 0.02, duration: .5, delay: 0.1 })
-      .to('#hero-main-desc', { opacity: 1, y: -3, duration: 1.2 }, "-=1")
-      .to('#hero-main-cta', { opacity: 1, y: -2.5, duration: 1 }, "-=1");
+  const tl = gsap.timeline();
+  tl.set('#hero-title', { opacity: 1 });
+  tl.to(targets, { y: 0, stagger: 0.02, duration: 0.35, ease: "power4.out" })
+    .to('#hero-desc', { opacity: 1, y: 0, duration: 0.4 }, "-=0.2")
+    .to('#hero-cta', { opacity: 1, y: 0, duration: 0.4 }, "-=0.3");
 }
 
-function setLang(lang){
-  localStorage.setItem("lang",lang);
-  document.documentElement.lang=lang;
-  
-  // Text content translation
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('pref_lang', lang);
+
+  const btns = { en: document.getElementById('en-btn'), ta: document.getElementById('ta-btn') };
+  Object.keys(btns).forEach(k => {
+    btns[k].className = k === lang ? "px-4 py-1.5 text-[10px] font-black rounded-full bg-white shadow-sm text-indigo-600 border border-slate-200" : "px-4 py-1.5 text-[10px] font-black rounded-full text-slate-400";
+  });
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
-    if(content[lang][key]) el.textContent=content[lang][key];
+    if (translations[lang][key]) el.innerText = translations[lang][key];
   });
 
-  // Placeholder translation
-  document.getElementById('f-name').placeholder = content[lang].ph_name;
-  document.getElementById('f-email').placeholder = content[lang].ph_email;
-  document.getElementById('f-msg').placeholder = content[lang].ph_msg;
+  document.getElementById('f_name').placeholder = translations[lang].ph_name;
+  document.getElementById('f_email').placeholder = translations[lang].ph_email;
+  document.getElementById('f_msg').placeholder = translations[lang].ph_msg;
 
-  initHeroAnimation();
+  animateHero();
 }
 
-function reveal(){
-  document.querySelectorAll('.reveal').forEach(el=>{
-    if(el.getBoundingClientRect().top<window.innerHeight-100){
-      el.classList.add('active');
-    }
+function calculateROI() {
+    const traffic = document.getElementById('roi-traffic').value;
+    const conv = document.getElementById('roi-conv').value / 100;
+    const val = document.getElementById('roi-val').value;
+    const result = Math.round((traffic * 2) * conv * val);
+    document.getElementById('roi-result').innerText = result.toLocaleString('en-IN');
+}
+
+function reveal() {
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.9) el.classList.add('active');
   });
 }
-
-window.addEventListener('DOMContentLoaded', () => {
-    setLang(localStorage.getItem("lang")||"en");
-    reveal();
-});
 
 window.addEventListener('scroll', reveal);
+window.addEventListener('DOMContentLoaded', () => {
+  setLang(localStorage.getItem('pref_lang') || 'en');
+  reveal();
+  calculateROI();
+});
 
 document.addEventListener('mousemove', (e) => {
-    const xPos = (e.clientX / window.innerWidth - 0.5) * 15;
-    const yPos = (e.clientY / window.innerHeight - 0.5) * 15;
-    gsap.to('.hero-bg .blob', { x: xPos * 2, y: yPos * 2, duration: 2, ease: "power2.out" });
+  const x = (e.clientX / window.innerWidth - 0.5) * 25;
+  const y = (e.clientY / window.innerHeight - 0.5) * 25;
+  gsap.to('.blob', { x: x, y: y, duration: 1, ease: "power2.out" });
 });
 </script>
 
