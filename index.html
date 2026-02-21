@@ -60,22 +60,20 @@
     .card-hover { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
     .card-hover:hover { transform: translateY(-8px); border-color: #6366f1; background: #ffffff; }
 
-    .roi-input {
-        @apply w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 outline-none focus:border-indigo-500 transition-all text-sm font-bold;
-    }
-
     .myth-pill { @apply bg-rose-50 text-rose-600 px-3 py-1 rounded-full text-[10px] font-black uppercase mb-2 inline-block; }
     .truth-pill { @apply bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-[10px] font-black uppercase mb-2 inline-block; }
     
     .check-item { @apply flex items-center gap-3 text-sm text-slate-600 border-b border-slate-100 py-3; }
-    .check-item i { @apply text-indigo-500; }
 
-    /* Graphical Styling for Language Selector */
+    /* Graphical Styling for Language Selector Box */
+    .lang-box {
+        @apply flex items-center gap-2 bg-indigo-50 border-2 border-indigo-200 rounded-xl px-3 py-2 transition-all duration-300;
+    }
+    .lang-box:hover { @apply border-indigo-500 shadow-md scale-105; }
     #google_translate_element select {
-        @apply bg-indigo-50 border-2 border-indigo-200 rounded-xl px-4 py-2 text-[10px] font-black uppercase tracking-wider outline-none cursor-pointer text-indigo-600 shadow-sm transition-all;
+        @apply bg-transparent text-[10px] font-black uppercase tracking-wider outline-none cursor-pointer text-indigo-600;
         appearance: none;
     }
-    #google_translate_element select:hover { @apply border-indigo-500 bg-white; }
     .goog-te-gadget { color: transparent !important; font-size: 0 !important; }
     .goog-logo-link { display: none !important; }
   </style>
@@ -84,7 +82,7 @@
 
 <header class="fixed top-0 w-full z-50 glass border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="font-black text-2xl tracking-tighter text-indigo-600 underline">RANKIQ</div>
+    <div class="font-black text-2xl tracking-tighter text-indigo-600 underline decoration-indigo-200">RANKIQ</div>
     
     <nav class="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
       <a href="#home" class="hover:text-indigo-600 transition-colors">Home</a>
@@ -93,8 +91,8 @@
       <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
     </nav>
 
-    <div class="flex items-center gap-2">
-        <i class="fa-solid fa-earth-asia text-indigo-600 text-lg"></i>
+    <div class="lang-box">
+        <i class="fa-solid fa-earth-asia text-indigo-600"></i>
         <div id="google_translate_element"></div>
     </div>
   </div>
@@ -111,7 +109,7 @@
       </h1>
     </div>
     <p id="hero-desc" class="text-slate-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-0 translate-y-4">
-        Stop chasing algorithm trends. Build a permanent digital asset. We help global businesses grow visibility and long-term trust through engineering-led SEO systems.
+        Stop chasing algorithm trends. Build a permanent digital asset. We help global businesses grow visibility through engineering-led Search Engine Optimization systems.
     </p>
     <div id="hero-cta" class="opacity-0 translate-y-4">
       <a href="#contact" class="btn-primary text-white px-12 py-5 rounded-2xl font-black text-lg inline-block tracking-tight">
@@ -123,7 +121,7 @@
 
 <section id="about" class="py-24 px-6 max-w-7xl mx-auto border-b border-slate-100">
   <div class="text-center mb-16 reveal">
-    <h2 class="text-4xl font-black mb-4 tracking-tight">The Science of Search Engine Optimization</h2>
+    <h2 class="text-4xl font-black mb-4 tracking-tight">The Science of Search</h2>
     <p class="text-slate-500 max-w-3xl mx-auto">To outrank your competitors, you must understand how search engines perceive value. We replace "magic" with engineering logic.</p>
   </div>
 
@@ -131,23 +129,24 @@
     <div class="reveal">
       <h3 class="text-3xl font-black mb-6">Logic Over Myth</h3>
       <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
-        <p>SEO is often sold as a "secret formula," but the **Hidden Truth** is simpler: Search Engines are answer engines. Their only goal is to provide the most reliable, fastest, and most authoritative answer to a user's question. If your site isn't answering better than others, no amount of "tricks" will keep you at the top.</p>
+        <p>Search Engine Optimization is often sold as a "secret formula," but the **Hidden Truth** is simpler: Search Engines are answer engines. Their only goal is to provide the most reliable, fastest, and most authoritative answer to a user's question. If your site isn't answering better than others, no amount of "tricks" will keep you at the top.</p>
         
-        <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 mt-8">
+        <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 mt-8 shadow-sm">
             <div class="mb-6">
                 <span class="myth-pill">The Myth</span>
-                <p class="font-bold text-slate-800 italic">"SEO is just about repeating keywords 100 times to trick Google's algorithm."</p>
+                <p class="font-bold text-slate-800 italic">"SEO is just about repeating keywords 100 times to trick the system."</p>
             </div>
             <div>
-                <span class="truth-pill">The Technical Truth</span>
-                <p class="font-bold text-indigo-600 leading-snug">"Google rewards E-E-A-T: Experience, Expertise, Authoritativeness, and Trust. Modern systems use AI to understand human intent rather than just matching words."</p>
+                <span class="truth-pill">The Technical Reality</span>
+                <p class="font-bold text-indigo-600 leading-snug">"Google rewards E-E-A-T: Experience, Expertise, Authority, and Trust. Modern systems use AI to understand human intent rather than just matching words."</p>
             </div>
         </div>
       </div>
     </div>
     
     <div class="reveal text-center">
-                <p class="text-[10px] text-center mt-4 text-slate-400 font-black uppercase tracking-widest">Educational Reference: The SEO Priority Hierarchy</p>
+                <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1000" class="rounded-3xl shadow-2xl mb-4 border-8 border-white" alt="SEO Pyramid Concept">
+        <p class="text-[10px] text-center text-slate-400 font-black uppercase tracking-widest">Educational Reference: The SEO Priority Hierarchy</p>
     </div>
   </div>
 </section>
@@ -156,43 +155,43 @@
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-20 reveal">
       <h2 class="text-4xl font-black mb-4 tracking-tighter">3-Phase Technical Roadmap</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto">A detailed breakdown of how we rebuild your site's digital authority from the ground up.</p>
+      <p class="text-slate-500 max-w-2xl mx-auto">Detailed breakdown of how we rebuild your site's digital authority from the ground up.</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
       <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-indigo-500 flex flex-col h-full">
         <h3 class="text-xl font-black mb-4">Phase 1: Technical Integrity</h3>
         <p class="text-slate-500 text-sm leading-relaxed mb-6">
-            **Detailing:** Before a site can rank, it must be crawlable. We resolve 'Crawl Blockers' and optimize the 'Crawl Budget'. If Google's bots struggle to read your code or if your server is slow, your content is effectively invisible.
+            **Detailing:** Before a site can rank, it must be crawlable. We resolve 'Crawl Blockers' and optimize the 'Crawl Budget'. If search bots struggle to read your code or if your server is slow, your content remains invisible to the world.
         </p>
-                <div class="mt-auto space-y-2 pt-6">
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Core Web Vitals Pass</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Schema structured data</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Server speed analysis</span></div>
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?q=80&w=1000" class="rounded-2xl mb-6 grayscale hover:grayscale-0 transition-all duration-500" alt="Technical Infrastructure">
+        <div class="mt-auto space-y-2">
+            <div class="check-item"><i class="fa-solid fa-check-circle text-indigo-500"></i> <span>Core Web Vitals Pass</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle text-indigo-500"></i> <span>Schema JSON-LD Data</span></div>
         </div>
       </div>
 
       <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-purple-500 flex flex-col h-full" style="transition-delay: 0.1s">
         <h3 class="text-xl font-black mb-4">Phase 2: Intent Engineering</h3>
         <p class="text-slate-500 text-sm leading-relaxed mb-6">
-            **Detailing:** Traffic is useless if it's the wrong people. We analyze 'Search Intent'—the psychology of your buyers. Are they looking for info or ready to buy? We engineer the page to satisfy the specific stage of the buyer journey.
+            **Detailing:** Traffic is useless if it's the wrong people. We analyze 'Search Intent'—the psychology of your buyers. We engineer the page to satisfy the specific stage of the user journey from curiosity to purchase.
         </p>
-                <div class="mt-auto space-y-2 pt-6">
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Semantic Topic Clusters</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Competitive Gap Analysis</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>LSI Content Engineering</span></div>
+        <img src="https://images.unsplash.com/photo-1551288049-bbbda546697c?q=80&w=1000" class="rounded-2xl mb-6 grayscale hover:grayscale-0 transition-all duration-500" alt="Search Intent Funnel">
+        <div class="mt-auto space-y-2">
+            <div class="check-item"><i class="fa-solid fa-check-circle text-purple-500"></i> <span>Semantic Keyword Clustering</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle text-purple-500"></i> <span>Competitive Gap Analysis</span></div>
         </div>
       </div>
 
       <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-emerald-500 flex flex-col h-full" style="transition-delay: 0.2s">
         <h3 class="text-xl font-black mb-4">Phase 3: Digital Authority</h3>
         <p class="text-slate-500 text-sm leading-relaxed mb-6">
-            **Detailing:** The final phase is external validation. We earn high-authority citations and references. This signals to Google that your brand is a trusted leader, ensuring your rankings remain stable long-term despite algorithm shifts.
+            **Detailing:** The final phase is external validation. We earn high-authority citations and references. This signals to Google that your brand is a trusted market leader, making your rankings immune to temporary algorithm shifts.
         </p>
-                <div class="mt-auto space-y-2 pt-6 border-t border-slate-100">
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>E-E-A-T Signal Building</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Natural Backlink Earning</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Industry Reference Logic</span></div>
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000" class="rounded-2xl mb-6 grayscale hover:grayscale-0 transition-all duration-500" alt="Digital Authority Network">
+        <div class="mt-auto space-y-2 pt-4">
+            <div class="check-item"><i class="fa-solid fa-check-circle text-emerald-500"></i> <span>E-E-A-T Signal Building</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle text-emerald-500"></i> <span>Natural Backlink Earning</span></div>
         </div>
       </div>
     </div>
@@ -202,15 +201,15 @@
 <section id="contact" class="py-24 px-6 max-w-5xl mx-auto">
   <div class="reveal text-center mb-16">
     <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight">Claim Your Audit</h2>
-    <p class="text-slate-500 text-lg">Submit your URL for a comprehensive technical Search Engine Optimization review. No myths, just data.</p>
+    <p class="text-slate-500 text-lg">Submit your URL for a comprehensive technical SEO review. No myths, just data.</p>
   </div>
 
   <form action="https://formspree.io/f/mwvnenkk" method="POST" class="reveal space-y-4">
     <div class="grid md:grid-cols-2 gap-4">
-      <input id="f_name" name="name" required placeholder="Full Name" class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all">
-      <input id="f_email" name="email" required type="email" placeholder="Business Email" class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all">
+      <input name="name" required placeholder="Full Name" class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all">
+      <input name="email" required type="email" placeholder="Business Email" class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all">
     </div>
-    <textarea id="f_msg" name="message" required placeholder="Tell us about your website goals..." class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all h-40"></textarea>
+    <textarea name="message" required placeholder="Tell us about your website goals and current URL..." class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all h-40"></textarea>
     <button class="btn-primary w-full text-white font-black py-5 rounded-xl text-lg uppercase tracking-widest">Send My Audit</button>
   </form>
 </section>
@@ -221,7 +220,11 @@
 
 <script type="text/javascript">
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  new google.translate.TranslateElement({
+    pageLanguage: 'en', 
+    includedLanguages: 'ta,ar,hi,zh-CN,ja,ms,te,ml,kn,gu,pa,bn', // Explicitly including Tamil, Arabic, and major Asian languages
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
 }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
