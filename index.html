@@ -19,290 +19,189 @@
     .goog-te-banner-frame.skiptranslate { display: none !important; }
     body { top: 0px !important; }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1);
-      will-change: transform, opacity;
-    }
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1); will-change: transform, opacity; }
     .reveal.active { opacity: 1; transform: translateY(0); }
 
     .title-clip { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
-    .char, .word { transform: translateY(110%); display: inline-block; }
+    .char { transform: translateY(110%); display: inline-block; }
 
-    .hero-bg {
-      position: relative;
-      background: radial-gradient(circle at top right, #f5f3ff, #ffffff);
-    }
-    .blob {
-      position: absolute;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
-      border-radius: 50%;
-      filter: blur(60px);
-      pointer-events: none;
-      z-index: 0;
-    }
+    .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border: 1px solid rgba(226, 232, 240, 0.6); }
 
-    .glass {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(226, 232, 240, 0.6);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
-      box-shadow: 0 10px 25px -10px rgba(79, 70, 229, 0.5);
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    .btn-primary { background: linear-gradient(135deg, #4f46e5, #7c3aed); transition: all 0.2s ease; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 35px -10px rgba(79, 70, 229, 0.6); }
-    
-    .card-hover { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
-    .card-hover:hover { transform: translateY(-8px); border-color: #6366f1; background: #ffffff; }
 
-    .roi-input {
-        @apply w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 outline-none focus:border-indigo-500 transition-all text-sm font-bold;
-    }
+    /* STICKY ACTIONS */
+    .action-bar { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
+    .action-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; items-center; justify-content: center; color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; }
+    .action-btn:hover { transform: scale(1.1); }
+    .bg-whatsapp { background: #25D366; }
+    .bg-call { background: #3b82f6; }
 
-    .myth-pill { @apply bg-rose-50 text-rose-600 px-3 py-1 rounded-full text-[10px] font-black uppercase mb-2 inline-block; }
-    .truth-pill { @apply bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-[10px] font-black uppercase mb-2 inline-block; }
-    
-    .check-item { @apply flex items-center gap-3 text-sm text-slate-600 border-b border-slate-100 py-3; }
-
-    /* Graphical Styling for Language Selector Box */
-    .lang-box {
-        @apply flex items-center gap-2 bg-indigo-50 border-2 border-indigo-200 rounded-xl px-3 py-2 transition-all duration-300 shadow-sm;
-    }
-    .lang-box:hover { @apply border-indigo-500 bg-white scale-105; }
-    #google_translate_element select {
-        @apply bg-transparent text-[10px] font-black uppercase tracking-wider outline-none cursor-pointer text-indigo-600;
-        appearance: none;
-    }
+    /* LANGUAGE BOX */
+    .lang-box { @apply flex items-center gap-2 bg-indigo-50 border-2 border-indigo-200 rounded-xl px-3 py-2; }
+    #google_translate_element select { @apply bg-transparent text-[10px] font-black uppercase outline-none cursor-pointer text-indigo-600; appearance: none; }
     .goog-te-gadget { color: transparent !important; font-size: 0 !important; }
     .goog-logo-link { display: none !important; }
+
+    /* ROI CALCULATOR STYLING */
+    .roi-card { background: linear-gradient(145deg, #ffffff, #f8fafc); border: 1px solid #e2e8f0; }
+    .roi-input { @apply w-full bg-white border border-slate-200 rounded-lg px-4 py-2 outline-none focus:border-indigo-500 font-bold text-slate-700; }
   </style>
 </head>
 <body>
 
+<div class="action-bar">
+    <a href="https://wa.me/919500582046" class="action-btn bg-whatsapp" title="WhatsApp Us"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+    <a href="tel:+919500582046" class="action-btn bg-call" title="Call Us"><i class="fa-solid fa-phone text-xl"></i></a>
+    <a href="mailto:thoufiqahamedseo@gmail.com" class="action-btn bg-indigo-600" title="Email Us"><i class="fa-solid fa-envelope text-xl"></i></a>
+</div>
+
 <header class="fixed top-0 w-full z-50 glass border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="font-black text-2xl tracking-tighter text-indigo-600 underline decoration-indigo-200">RANKIQ</div>
-    
-    <nav class="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
-      <a href="#home" class="hover:text-indigo-600 transition-colors">Home</a>
-      <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
-      <a href="#services" class="hover:text-indigo-600 transition-colors">Services</a>
-      <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
-    </nav>
-
+    <div class="font-black text-2xl tracking-tighter text-indigo-600 underline">RANKIQ</div>
     <div class="lang-box">
-        <i class="fa-solid fa-earth-asia text-indigo-600"></i>
+        <i class="fa-solid fa-language text-indigo-600"></i>
         <div id="google_translate_element"></div>
     </div>
   </div>
 </header>
 
-<section id="home" class="hero-bg min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden">
-  <div class="blob" id="blob1" style="top: -10%; left: -10%;"></div>
-  <div class="blob" id="blob2" style="bottom: -10%; right: -10%;"></div>
-
+<section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20 bg-slate-50">
   <div class="max-w-5xl text-center relative z-10">
     <div class="title-clip mb-6">
-      <h1 id="hero-title" class="text-5xl md:text-8xl font-black leading-[1.05] tracking-tight text-slate-900">
-        Search Engine Optimization That Gets You Found
+      <h1 id="hero-title" class="text-5xl md:text-8xl font-black leading-none tracking-tight text-slate-900">
+        Global Search Engine Optimization Systems
       </h1>
     </div>
     <p id="hero-desc" class="text-slate-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-0 translate-y-4">
-        Build a global digital asset. Rankiq helps Indian businesses grow visibility and long-term trust through transparent, engineering-led Search Engine Optimization systems.
+        Engineering-led growth. We bridge the gap between complex algorithms and human business goals across all global languages.
     </p>
     <div id="hero-cta" class="opacity-0 translate-y-4">
-      <a href="#contact" class="btn-primary text-white px-12 py-5 rounded-2xl font-black text-lg inline-block tracking-tight">
-        Claim Your Free Audit
-      </a>
+      <a href="#contact" class="btn-primary text-white px-12 py-5 rounded-2xl font-black text-lg inline-block">Start Free Audit</a>
     </div>
   </div>
 </section>
 
-<section id="about" class="py-24 px-6 max-w-7xl mx-auto border-b border-slate-100">
-  <div class="text-center mb-16 reveal">
-    <h2 class="text-4xl font-black mb-4 tracking-tight">The Science of Search Engine Optimization</h2>
-    <p class="text-slate-500 max-w-3xl mx-auto">To outrank your competitors, you must understand how Google perceives value. We replace "magic" with engineering logic.</p>
-  </div>
-
-  <div class="grid lg:grid-cols-2 gap-20 items-center">
+<section class="py-24 px-6 max-w-7xl mx-auto">
+  <div class="grid lg:grid-cols-2 gap-16 items-center">
     <div class="reveal">
-      <h3 class="text-3xl font-black mb-6 text-indigo-900">Logic Over Myth</h3>
+      <h2 class="text-4xl font-black mb-8">Breaking The SEO Myth</h2>
       <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
-        <p>Search Engine Optimization is often sold as a "secret formula," but the **Hidden Truth** is simpler: Search Engines are answer engines. Their only goal is to provide the most reliable, fastest, and most authoritative answer to a user's question. This module explains how we align your site with that goal.</p>
-        
-        <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 mt-8 shadow-inner">
-            <div class="mb-6">
-                <span class="myth-pill">The Myth</span>
-                <p class="font-bold text-slate-800 italic">"SEO is just about repeating keywords 100 times to trick Google's algorithm."</p>
-            </div>
-            <div>
-                <span class="truth-pill">The Technical Reality</span>
-                <p class="font-bold text-indigo-600 leading-snug">"Google rewards E-E-A-T: Experience, Expertise, Authority, and Trust. Modern systems use AI to understand human intent rather than just matching words."</p>
-            </div>
+        <p>Most believe Search Engine Optimization is a "trick" or a "hack." This is the **Hidden Myth**. Google is not a lottery; it is a mathematical relevance engine. </p>
+        <p>The truth: Google’s AI (RankBrain) measures **E-E-A-T** (Experience, Expertise, Authoritativeness, and Trust). If your site lacks these engineering signals, no amount of keywords will save your rankings.</p>
+        <div class="bg-indigo-50 p-6 rounded-2xl border-l-4 border-indigo-500">
+            <span class="text-xs font-black uppercase text-indigo-600 tracking-widest">The Core Detailing</span>
+            <p class="text-slate-800 font-bold mt-2">We optimize for "Human Intent." Whether a user searches in Tamil, Arabic, or English, the engine looks for the most helpful answer. Our system builds that helpfulness into your site's DNA.</p>
         </div>
       </div>
     </div>
-    
-    <div class="reveal text-center">
-                <img src="https://www.gstatic.com/images/branding/product/2x/search_64dp.png" class="mx-auto w-24 mb-6 opacity-20" alt="Search Concept">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000" class="rounded-[3rem] shadow-2xl border-8 border-white" alt="SEO Strategy Diagram">
-        <p class="text-[10px] text-center mt-6 text-slate-400 font-black uppercase tracking-widest">Global Reference: The Priority Hierarchy</p>
+    <div class="reveal">
+        <img src="https://www.gstatic.com/images/branding/product/2x/search_64dp.png" class="w-16 mb-4 opacity-50" alt="Search">
+        <img src="https://images.unsplash.com/photo-1551288049-bbbda546697c?auto=format&fit=crop&q=80&w=800" class="rounded-3xl shadow-2xl border-8 border-white" alt="Data Analytics Integration">
     </div>
   </div>
 </section>
 
-<section id="services" class="py-24 px-6 bg-slate-50/30">
+<section class="py-24 px-6 bg-slate-50">
   <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-20 reveal">
-      <h2 class="text-4xl font-black mb-4 tracking-tighter">3-Phase Technical Roadmap</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto">A deep detailing of how we rebuild your site's digital authority from the technical basement to the authority penthouse.</p>
-    </div>
-
+    <h2 class="text-center text-4xl font-black mb-16">The 3-Phase Engineering Protocol</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-indigo-500 flex flex-col h-full">
-        <h3 class="text-xl font-black mb-4">Phase 1: Technical Integrity</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-6 italic">
-            **Detailing:** Before a site can rank, it must be readable. We resolve 'Crawl Blockers' and optimize the 'Crawl Budget'. In this phase, we analyze server response codes and speed signals. If bots struggle to read your code, your content is invisible.
-        </p>
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?q=80&w=1000" class="rounded-2xl mb-6 shadow-md" alt="Server Infrastructure">
-        <div class="mt-auto space-y-2">
-            <div class="check-item"><i class="fa-solid fa-check-circle text-indigo-500"></i> <span>Core Web Vitals Pass</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle text-indigo-500"></i> <span>Schema JSON-LD Data</span></div>
-        </div>
+      
+      <div class="reveal glass p-8 rounded-[2rem] flex flex-col border-t-4 border-indigo-500">
+        <h3 class="font-black text-xl mb-4">Phase 1: Technical Integrity</h3>
+        <p class="text-slate-500 text-sm mb-6">**Detailing:** We resolve 'Crawl Blockers.' If Google's bots (Googlebot) cannot render your JavaScript or CSS in 2.5 seconds, you are penalized. We clean the backend code to ensure 100% indexability.</p>
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=60&w=500" class="rounded-xl mb-4 h-40 object-cover" alt="Server Backend">
       </div>
 
-      <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-purple-500 flex flex-col h-full" style="transition-delay: 0.1s">
-        <h3 class="text-xl font-black mb-4">Phase 2: Intent Engineering</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-6 italic">
-            **Detailing:** Traffic is useless if it's the wrong people. We analyze 'Search Intent'—the psychology of your buyers. We engineer the content to satisfy the specific stage of the user journey from awareness to final purchase decision.
-        </p>
-        <img src="https://images.unsplash.com/photo-1551288049-bbbda546697c?q=80&w=1000" class="rounded-2xl mb-6 shadow-md" alt="Intent Analysis">
-        <div class="mt-auto space-y-2">
-            <div class="check-item"><i class="fa-solid fa-check-circle text-purple-500"></i> <span>Semantic Keyword Clustering</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle text-purple-500"></i> <span>Competitor Visibility Gap</span></div>
-        </div>
+      <div class="reveal glass p-8 rounded-[2rem] flex flex-col border-t-4 border-purple-500">
+        <h3 class="font-black text-xl mb-4">Phase 2: Semantic Intent</h3>
+        <p class="text-slate-500 text-sm mb-6">**Detailing:** Keywords are dead; Entities are alive. We map your content to 'Topic Clusters.' This ensures that for every search query, your site is seen as a topical authority, not just a keyword matcher.</p>
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=60&w=500" class="rounded-xl mb-4 h-40 object-cover" alt="Data Science">
       </div>
 
-      <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-emerald-500 flex flex-col h-full" style="transition-delay: 0.2s">
-        <h3 class="text-xl font-black mb-4">Phase 3: Digital Authority</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-6 italic">
-            **Detailing:** The final phase is external validation. We earn high-authority citations and natural references. This signals to Google that your brand is a trusted market leader, making your rankings immune to algorithm shifts.
-        </p>
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000" class="rounded-2xl mb-6 shadow-md" alt="Digital Networking">
-        <div class="mt-auto space-y-2 pt-4 border-t border-slate-100">
-            <div class="check-item"><i class="fa-solid fa-check-circle text-emerald-500"></i> <span>E-E-A-T Signal Building</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle text-emerald-500"></i> <span>Natural Backlink Earning</span></div>
-        </div>
+      <div class="reveal glass p-8 rounded-[2rem] flex flex-col border-t-4 border-emerald-500">
+        <h3 class="font-black text-xl mb-4">Phase 3: Authority Signals</h3>
+        <p class="text-slate-500 text-sm mb-6">**Detailing:** The final phase involves earning Digital Citations. We build a network of high-authority references that signal to the world that your brand is the definitive leader in your industry.</p>
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=60&w=500" class="rounded-xl mb-4 h-40 object-cover" alt="Growth Network">
       </div>
+
     </div>
   </div>
 </section>
 
-<section class="py-24 px-6 max-w-5xl mx-auto">
-  <div class="glass p-12 rounded-[3rem] shadow-xl reveal border-2 border-indigo-50">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <h2 class="text-3xl font-black mb-6">Visitor Growth Calculator</h2>
-            <p class="text-slate-500 text-sm mb-8">Professional Search Engine Optimization isn't just about traffic; it's about the bottom line. Input your metrics to see the projected revenue growth.</p>
+<section class="py-24 px-6 max-w-4xl mx-auto">
+    <div class="roi-card p-10 rounded-[3rem] shadow-xl reveal">
+        <h2 class="text-3xl font-black mb-6 text-center">Traffic ROI Estimator</h2>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
             <div class="space-y-4">
                 <div>
-                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 block">Monthly Traffic</label>
-                    <input type="number" id="roi-traffic" value="5000" class="roi-input" oninput="calculateROI()">
+                    <label class="text-[10px] font-black uppercase text-slate-400 block mb-2">Monthly Visitors</label>
+                    <input type="number" id="roi-traffic" value="1000" class="roi-input" oninput="calculate()">
                 </div>
                 <div>
-                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 block">Conversion Rate (%)</label>
-                    <input type="number" id="roi-conv" value="2" class="roi-input" oninput="calculateROI()">
-                </div>
-                <div>
-                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 block">Avg. Sale Value (₹)</label>
-                    <input type="number" id="roi-val" value="5000" class="roi-input" oninput="calculateROI()">
+                    <label class="text-[10px] font-black uppercase text-slate-400 block mb-2">Order Value (₹)</label>
+                    <input type="number" id="roi-val" value="2000" class="roi-input" oninput="calculate()">
                 </div>
             </div>
-        </div>
-        <div class="bg-indigo-600 rounded-[2rem] p-10 text-white text-center shadow-2xl">
-            <p class="text-indigo-200 text-xs font-bold uppercase tracking-widest mb-4">Projected Monthly Revenue</p>
-            <div class="text-5xl font-black mb-4">₹<span id="roi-result">5,00,000</span></div>
-            <p class="text-indigo-100 text-[10px] opacity-80">Assuming 2x visibility growth via engineering-led systems.</p>
+            <div class="bg-indigo-600 p-8 rounded-3xl text-white text-center">
+                <span class="text-xs uppercase font-bold opacity-70">Projected Growth Revenue</span>
+                <div class="text-4xl font-black mt-2">₹<span id="roi-res">40,000</span></div>
+            </div>
         </div>
     </div>
-  </div>
 </section>
 
-<section id="contact" class="py-24 px-6 max-w-5xl mx-auto">
-  <div class="reveal text-center mb-16">
-    <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight">Claim Your Audit</h2>
-    <p class="text-slate-500 text-lg">Submit your URL for a comprehensive technical Search Engine Optimization review. No myths, just data.</p>
+<section id="contact" class="py-24 px-6 max-w-3xl mx-auto">
+  <div class="reveal text-center mb-12">
+    <h2 class="text-5xl font-black mb-4">Get Your Audit</h2>
+    <p class="text-slate-500">Direct technical analysis for your global expansion.</p>
   </div>
-
   <form action="https://formspree.io/f/mwvnenkk" method="POST" class="reveal space-y-4">
-    <div class="grid md:grid-cols-2 gap-4">
-      <input name="name" required placeholder="Full Name" class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all">
-      <input name="email" required type="email" placeholder="Business Email" class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all">
-    </div>
-    <textarea name="message" required placeholder="Tell us about your website goals and current URL..." class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all h-40"></textarea>
-    <button class="btn-primary w-full text-white font-black py-5 rounded-xl text-lg uppercase tracking-widest">Send My Audit</button>
+    <input name="name" required placeholder="Full Name" class="w-full p-4 rounded-xl bg-slate-50 border outline-none focus:border-indigo-500 transition-all">
+    <input name="email" type="email" required placeholder="Email Address" class="w-full p-4 rounded-xl bg-slate-50 border outline-none focus:border-indigo-500 transition-all">
+    <textarea name="message" required placeholder="Tell us about your project..." class="w-full p-4 rounded-xl bg-slate-50 border outline-none focus:border-indigo-500 transition-all h-32"></textarea>
+    <button class="btn-primary w-full text-white font-black py-4 rounded-xl text-lg uppercase tracking-widest">Submit Inquiry</button>
   </form>
 </section>
 
 <footer class="py-12 border-t text-center text-slate-400 text-[10px] font-black uppercase tracking-widest">
-  <p>© 2026 Rankiq. Designed and Crafted by Thoufiq Ahamed.</p>
+  <p>© 2026 Rankiq. Engineering by Thoufiq Ahamed.</p>
 </footer>
 
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
-    pageLanguage: 'en', 
-    includedLanguages: 'ta,ar,hi,zh-CN,ja,ms,te,ml,kn,gu,pa,bn,tr,fa', // Prioritizing Tamil, Arabic, Middle-East and Asian languages
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    pageLanguage: 'en',
+    includedLanguages: '', // Leaving empty allows all supported 243+ languages
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
   }, 'google_translate_element');
 }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
-let split;
-function animateHero() {
-  if (split) split.revert();
-  split = new SplitType('#hero-title', { types: 'chars' });
-  const tl = gsap.timeline();
-  tl.set('#hero-title', { opacity: 1 });
-  tl.to('.char', { y: 0, stagger: 0.02, duration: 0.35, ease: "power4.out" })
-    .to('#hero-desc', { opacity: 1, y: 0, duration: 0.4 }, "-=0.2")
-    .to('#hero-cta', { opacity: 1, y: 0, duration: 0.4 }, "-=0.3");
-}
-
-function calculateROI() {
-    const traffic = document.getElementById('roi-traffic').value;
-    const conv = document.getElementById('roi-conv').value / 100;
-    const val = document.getElementById('roi-val').value;
-    const result = Math.round((traffic * 2) * conv * val);
-    document.getElementById('roi-result').innerText = result.toLocaleString('en-IN');
+function calculate() {
+    const t = document.getElementById('roi-traffic').value;
+    const v = document.getElementById('roi-val').value;
+    const res = (t * 0.02) * v; // Assuming 2% conversion growth
+    document.getElementById('roi-res').innerText = res.toLocaleString('en-IN');
 }
 
 function reveal() {
   document.querySelectorAll('.reveal').forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight * 0.9) {
-      el.classList.add('active');
-    }
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.9) el.classList.add('active');
   });
 }
 
 window.addEventListener('scroll', reveal);
 window.addEventListener('DOMContentLoaded', () => {
-  animateHero();
-  reveal();
-  calculateROI();
-});
-
-document.addEventListener('mousemove', (e) => {
-  const x = (e.clientX / window.innerWidth - 0.5) * 25;
-  const y = (e.clientY / window.innerHeight - 0.5) * 25;
-  gsap.to('.blob', { x: x, y: y, duration: 1, ease: "power2.out" });
+    const split = new SplitType('#hero-title', { types: 'chars' });
+    gsap.to('.char', { y: 0, stagger: 0.02, duration: 0.5, ease: "power4.out" });
+    gsap.to('#hero-desc', { opacity: 1, y: 0, delay: 0.3 });
+    gsap.to('#hero-cta', { opacity: 1, y: 0, delay: 0.5 });
+    reveal();
+    calculate();
 });
 </script>
 
