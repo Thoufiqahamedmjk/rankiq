@@ -3,186 +3,228 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RANKIQ | SEO Blueprint by Thoufiq Ahamed</title>
-<meta name="description" content="RANKIQ is a structured SEO engineering framework focused on technical precision, semantic depth, authority building, and conversion alignment.">
+<title>RANKIQ – SEO Authority Engineering | Professional SEO Services</title>
+<meta name="description" content="RANKIQ provides engineering-led SEO systems for global brands. Learn the hidden truth behind modern SEO and build digital authority.">
+
 <link rel="canonical" href="https://thoufiqahamed.in/">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<!-- OpenGraph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thoufiqahamed.in/">
+<meta property="og:title" content="RANKIQ – Global SEO Authority Systems">
+<meta property="og:description" content="Stop chasing trends. Build a permanent digital asset with engineering-led SEO.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bbbda546697c?q=80&w=1200">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://thoufiqahamed.in/">
+<meta property="twitter:title" content="RANKIQ – Global SEO Authority Systems">
+<meta property="twitter:description" content="Data-driven technical SEO systems for global business growth.">
+<meta property="twitter:image" content="https://images.unsplash.com/photo-1551288049-bbbda546697c?q=80&w=1200">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "RANKIQ",
+  "url": "https://thoufiqahamed.in/",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+919884795585",
+    "contactType": "customer service"
+  }
+}
+</script>
+
+<!-- TailwindCSS & GSAP -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://unpkg.com/split-type" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+  :root { --accent: #6366f1; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #f9fafb; color: #1e293b; overflow-x: hidden; }
 
-body{
-    font-family:'Inter',sans-serif;
-    background:linear-gradient(135deg,#0f172a,#111827);
-    color:#ffffff;
-    line-height:1.7;
-}
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .char, .blob { transition: none !important; animation: none !important; transform: none !important; opacity: 1 !important; }
+  }
 
-header{
-    padding:25px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+  .reveal { opacity: 0; transform: translateY(20px); transition: all 0.3s cubic-bezier(0.2,1,0.3,1); will-change: transform, opacity; }
+  .reveal.active { opacity:1; transform: translateY(0); }
+  .title-clip { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+  .char { transform: translateY(110%); display:inline-block; }
 
-.logo{
-    font-size:22px;
-    font-weight:800;
-    color:#22d3ee;
-}
+  .hero-bg { position:relative; background: radial-gradient(circle at top right, #e0e7ff, #f9fafb); }
+  .blob { position:absolute; width:600px; height:600px; background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%); border-radius:50%; filter:blur(60px); pointer-events:none; z-index:0; }
+  .glass { background: rgba(255,255,255,0.85); backdrop-filter: blur(16px); border:1px solid rgba(226,232,240,0.6); }
+  .btn-primary { background: linear-gradient(135deg, #4f46e5, #7c3aed); transition: all 0.2s ease; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 35px -10px rgba(79,70,229,0.6); }
 
-nav a{
-    color:#cbd5e1;
-    text-decoration:none;
-    margin-left:25px;
-}
+  .action-bar { position:fixed; top:50%; right:20px; transform:translateY(-50%); display:flex; flex-direction:column; gap:15px; z-index:1000; }
+  .action-btn { width:48px; height:48px; border-radius:14px; display:flex; align-items:center; justify-content:center; background:white; border:1px solid rgba(99,102,241,0.2); color:#6366f1; box-shadow:0 10px 25px rgba(99,102,241,0.1); transition:0.3s; }
+  .action-btn:hover { background:#6366f1; color:white; transform:translateX(-8px); }
 
-nav a:hover{
-    color:#22d3ee;
-}
-
-.hero{
-    padding:120px 8%;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:60px;
-    margin-bottom:25px;
-}
-
-.hero p{
-    max-width:800px;
-    margin:auto;
-    color:#cbd5e1;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:35px;
-    padding:15px 35px;
-    background:#22d3ee;
-    color:#0f172a;
-    border-radius:12px;
-    font-weight:700;
-    text-decoration:none;
-}
-
-.section{
-    padding:100px 8%;
-}
-
-.section h2{
-    text-align:center;
-    font-size:38px;
-    margin-bottom:60px;
-    color:#22d3ee;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:#1e293b;
-    padding:30px;
-    border-radius:16px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:#22d3ee;
-}
-
-.blueprint{
-    text-align:center;
-    max-width:900px;
-    margin:auto;
-}
-
-.contact{
-    text-align:center;
-}
-
-footer{
-    background:#0b1120;
-    padding:40px 8%;
-    text-align:center;
-    color:#94a3b8;
-}
+  .lang-box { display:flex; align-items:center; gap:8px; background:#f1f5f9; border:1px solid #cbd5e1; border-radius:12px; padding:4px 10px; }
+  #google_translate_element select { background:transparent; font-size:12px; font-weight:800; text-transform:uppercase; color:#4f46e5; appearance:none; }
+  .goog-te-gadget { color:transparent !important; font-size:0 !important; }
+  .trust-badge { position:fixed; bottom:20px; left:20px; background:white; border:1px solid #cbd5e1; box-shadow:0 10px 25px rgba(0,0,0,0.05); border-radius:9999px; padding:8px 12px; display:flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:#475569; z-index:1000; }
 </style>
 </head>
-
 <body>
 
-<header>
-<div class="logo">RANKIQ</div>
-<nav>
-<a href="#framework">Framework</a>
-<a href="#blueprint">Blueprint</a>
-<a href="#contact">Contact</a>
-</nav>
+<!-- Trust Badge -->
+<div class="trust-badge"><i class="fa-solid fa-shield-halved text-emerald-500"></i> SSL SECURE CONNECTION ACTIVE</div>
+
+<!-- Action Bar -->
+<div class="action-bar">
+  <a href="https://wa.me/9884795585" target="_blank" rel="noopener" class="action-btn"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+  <a href="tel:+919884795585" class="action-btn"><i class="fa-solid fa-phone text-lg"></i></a>
+  <a href="mailto:contact@thoufiqahamed.in" class="action-btn"><i class="fa-solid fa-envelope text-lg"></i></a>
+</div>
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+  <div class="font-black text-2xl tracking-tighter text-indigo-600">RANKIQ</div>
+  <div class="lang-box">
+    <i class="fa-solid fa-earth-asia text-indigo-400"></i>
+    <div id="google_translate_element"></div>
+  </div>
 </header>
 
-<section class="hero">
-<h1>Search Authority. Engineered.</h1>
-<p>RANKIQ is not traditional SEO. It is a structured authority engineering framework focused on infrastructure, semantic depth, external validation, and conversion alignment.</p>
-<a href="#blueprint" class="btn">Download SEO Blueprint</a>
+<!-- Hero -->
+<section class="hero-bg min-h-screen flex items-center justify-center px-6 pt-24 overflow-hidden relative">
+  <div class="blob"></div>
+  <div class="max-w-5xl text-center relative z-10">
+    <div class="title-clip mb-6">
+      <h1 id="hero-title" class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-slate-900">
+        Engineering-led SEO Authority Systems
+      </h1>
+    </div>
+    <p id="hero-desc" class="text-slate-600 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-0 translate-y-4">
+      Stop chasing trends. Build a permanent digital asset. Learn the real technical SEO process and grow your business with authority.
+    </p>
+    <div id="hero-cta" class="opacity-0 translate-y-4">
+      <a href="#blueprint" class="btn-primary text-white px-12 py-5 rounded-2xl font-black text-lg tracking-tight inline-block">Download Blueprint</a>
+    </div>
+  </div>
 </section>
 
-<section id="framework" class="section">
-<h2>The 4-Phase Authority Model</h2>
-<div class="cards">
+<!-- Phase Breakdown -->
+<section id="phases" class="py-24 px-6 max-w-7xl mx-auto">
+  <h2 class="text-4xl font-black text-center mb-16">RANKIQ 4-Phase Authority SEO Model</h2>
+  <div class="grid md:grid-cols-2 gap-12">
 
-<div class="card">
-<h3>Phase 1: Technical Infrastructure</h3>
-<p>Crawlability, indexing, speed optimization, mobile responsiveness, internal linking structure, and canonical clarity. Without technical strength, authority collapses.</p>
-</div>
+    <!-- Phase 1 -->
+    <div class="reveal glass p-8 rounded-3xl border-l-4 border-indigo-500">
+      <h3 class="text-2xl font-black mb-4">Phase 1: Integrity</h3>
+      <p class="text-slate-700 mb-4">
+        SEO is not magic. It starts with technical integrity. Crawlability, structured data, and server performance decide whether Google sees your site or ignores it.
+      </p>
+      <ul class="list-disc list-inside text-slate-600">
+        <li>Crawl budget optimization</li>
+        <li>Structured data alignment</li>
+        <li>Performance & speed improvement</li>
+      </ul>
+    </div>
 
-<div class="card">
-<h3>Phase 2: Semantic Architecture</h3>
-<p>Topic clusters, structured hierarchy, internal contextual linking, and deep content coverage. Authority is built through completeness.</p>
-</div>
+    <!-- Phase 2 -->
+    <div class="reveal glass p-8 rounded-3xl border-l-4 border-purple-500">
+      <h3 class="text-2xl font-black mb-4">Phase 2: Intent</h3>
+      <p class="text-slate-700 mb-4">
+        Every page must satisfy search intent. Understand whether users want information, awareness, or a transaction, then architect content accordingly.
+      </p>
+      <ul class="list-disc list-inside text-slate-600">
+        <li>Landing page optimization</li>
+        <li>Semantic clustering</li>
+        <li>Conversion-driven content structure</li>
+      </ul>
+    </div>
 
-<div class="card">
-<h3>Phase 3: Authority Signals</h3>
-<p>Backlinks, brand mentions, engagement signals, transparency, and consistent publishing. Trust must be earned externally.</p>
-</div>
+    <!-- Phase 3 -->
+    <div class="reveal glass p-8 rounded-3xl border-l-4 border-emerald-500">
+      <h3 class="text-2xl font-black mb-4">Phase 3: Scaling</h3>
+      <p class="text-slate-700 mb-4">
+        Build authority with digital PR footprints and backlinks. Trust signals from high-authority sources amplify your rankings and create a moat against competitors.
+      </p>
+      <ul class="list-disc list-inside text-slate-600">
+        <li>Citation & backlink strategy</li>
+        <li>Authority referencing</li>
+        <li>Digital footprint amplification</li>
+      </ul>
+    </div>
 
-<div class="card">
-<h3>Phase 4: Conversion Alignment</h3>
-<p>Clear call-to-action, logical user journey, friction reduction, and trust reinforcement. Traffic without conversion is noise.</p>
-</div>
+    <!-- Phase 4 -->
+    <div class="reveal glass p-8 rounded-3xl border-l-4 border-rose-500">
+      <h3 class="text-2xl font-black mb-4">Phase 4: Analytics & Optimization</h3>
+      <p class="text-slate-700 mb-4">
+        Track, measure, and optimize. Real SEO success comes from data-driven adjustments and continual content refinement.
+      </p>
+      <ul class="list-disc list-inside text-slate-600">
+        <li>Traffic & conversion monitoring</li>
+        <li>SEO audit & reporting</li>
+        <li>Continuous improvement loop</li>
+      </ul>
+    </div>
 
-</div>
+  </div>
 </section>
 
-<section id="blueprint" class="section blueprint">
-<h2>RANKIQ SEO Blueprint</h2>
-<p>
-Search is not marketing. Search is infrastructure.  
-This blueprint explains how structured SEO compounds over time when technical integrity, semantic depth, authority signals, and conversion alignment operate together.
-</p>
-<a href="#" class="btn">Get Free Blueprint</a>
+<!-- Blueprint Form -->
+<section id="blueprint" class="py-24 px-6 max-w-3xl mx-auto text-center">
+  <h2 class="text-4xl font-black mb-6 tracking-tight">Download the RANKIQ SEO Blueprint</h2>
+  <p class="text-slate-600 mb-12">Learn the 4-Phase Authority SEO Model and start applying engineering-led SEO today.</p>
+
+  <form action="https://formspree.io/f/xpqjylng" method="POST" class="space-y-4 text-left mx-auto max-w-md">
+
+    <input name="name" required placeholder="Full Name" class="w-full p-4 rounded-xl bg-white border outline-none focus:border-indigo-500">
+    <input name="email" type="email" required placeholder="Business Email" class="w-full p-4 rounded-xl bg-white border outline-none focus:border-indigo-500">
+    <input type="hidden" name="_subject" value="New RANKIQ Blueprint Request">
+
+    <button type="submit" class="btn-primary w-full text-white font-black py-4 rounded-xl text-lg uppercase tracking-widest">Get Instant Access</button>
+  </form>
+  <p class="mt-4 text-slate-400 text-sm">We respect your privacy. No spam. Only structured insights.</p>
 </section>
 
-<section id="contact" class="section contact">
-<h2>Contact</h2>
-<p>Email: contact@thoufiqahamed.in</p>
-<p>WhatsApp: 9385352585</p>
-<p>Website: thoufiqahamed.in</p>
-</section>
-
-<footer>
-<p>© 2026 RANKIQ | Structured SEO by Thoufiq Ahamed</p>
+<!-- Footer -->
+<footer class="py-12 border-t text-center text-slate-500 text-sm font-bold tracking-widest">
+  <p>© 2026 RANKIQ. Designed by Thoufiq Ahamed. All rights reserved.</p>
 </footer>
+
+<!-- Google Translate -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage:'en', layout:google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+
+<!-- GSAP + Hero Animations + Reveal -->
+<script>
+function reveal() {
+  document.querySelectorAll('.reveal').forEach(el => {
+    if(el.getBoundingClientRect().top < window.innerHeight * 0.9) el.classList.add('active');
+  });
+}
+
+window.addEventListener('scroll', reveal);
+window.addEventListener('DOMContentLoaded', () => {
+  if(typeof SplitType !== 'undefined' && typeof gsap !== 'undefined'){
+    const split = new SplitType('#hero-title', {types:'chars'});
+    gsap.to('.char',{y:0, stagger:0.02, duration:0.35, ease:"power4.out"});
+    gsap.to('#hero-desc',{opacity:1, y:0, duration:0.4, delay:0.2});
+    gsap.to('#hero-cta',{opacity:1, y:0, duration:0.4, delay:0.3});
+  }
+  reveal();
+});
+
+// Blob parallax effect
+document.addEventListener('mousemove', e => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 25;
+  const y = (e.clientY / window.innerHeight - 0.5) * 25;
+  const blob = document.querySelector('.blob');
+  if(blob) gsap.to(blob,{x:x,y:y,duration:1,ease:"power2.out"});
+});
+</script>
 
 </body>
 </html>
