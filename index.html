@@ -25,183 +25,170 @@
     .title-clip { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
     .char { transform: translateY(110%); display: inline-block; }
 
-    .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border: 1px solid rgba(226, 232, 240, 0.6); }
+    .hero-bg { position: relative; background: radial-gradient(circle at top right, #f5f3ff, #ffffff); }
+    .blob { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%); border-radius: 50%; filter: blur(60px); pointer-events: none; z-index: 0; }
 
+    .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border: 1px solid rgba(226, 232, 240, 0.6); }
     .btn-primary { background: linear-gradient(135deg, #4f46e5, #7c3aed); transition: all 0.2s ease; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 35px -10px rgba(79, 70, 229, 0.6); }
 
-    /* STICKY ACTIONS */
-    .action-bar { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
-    .action-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; items-center; justify-content: center; color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; }
-    .action-btn:hover { transform: scale(1.1); }
-    .bg-whatsapp { background: #25D366; }
-    .bg-call { background: #3b82f6; }
+    /* FIXED CONTACT ACTIONS */
+    .action-bar { position: fixed; top: 50%; right: 20px; transform: translateY(-50%); display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
+    .action-btn { width: 45px; height: 45px; border-radius: 12px; display: flex; items-center; justify-content: center; color: white; background: white; border: 1px solid rgba(0,0,0,0.05); color: #6366f1; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+    .action-btn:hover { background: #6366f1; color: white; transform: translateX(-5px); }
 
-    /* LANGUAGE BOX */
-    .lang-box { @apply flex items-center gap-2 bg-indigo-50 border-2 border-indigo-200 rounded-xl px-3 py-2; }
+    /* GRAPHICAL LANGUAGE BOX */
+    .lang-box { @apply flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 shadow-sm; }
     #google_translate_element select { @apply bg-transparent text-[10px] font-black uppercase outline-none cursor-pointer text-indigo-600; appearance: none; }
     .goog-te-gadget { color: transparent !important; font-size: 0 !important; }
     .goog-logo-link { display: none !important; }
 
-    /* ROI CALCULATOR STYLING */
-    .roi-card { background: linear-gradient(145deg, #ffffff, #f8fafc); border: 1px solid #e2e8f0; }
-    .roi-input { @apply w-full bg-white border border-slate-200 rounded-lg px-4 py-2 outline-none focus:border-indigo-500 font-bold text-slate-700; }
+    .myth-pill { @apply bg-rose-50 text-rose-600 px-3 py-1 rounded-full text-[10px] font-black uppercase mb-2 inline-block; }
+    .truth-pill { @apply bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-[10px] font-black uppercase mb-2 inline-block; }
   </style>
 </head>
 <body>
 
 <div class="action-bar">
-    <a href="https://wa.me/919500582046" class="action-btn bg-whatsapp" title="WhatsApp Us"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
-    <a href="tel:+919500582046" class="action-btn bg-call" title="Call Us"><i class="fa-solid fa-phone text-xl"></i></a>
-    <a href="mailto:thoufiqahamedseo@gmail.com" class="action-btn bg-indigo-600" title="Email Us"><i class="fa-solid fa-envelope text-xl"></i></a>
+    <a href="https://wa.me/919884795585" class="action-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+    <a href="tel:+919884795585" class="action-btn" title="Call"><i class="fa-solid fa-phone text-lg"></i></a>
+    <a href="mailto:contact@thoufiqahamed.in" class="action-btn" title="Email"><i class="fa-solid fa-envelope text-lg"></i></a>
 </div>
 
-<header class="fixed top-0 w-full z-50 glass border-b border-slate-200">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="font-black text-2xl tracking-tighter text-indigo-600 underline">RANKIQ</div>
-    <div class="lang-box">
-        <i class="fa-solid fa-language text-indigo-600"></i>
-        <div id="google_translate_element"></div>
-    </div>
+<header class="fixed top-0 w-full z-50 glass border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+  <div class="font-black text-2xl tracking-tighter text-indigo-600 underline">RANKIQ</div>
+  <div class="lang-box">
+      <i class="fa-solid fa-earth-asia text-indigo-400"></i>
+      <div id="google_translate_element"></div>
   </div>
 </header>
 
-<section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20 bg-slate-50">
+<section id="home" class="hero-bg min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden">
+  <div class="blob"></div>
   <div class="max-w-5xl text-center relative z-10">
     <div class="title-clip mb-6">
       <h1 id="hero-title" class="text-5xl md:text-8xl font-black leading-none tracking-tight text-slate-900">
-        Global Search Engine Optimization Systems
+        Search Engine Optimization Logic
       </h1>
     </div>
     <p id="hero-desc" class="text-slate-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-0 translate-y-4">
-        Engineering-led growth. We bridge the gap between complex algorithms and human business goals across all global languages.
+        Stop chasing algorithm trends. Build a permanent digital asset through transparent, engineering-led systems.
     </p>
     <div id="hero-cta" class="opacity-0 translate-y-4">
-      <a href="#contact" class="btn-primary text-white px-12 py-5 rounded-2xl font-black text-lg inline-block">Start Free Audit</a>
+      <a href="#contact" class="btn-primary text-white px-12 py-5 rounded-2xl font-black text-lg inline-block">Free Technical Audit</a>
     </div>
   </div>
 </section>
 
-<section class="py-24 px-6 max-w-7xl mx-auto">
-  <div class="grid lg:grid-cols-2 gap-16 items-center">
+<section id="about" class="py-24 px-6 max-w-7xl mx-auto">
+  <div class="grid lg:grid-cols-2 gap-20 items-center">
     <div class="reveal">
-      <h2 class="text-4xl font-black mb-8">Breaking The SEO Myth</h2>
+      <h2 class="text-4xl font-black mb-8">The Science of Search</h2>
       <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
-        <p>Most believe Search Engine Optimization is a "trick" or a "hack." This is the **Hidden Myth**. Google is not a lottery; it is a mathematical relevance engine. </p>
-        <p>The truth: Google’s AI (RankBrain) measures **E-E-A-T** (Experience, Expertise, Authoritativeness, and Trust). If your site lacks these engineering signals, no amount of keywords will save your rankings.</p>
-        <div class="bg-indigo-50 p-6 rounded-2xl border-l-4 border-indigo-500">
-            <span class="text-xs font-black uppercase text-indigo-600 tracking-widest">The Core Detailing</span>
-            <p class="text-slate-800 font-bold mt-2">We optimize for "Human Intent." Whether a user searches in Tamil, Arabic, or English, the engine looks for the most helpful answer. Our system builds that helpfulness into your site's DNA.</p>
+        <p>Most agencies treat Search Engine Optimization like a mystery where you pay and hope for results. This is the **Hidden Myth**. Google is not a lottery; it is a mathematical engine that measures **E-E-A-T** (Experience, Expertise, Authoritativeness, and Trust).</p>
+        
+        <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 shadow-sm mt-8">
+            <div class="mb-6">
+                <span class="myth-pill">Common Myth</span>
+                <p class="font-bold text-slate-800">"SEO is just about keyword density and tricking the system."</p>
+            </div>
+            <div>
+                <span class="truth-pill">Engineering Truth</span>
+                <p class="font-bold text-indigo-600">"Modern systems use AI to understand human intent. We optimize your site's data structure so that Google sees you as the definitive answer, not just a matching word."</p>
+            </div>
         </div>
       </div>
     </div>
-    <div class="reveal">
-        <img src="https://www.gstatic.com/images/branding/product/2x/search_64dp.png" class="w-16 mb-4 opacity-50" alt="Search">
-        <img src="https://images.unsplash.com/photo-1551288049-bbbda546697c?auto=format&fit=crop&q=80&w=800" class="rounded-3xl shadow-2xl border-8 border-white" alt="Data Analytics Integration">
+    <div class="reveal flex justify-center">
+        <svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M200 20L380 280H20L200 20Z" stroke="#6366f1" stroke-width="4" fill="#6366f1" fill-opacity="0.05"/>
+            <line x1="80" y1="200" x2="320" y2="200" stroke="#6366f1" stroke-width="2" stroke-dasharray="8 8"/>
+            <line x1="140" y1="110" x2="260" y2="110" stroke="#6366f1" stroke-width="2" stroke-dasharray="8 8"/>
+            <text x="200" y="240" fill="#6366f1" font-weight="900" font-size="14" text-anchor="middle">TECHNICAL INTEGRITY</text>
+            <text x="200" y="160" fill="#6366f1" font-weight="900" font-size="14" text-anchor="middle">CONTENT INTENT</text>
+            <text x="200" y="80" fill="#6366f1" font-weight="900" font-size="14" text-anchor="middle">AUTHORITY</text>
+        </svg>
     </div>
   </div>
 </section>
 
-<section class="py-24 px-6 bg-slate-50">
+<section id="services" class="py-24 px-6 bg-slate-50">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-center text-4xl font-black mb-16">The 3-Phase Engineering Protocol</h2>
+    <h2 class="text-4xl font-black text-center mb-16">The 3-Phase Roadmap</h2>
     <div class="grid md:grid-cols-3 gap-8">
       
-      <div class="reveal glass p-8 rounded-[2rem] flex flex-col border-t-4 border-indigo-500">
-        <h3 class="font-black text-xl mb-4">Phase 1: Technical Integrity</h3>
-        <p class="text-slate-500 text-sm mb-6">**Detailing:** We resolve 'Crawl Blockers.' If Google's bots (Googlebot) cannot render your JavaScript or CSS in 2.5 seconds, you are penalized. We clean the backend code to ensure 100% indexability.</p>
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=60&w=500" class="rounded-xl mb-4 h-40 object-cover" alt="Server Backend">
-      </div>
-
-      <div class="reveal glass p-8 rounded-[2rem] flex flex-col border-t-4 border-purple-500">
-        <h3 class="font-black text-xl mb-4">Phase 2: Semantic Intent</h3>
-        <p class="text-slate-500 text-sm mb-6">**Detailing:** Keywords are dead; Entities are alive. We map your content to 'Topic Clusters.' This ensures that for every search query, your site is seen as a topical authority, not just a keyword matcher.</p>
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=60&w=500" class="rounded-xl mb-4 h-40 object-cover" alt="Data Science">
-      </div>
-
-      <div class="reveal glass p-8 rounded-[2rem] flex flex-col border-t-4 border-emerald-500">
-        <h3 class="font-black text-xl mb-4">Phase 3: Authority Signals</h3>
-        <p class="text-slate-500 text-sm mb-6">**Detailing:** The final phase involves earning Digital Citations. We build a network of high-authority references that signal to the world that your brand is the definitive leader in your industry.</p>
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=60&w=500" class="rounded-xl mb-4 h-40 object-cover" alt="Growth Network">
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="py-24 px-6 max-w-4xl mx-auto">
-    <div class="roi-card p-10 rounded-[3rem] shadow-xl reveal">
-        <h2 class="text-3xl font-black mb-6 text-center">Traffic ROI Estimator</h2>
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-4">
-                <div>
-                    <label class="text-[10px] font-black uppercase text-slate-400 block mb-2">Monthly Visitors</label>
-                    <input type="number" id="roi-traffic" value="1000" class="roi-input" oninput="calculate()">
-                </div>
-                <div>
-                    <label class="text-[10px] font-black uppercase text-slate-400 block mb-2">Order Value (₹)</label>
-                    <input type="number" id="roi-val" value="2000" class="roi-input" oninput="calculate()">
-                </div>
-            </div>
-            <div class="bg-indigo-600 p-8 rounded-3xl text-white text-center">
-                <span class="text-xs uppercase font-bold opacity-70">Projected Growth Revenue</span>
-                <div class="text-4xl font-black mt-2">₹<span id="roi-res">40,000</span></div>
-            </div>
+      <div class="reveal glass p-10 rounded-[2.5rem] border-t-4 border-indigo-500">
+        <h3 class="text-xl font-black mb-4">Phase 1: Infra</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">**Detailing:** Before you can rank, your site must be crawlable. We resolve "Crawl Blockers" by fixing server response codes, Core Web Vitals, and indexing scripts. If Google's bot can't read your code in 2.5 seconds, your site is invisible.</p>
+        <div class="mt-8 bg-indigo-50 rounded-xl p-4 flex justify-center">
+            <i class="fa-solid fa-server text-4xl text-indigo-200"></i>
         </div>
+      </div>
+
+      <div class="reveal glass p-10 rounded-[2.5rem] border-t-4 border-purple-500">
+        <h3 class="text-xl font-black mb-4">Phase 2: Intent</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">**Detailing:** Traffic is vanity; conversion is sanity. We analyze the search intent of your buyers. Are they searching for "Best SEO" (Informational) or "Hire SEO" (Transactional)? We engineer the page to match the exact psychology of the user.</p>
+        <div class="mt-8 bg-purple-50 rounded-xl p-4 flex justify-center">
+            <i class="fa-solid fa-magnifying-glass-chart text-4xl text-purple-200"></i>
+        </div>
+      </div>
+
+      <div class="reveal glass p-10 rounded-[2.5rem] border-t-4 border-emerald-500">
+        <h3 class="text-xl font-black mb-4">Phase 3: Scaling</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">**Detailing:** This is the authority phase. We earn high-quality digital citations and natural references. This signals to Google that you are a market leader, protecting your rankings from competitor attacks and algorithm shifts.</p>
+        <div class="mt-8 bg-emerald-50 rounded-xl p-4 flex justify-center">
+            <i class="fa-solid fa-chart-line text-4xl text-emerald-200"></i>
+        </div>
+      </div>
+
     </div>
-</section>
-
-<section id="contact" class="py-24 px-6 max-w-3xl mx-auto">
-  <div class="reveal text-center mb-12">
-    <h2 class="text-5xl font-black mb-4">Get Your Audit</h2>
-    <p class="text-slate-500">Direct technical analysis for your global expansion.</p>
   </div>
-  <form action="https://formspree.io/f/mwvnenkk" method="POST" class="reveal space-y-4">
-    <input name="name" required placeholder="Full Name" class="w-full p-4 rounded-xl bg-slate-50 border outline-none focus:border-indigo-500 transition-all">
-    <input name="email" type="email" required placeholder="Email Address" class="w-full p-4 rounded-xl bg-slate-50 border outline-none focus:border-indigo-500 transition-all">
-    <textarea name="message" required placeholder="Tell us about your project..." class="w-full p-4 rounded-xl bg-slate-50 border outline-none focus:border-indigo-500 transition-all h-32"></textarea>
-    <button class="btn-primary w-full text-white font-black py-4 rounded-xl text-lg uppercase tracking-widest">Submit Inquiry</button>
-  </form>
 </section>
 
-<footer class="py-12 border-t text-center text-slate-400 text-[10px] font-black uppercase tracking-widest">
-  <p>© 2026 Rankiq. Engineering by Thoufiq Ahamed.</p>
+<section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
+  <div class="glass p-12 rounded-[3rem] shadow-xl reveal text-center">
+    <h2 class="text-4xl font-black mb-6">Start Your Journey</h2>
+    <p class="text-slate-500 mb-10 text-lg">Detailed technical review. No myths, just engineering data.</p>
+    
+    <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-4 text-left">
+      <div class="grid md:grid-cols-2 gap-4">
+        <input name="name" required placeholder="Full Name" class="w-full p-4 rounded-xl bg-slate-50 border outline-none focus:border-indigo-500 transition-all">
+        <input name="email" type="email" required placeholder="Business Email" class="w-full p-4 rounded-xl bg-slate-50 border outline-none focus:border-indigo-500 transition-all">
+      </div>
+      <textarea name="message" required placeholder="Describe your business goals and website URL..." class="w-full p-4 rounded-xl bg-slate-50 border outline-none focus:border-indigo-500 transition-all h-32"></textarea>
+      <button class="btn-primary w-full text-white font-black py-4 rounded-xl text-lg uppercase tracking-widest">Send My Audit</button>
+    </form>
+  </div>
+</section>
+
+<footer class="py-12 text-center text-slate-400 text-[10px] font-black uppercase tracking-widest">
+  <p>© 2026 Rankiq. Designed and Crafted by Thoufiq Ahamed.</p>
 </footer>
 
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: '', // Leaving empty allows all supported 243+ languages
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
+    pageLanguage: 'en', 
+    includedLanguages: '', // All 243+ languages supported
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
   }, 'google_translate_element');
 }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
-function calculate() {
-    const t = document.getElementById('roi-traffic').value;
-    const v = document.getElementById('roi-val').value;
-    const res = (t * 0.02) * v; // Assuming 2% conversion growth
-    document.getElementById('roi-res').innerText = res.toLocaleString('en-IN');
-}
-
 function reveal() {
   document.querySelectorAll('.reveal').forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight * 0.9) el.classList.add('active');
   });
 }
-
 window.addEventListener('scroll', reveal);
 window.addEventListener('DOMContentLoaded', () => {
     const split = new SplitType('#hero-title', { types: 'chars' });
-    gsap.to('.char', { y: 0, stagger: 0.02, duration: 0.5, ease: "power4.out" });
+    gsap.to('.char', { y: 0, stagger: 0.02, duration: 0.4, ease: "power4.out" });
     gsap.to('#hero-desc', { opacity: 1, y: 0, delay: 0.3 });
-    gsap.to('#hero-cta', { opacity: 1, y: 0, delay: 0.5 });
+    gsap.to('#hero-cta', { opacity: 1, y: 0, delay: 0.4 });
     reveal();
-    calculate();
 });
 </script>
 
