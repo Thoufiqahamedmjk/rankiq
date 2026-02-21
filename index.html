@@ -87,7 +87,6 @@
     .title-clip {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
-    /* Updated to target both characters and words */
     .char, .word {
         transform: translateY(115%);
         display: inline-block;
@@ -171,6 +170,32 @@
   </div>
 </section>
 
+<section class="max-w-6xl mx-auto px-6 py-20 border-t border-indigo-50">
+  <h2 class="text-3xl font-bold text-center mb-16 reveal" data-i18n="roadmap_title">Our Strategic Roadmap</h2>
+  <div class="grid md:grid-cols-4 gap-6 text-center">
+    <div class="reveal">
+      <span class="text-indigo-200 text-5xl font-black italic opacity-50 block mb-2">01</span>
+      <h4 class="font-bold mb-2">Audit</h4>
+      <p class="text-xs text-gray-500">We analyze 200+ technical signals to find bottlenecks.</p>
+    </div>
+    <div class="reveal" style="transition-delay: 0.1s">
+      <span class="text-indigo-200 text-5xl font-black italic opacity-50 block mb-2">02</span>
+      <h4 class="font-bold mb-2">Structure</h4>
+      <p class="text-xs text-gray-500">Building a siloed architecture Google loves to crawl.</p>
+    </div>
+    <div class="reveal" style="transition-delay: 0.2s">
+      <span class="text-indigo-200 text-5xl font-black italic opacity-50 block mb-2">03</span>
+      <h4 class="font-bold mb-2">Authority</h4>
+      <p class="text-xs text-gray-500">Connecting you with industry-relevant digital footprints.</p>
+    </div>
+    <div class="reveal" style="transition-delay: 0.3s">
+      <span class="text-indigo-200 text-5xl font-black italic opacity-50 block mb-2">04</span>
+      <h4 class="font-bold mb-2">Growth</h4>
+      <p class="text-xs text-gray-500">Tracking enquiries, not just random traffic metrics.</p>
+    </div>
+  </div>
+</section>
+
 <section id="services" class="py-32 px-6 bg-gradient-to-b from-indigo-50 to-white text-center">
   <h2 class="text-4xl font-bold mb-6 reveal" data-i18n="services_title">Data-Driven SEO Services</h2>
   <p class="text-gray-500 max-w-4xl mx-auto mb-20 text-lg reveal" data-i18n="services_desc">
@@ -219,9 +244,9 @@
       </p>
 
       <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
-        <input required placeholder="Your Full Name" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors">
-        <input required type="email" placeholder="Business Email" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors">
-        <textarea required placeholder="Briefly describe your business goals and current website URL" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors h-32"></textarea>
+        <input required name="full_name" placeholder="Your Full Name" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors">
+        <input required name="email" type="email" placeholder="Business Email" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors">
+        <textarea required name="message" placeholder="Briefly describe your business goals and current website URL" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors h-32"></textarea>
         <button class="glossy-btn text-white px-12 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">
           Get My Roadmap
         </button>
@@ -259,6 +284,7 @@ const content={
     about_title:"Bridging Engineering Logic with Marketing Creativity",
     about_desc:"Most agencies treat SEO like a dark art. At Rankiq, we treat it like an engineering problem. Founded by Thoufiq Ahamed—a filmmaker and engineer—we believe that search ranking is the result of perfect technical structure meeting high-quality human storytelling.",
     about_extra:"We don't just 'do keywords.' We optimize for the human on the other side of the screen. Our philosophy is simple: Build a website that Google's algorithm loves to crawl and humans love to read.",
+    roadmap_title:"Our Strategic Roadmap",
     services_title:"Data-Driven SEO Services",
     services_desc:"Our approach is holistic. We don't just fix meta tags; we rebuild your site's authority from the ground up to ensure you stay at the top for years, not weeks.",
     service1_title:"Technical Infrastructure",
@@ -278,6 +304,7 @@ const content={
     about_title:"பொறியியல் தர்க்கம் மற்றும் சந்தைப்படுத்தல் படைப்பாற்றல்",
     about_desc:"பெரும்பாலான நிறுவனங்கள் SEO-வை ஒரு ரகசிய வித்தையாக கருதுகின்றன. ஆனால் Rankiq-இல், நாங்கள் அதை ஒரு பொறியியல் பிரச்சனையாக அணுகுகிறோம். தௌஃபிக் அகமது என்பவரால் தொடங்கப்பட்டது—ஒரு திரைப்படத் தயாரிப்பாளர் மற்றும் பொறியாளர்.",
     about_extra:"நாங்கள் வெறும் 'கீவேர்டுகளை' மட்டும் கையாள்வதில்லை. திரைக்கு மறுபுறம் இருக்கும் மனிதர்களுக்காக இணையதளத்தை மேம்படுத்துகிறோம். கூகுள் அல்காரிதம் மற்றும் மனிதர்கள் இருவருக்கும் பிடித்தமான தளத்தை உருவாக்குவதே எங்கள் நோக்கம்.",
+    roadmap_title:"எங்கள் மூலோபாய திட்டவரைபடம்",
     services_title:"தரவு சார்ந்த SEO சேவைகள்",
     services_desc:"எங்கள் அணுகுமுறை முழுமையானது. வெறும் மெட்டா டேகுகளை மட்டும் மாற்றாமல், உங்கள் தளத்தின் அதிகாரத்தை ஆரம்பத்திலிருந்து கட்டமைக்கிறோம்.",
     service1_title:"தொழில்நுட்ப கட்டமைப்பு",
@@ -298,7 +325,6 @@ function initHeroAnimation() {
     
     const isTamil = document.documentElement.lang === 'ta';
     
-    // FIX: Split by words for Tamil to prevent character corruption
     splitInstance = new SplitType('#hero-main-title', { 
         types: isTamil ? 'words' : 'chars' 
     });
@@ -306,7 +332,6 @@ function initHeroAnimation() {
     const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
     tl.set('#hero-main-title', { opacity: 1 });
     
-    // Target words for Tamil and chars for English
     const target = isTamil ? '.word' : '.char';
     
     tl.to(target, {
