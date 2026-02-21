@@ -1,97 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-1488001824666458">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rankiq – Ethical SEO That Works</title>
+<title>Rankiq – Ethical SEO That Works</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://unpkg.com/split-type"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    body{
-      font-family:Inter,system-ui,sans-serif;
-      scroll-behavior:smooth;
-      background:#f6f7ff;
-    }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
 
-    /* ===== BACKGROUND ===== */
-    .hero-bg{
-      position:relative;
-      overflow:hidden;
-      background:radial-gradient(circle at top,#e0e7ff,#ffffff);
-    }
-    .blob{
-      position:absolute;
-      width:420px;height:420px;
-      border-radius:50%;
-      filter:blur(100px);
-      opacity:.35;
-      animation:blob 18s infinite alternate ease-in-out;
-    }
-    .blob.blue{background:#6366f1;top:-120px;left:-120px;}
-    .blob.purple{background:#8b5cf6;bottom:-150px;right:-120px;animation-delay:5s;}
+<style>
+body{
+  font-family:Inter,system-ui,sans-serif;
+  scroll-behavior:smooth;
+  background:#f6f7ff;
+}
 
-    @keyframes blob{
-      from{transform:translate(0,0)}
-      to{transform:translate(80px,60px)}
-    }
+/* ===== BACKGROUND ===== */
+.hero-bg{
+  position:relative;
+  overflow:hidden;
+  background:radial-gradient(circle at top,#e0e7ff,#ffffff);
+}
+.blob{
+  position:absolute;
+  width:420px;height:420px;
+  border-radius:50%;
+  filter:blur(100px);
+  opacity:.35;
+  animation:blob 18s infinite alternate ease-in-out;
+}
+.blob.blue{background:#6366f1;top:-120px;left:-120px;}
+.blob.purple{background:#8b5cf6;bottom:-150px;right:-120px;animation-delay:5s;}
 
-    /* ===== GLASS ===== */
-    .glass{
-      background:rgba(255,255,255,.78);
-      backdrop-filter:blur(14px);
-      border:1px solid rgba(255,255,255,.45);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.6),
-        0 20px 40px rgba(0,0,0,.08);
-    }
+@keyframes blob{
+  from{transform:translate(0,0)}
+  to{transform:translate(80px,60px)}
+}
 
-    /* ===== FLOAT ===== */
-    @keyframes float{
-      0%{transform:translateY(0)}
-      50%{transform:translateY(-14px)}
-      100%{transform:translateY(0)}
-    }
-    .float{animation:float 7s ease-in-out infinite}
+/* ===== GLASS ===== */
+.glass{
+  background:rgba(255,255,255,.78);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.6),
+    0 20px 40px rgba(0,0,0,.08);
+}
 
-    /* ===== REVEAL ===== */
-    .reveal{opacity:0;transform:translateY(40px);transition:.9s ease}
-    .reveal.active{opacity:1;transform:translateY(0)}
+/* ===== FLOAT ===== */
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-14px)}
+  100%{transform:translateY(0)}
+}
+.float{animation:float 7s ease-in-out infinite}
 
-    /* ===== BUTTON ===== */
-    .glossy-btn{
-      background:linear-gradient(135deg,#2563eb,#7c3aed);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.45),
-        0 18px 36px rgba(79,70,229,.4);
-    }
-    .glossy-btn:hover{
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.6),
-        0 26px 52px rgba(79,70,229,.55);
-    }
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(40px);transition:.9s ease}
+.reveal.active{opacity:1;transform:translateY(0)}
 
-    /* ===== CARD ===== */
-    .card{transition:.4s ease}
-    .card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 30px 60px rgba(0,0,0,.12);
-    }
+/* ===== BUTTON ===== */
+.glossy-btn{
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.45),
+    0 18px 36px rgba(79,70,229,.4);
+}
+.glossy-btn:hover{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.6),
+    0 26px 52px rgba(79,70,229,.55);
+}
 
-    /* CINEMATIC TEXT REVEAL CSS */
-    .title-clip {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    .char {
-        transform: translateY(115%);
-        display: inline-block;
-    }
-  </style>
+/* ===== CARD ===== */
+.card{transition:.4s ease}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 60px rgba(0,0,0,.12);
+}
+
+.title-container {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.char {
+    transform: translateY(115%);
+}
+</style>
 </head>
 
 <body class="text-gray-800">
@@ -130,62 +128,80 @@
   <div class="blob blue"></div>
   <div class="blob purple"></div>
 
-  <div class="title-clip">
-    <h1 id="hero-main-title" class="text-4xl md:text-6xl font-extrabold mb-6" data-i18n="hero_title">
+  <div class="title-container">
+    <h1 id="hero-title" class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight" data-i18n="hero_title">
       SEO That Gets You Found, Not Just Promised
     </h1>
   </div>
 
-  <p id="hero-main-desc" class="max-w-3xl mx-auto text-gray-600 mb-10 opacity-0" data-i18n="hero_desc">
-    Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through ethical SEO systems.
+  <p id="hero-desc" class="max-w-4xl mx-auto text-gray-600 text-lg md:text-xl mb-10 opacity-0" data-i18n="hero_desc">
+    Stop chasing algorithm trends and start building a digital asset. Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through transparent, ethical SEO systems.
   </p>
 
-  <a href="#contact" id="hero-main-cta" class="glossy-btn text-white px-10 py-4 rounded font-bold opacity-0 inline-block" data-i18n="hero_cta">
-    Get Free SEO Review
+  <a href="#contact" id="hero-cta" class="glossy-btn text-white px-10 py-5 rounded-lg font-bold opacity-0 inline-block text-lg shadow-xl" data-i18n="hero_cta">
+    Claim Your Free SEO Audit
   </a>
 </section>
 
-<section id="about" class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-14 items-center">
+<section id="about" class="max-w-6xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center">
   <div class="reveal">
-    <h2 class="text-3xl font-bold mb-4" data-i18n="about_title">Why Businesses Trust Rankiq</h2>
-    <p class="text-gray-500 leading-relaxed" data-i18n="about_desc">
-      We avoid shortcuts. Rankiq builds SEO foundations that compound growth, credibility, and inbound leads over time.
+    <h2 class="text-4xl font-bold mb-6 text-indigo-900" data-i18n="about_title">Bridging Engineering Logic with Marketing Creativity</h2>
+    <p class="text-gray-600 leading-relaxed mb-6 text-lg" data-i18n="about_desc">
+      Most agencies treat SEO like a dark art. At Rankiq, we treat it like an engineering problem. Founded by Thoufiq Ahamed—a filmmaker and engineer—we believe that search ranking is the result of perfect technical structure meeting high-quality human storytelling.
+    </p>
+    <p class="text-gray-600 leading-relaxed text-lg" data-i18n="about_extra">
+        We don't just "do keywords." We optimize for the human on the other side of the screen. Our philosophy is simple: Build a website that Google's algorithm loves to crawl and humans love to read. 
     </p>
   </div>
 
-  <img
-    src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000"
-    referrerpolicy="no-referrer"
-    loading="lazy"
-    class="rounded-3xl shadow-xl float reveal"
-  >
+  <div class="relative">
+      <img
+        src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000"
+        referrerpolicy="no-referrer"
+        loading="lazy"
+        class="rounded-3xl shadow-2xl float"
+      >
+      <div class="absolute -bottom-6 -right-6 glass p-6 rounded-2xl hidden md:block">
+          <p class="font-bold text-indigo-600 text-3xl">100%</p>
+          <p class="text-xs text-gray-500 uppercase font-bold tracking-widest">Ethical White Hat</p>
+      </div>
+  </div>
 </section>
 
-<section id="services" class="py-28 px-6 bg-gradient-to-b from-indigo-50 to-white text-center">
-  <h2 class="text-3xl font-bold mb-4 reveal" data-i18n="services_title">SEO Services</h2>
-  <p class="text-gray-500 max-w-3xl mx-auto mb-16 reveal" data-i18n="services_desc">
-    From technical fixes to intent-driven content, our SEO work focuses on real business outcomes.
+<section id="services" class="py-32 px-6 bg-gradient-to-b from-indigo-50 to-white text-center">
+  <h2 class="text-4xl font-bold mb-6 reveal" data-i18n="services_title">Data-Driven SEO Services</h2>
+  <p class="text-gray-500 max-w-4xl mx-auto mb-20 text-lg reveal" data-i18n="services_desc">
+    Our approach is holistic. We don't just fix meta tags; we rebuild your site's authority from the ground up to ensure you stay at the top for years, not weeks.
   </p>
 
-  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-    <div class="glass card p-6 rounded-3xl reveal">
-      <h3 class="font-bold mb-3" data-i18n="service1_title">Technical SEO</h3>
-      <p class="text-sm text-gray-500" data-i18n="service1_desc">
-        Speed, structure, indexing, and crawl optimization.
+  <div class="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+    <div class="glass card p-10 rounded-3xl reveal flex flex-col items-center">
+      <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 text-indigo-600 text-2xl">
+          <i class="fa-solid fa-gears"></i>
+      </div>
+      <h3 class="font-bold text-xl mb-4" data-i18n="service1_title">Technical Infrastructure</h3>
+      <p class="text-gray-500 leading-relaxed" data-i18n="service1_desc">
+        We dive deep into your site's core. From fixing Core Web Vitals and Schema markup to optimizing crawl budget and site architecture. We ensure Google can find and index your best content without friction.
       </p>
     </div>
 
-    <div class="glass card p-6 rounded-3xl reveal">
-      <h3 class="font-bold mb-3" data-i18n="service2_title">Keyword Strategy</h3>
-      <p class="text-sm text-gray-500" data-i18n="service2_desc">
-        Buyer-intent keyword planning focused on enquiries.
+    <div class="glass card p-10 rounded-3xl reveal flex flex-col items-center">
+        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 text-purple-600 text-2xl">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+      <h3 class="font-bold text-xl mb-4" data-i18n="service2_title">Intent-Based Research</h3>
+      <p class="text-gray-500 leading-relaxed" data-i18n="service2_desc">
+        High volume doesn't always mean high profit. We find the "Money Keywords" your competitors missed. We map keywords to the buyer's journey—from awareness to the final decision.
       </p>
     </div>
 
-    <div class="glass card p-6 rounded-3xl reveal">
-      <h3 class="font-bold mb-3" data-i18n="service3_title">Content SEO</h3>
-      <p class="text-sm text-gray-500" data-i18n="service3_desc">
-        Content built to rank, educate, and convert.
+    <div class="glass card p-10 rounded-3xl reveal flex flex-col items-center">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-600 text-2xl">
+            <i class="fa-solid fa-pen-nib"></i>
+        </div>
+      <h3 class="font-bold text-xl mb-4" data-i18n="service3_title">Content Authority</h3>
+      <p class="text-gray-500 leading-relaxed" data-i18n="service3_desc">
+        SEO content shouldn't sound like a robot wrote it. We produce high-impact articles, landing pages, and guides that establish you as the undisputed expert in your industry while driving conversions.
       </p>
     </div>
   </div>
@@ -194,25 +210,40 @@
 <section id="contact" class="py-28 px-6 bg-gradient-to-t from-violet-50 to-white">
   <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 items-center">
     <div class="reveal">
-      <h2 class="text-3xl font-bold mb-4" data-i18n="contact_title">Get a Free SEO Review</h2>
-      <p class="text-gray-500 mb-8" data-i18n="contact_desc">
-        Share your website. We’ll respond with honest SEO insights — no pressure.
+      <h2 class="text-4xl font-bold mb-6" data-i18n="contact_title">Let’s Audit Your Online Presence</h2>
+      <p class="text-gray-500 mb-8 text-lg" data-i18n="contact_desc">
+        Are you tired of "SEO experts" who don't show results? Send us your URL. We’ll provide an honest breakdown of your site's current performance and a roadmap for growth. No strings attached.
       </p>
 
       <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
-        <input required placeholder="Name" class="w-full border-b py-2 bg-transparent outline-none">
-        <input required type="email" placeholder="Email" class="w-full border-b py-2 bg-transparent outline-none">
-        <textarea required placeholder="Tell us about your business" class="w-full border-b py-2 bg-transparent outline-none"></textarea>
-        <button class="glossy-btn text-white px-10 py-3 rounded font-bold">
-          Submit
+        <input required placeholder="Your Full Name" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors">
+        <input required type="email" placeholder="Business Email" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors">
+        <textarea required placeholder="Briefly describe your business goals and current website URL" class="w-full border-b py-3 bg-transparent outline-none focus:border-indigo-600 transition-colors h-32"></textarea>
+        <button class="glossy-btn text-white px-12 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">
+          Get My Roadmap
         </button>
       </form>
+    </div>
+    <div class="hidden md:block reveal">
+        <div class="bg-white p-8 rounded-3xl shadow-xl border border-indigo-50">
+            <h4 class="font-bold text-indigo-900 mb-4">What happens next?</h4>
+            <ul class="space-y-4 text-sm text-gray-600">
+                <li class="flex gap-3"><i class="fa-solid fa-check text-green-500"></i> We analyze your site's technical health.</li>
+                <li class="flex gap-3"><i class="fa-solid fa-check text-green-500"></i> We check your competitor's rankings.</li>
+                <li class="flex gap-3"><i class="fa-solid fa-check text-green-500"></i> We hop on a 15-min call to discuss findings.</li>
+            </ul>
+        </div>
     </div>
   </div>
 </section>
 
-<footer class="text-center py-10 text-xs text-gray-500 border-t">
-  © 2026 Rankiq. All rights reserved.
+<footer class="text-center py-12 text-sm text-gray-500 border-t bg-white">
+  <p class="mb-2">© 2026 Rankiq. Designed & Engineered by Thoufiq Ahamed.</p>
+  <div class="flex justify-center gap-6 mt-4 grayscale opacity-50">
+      <i class="fa-brands fa-google"></i>
+      <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-twitter"></i>
+  </div>
 </footer>
 
 <script>
@@ -220,79 +251,80 @@ const content={
   en:{
     nav_home:"Home",nav_about:"About",nav_services:"Services",nav_contact:"Contact",
     hero_title:"SEO That Gets You Found, Not Just Promised",
-    hero_desc:"Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through ethical SEO systems.",
-    hero_cta:"Get Free SEO Review",
-    about_title:"Why Businesses Trust Rankiq",
-    about_desc:"We avoid shortcuts. Rankiq builds SEO foundations that compound growth, credibility, and inbound leads over time.",
-    services_title:"SEO Services",
-    services_desc:"From technical fixes to intent-driven content, our SEO work focuses on real business outcomes.",
-    service1_title:"Technical SEO",
-    service1_desc:"Speed, structure, indexing, and crawl optimization.",
-    service2_title:"Keyword Strategy",
-    service2_desc:"Buyer-intent keyword planning focused on enquiries.",
-    service3_title:"Content SEO",
-    service3_desc:"Content built to rank, educate, and convert.",
-    contact_title:"Get a Free SEO Review",
-    contact_desc:"Share your website. We’ll respond with honest SEO insights — no pressure."
+    hero_desc:"Stop chasing algorithm trends and start building a digital asset. Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through transparent, ethical SEO systems.",
+    hero_cta:"Claim Your Free SEO Audit",
+    about_title:"Bridging Engineering Logic with Marketing Creativity",
+    about_desc:"Most agencies treat SEO like a dark art. At Rankiq, we treat it like an engineering problem. Founded by Thoufiq Ahamed—a filmmaker and engineer—we believe that search ranking is the result of perfect technical structure meeting high-quality human storytelling.",
+    about_extra:"We don't just 'do keywords.' We optimize for the human on the other side of the screen. Our philosophy is simple: Build a website that Google's algorithm loves to crawl and humans love to read.",
+    services_title:"Data-Driven SEO Services",
+    services_desc:"Our approach is holistic. We don't just fix meta tags; we rebuild your site's authority from the ground up to ensure you stay at the top for years, not weeks.",
+    service1_title:"Technical Infrastructure",
+    service1_desc:"We dive deep into your site's core. From fixing Core Web Vitals and Schema markup to optimizing crawl budget and site architecture. We ensure Google can find and index your best content without friction.",
+    service2_title:"Intent-Based Research",
+    service2_desc:"High volume doesn't always mean high profit. We find the 'Money Keywords' your competitors missed. We map keywords to the buyer's journey—from awareness to the final decision.",
+    service3_title:"Content Authority",
+    service3_desc:"SEO content shouldn't sound like a robot wrote it. We produce high-impact articles, landing pages, and guides that establish you as the undisputed expert in your industry while driving conversions.",
+    contact_title:"Let’s Audit Your Online Presence",
+    contact_desc:"Are you tired of 'SEO experts' who don't show results? Send us your URL. We’ll provide an honest breakdown of your site's current performance and a roadmap for growth. No strings attached."
   },
   ta:{
     nav_home:"முகப்பு",nav_about:"எங்களை பற்றி",nav_services:"சேவைகள்",nav_contact:"தொடர்பு",
     hero_title:"உங்களை கண்டுபிடிக்க உதவும் SEO — வெறும் வாக்குறுதி அல்ல",
-    hero_desc:"Rankiq இந்திய நிறுவனங்களுக்கு பார்வை, விசாரணைகள் மற்றும் நீண்டகால நம்பிக்கையை உருவாக்க உதவுகிறது.",
-    hero_cta:"இலவச SEO மதிப்பாய்வு",
-    about_title:"ஏன் Rankiq-ஐ நம்புகிறார்கள்",
-    about_desc:"Rankiq குறுக்குவழிகளை தவிர்த்து நிலையான SEO அடித்தளத்தை உருவாக்குகிறது.",
-    services_title:"SEO சேவைகள்",
-    services_desc:"உண்மையான வணிக வளர்ச்சிக்கான SEO தீர்வுகள்.",
-    service1_title:"தொழில்நுட்ப SEO",
-    service1_desc:"வேகம், அமைப்பு மற்றும் crawl மேம்பாடு.",
-    service2_title:"முக்கிய சொல் திட்டம்",
-    service2_desc:"வாங்கத் தயாரான பயனர்களுக்கான சொற்கள்.",
-    service3_title:"உள்ளடக்க SEO",
-    service3_desc:"தரவரிசை பெறும் மற்றும் நம்பிக்கை உருவாக்கும் உள்ளடக்கம்.",
-    contact_title:"இலவச SEO மதிப்பாய்வு",
-    contact_desc:"உங்கள் இணையதளத்தை பகிருங்கள். தெளிவான ஆலோசனைகள் வழங்கப்படும்."
+    hero_desc:"அல்காரிதம் மாற்றங்களை கண்டு அஞ்சாமல், உங்கள் வணிகத்திற்கான நிரந்தர டிஜிட்டல் சொத்தை உருவாக்குங்கள். Rankiq நேர்மையான முறையில் உங்கள் வணிக வளர்ச்சியை உறுதி செய்கிறது.",
+    hero_cta:"இலவச SEO தணிக்கை",
+    about_title:"பொறியியல் தர்க்கம் மற்றும் சந்தைப்படுத்தல் படைப்பாற்றல்",
+    about_desc:"பெரும்பாலான நிறுவனங்கள் SEO-வை ஒரு ரகசிய வித்தையாக கருதுகின்றன. ஆனால் Rankiq-இல், நாங்கள் அதை ஒரு பொறியியல் பிரச்சனையாக அணுகுகிறோம். தௌஃபிக் அகமது என்பவரால் தொடங்கப்பட்டது—ஒரு திரைப்படத் தயாரிப்பாளர் மற்றும் பொறியாளர்.",
+    about_extra:"நாங்கள் வெறும் 'கீவேர்டுகளை' மட்டும் கையாள்வதில்லை. திரைக்கு மறுபுறம் இருக்கும் மனிதர்களுக்காக இணையதளத்தை மேம்படுத்துகிறோம். கூகுள் அல்காரிதம் மற்றும் மனிதர்கள் இருவருக்கும் பிடித்தமான தளத்தை உருவாக்குவதே எங்கள் நோக்கம்.",
+    services_title:"தரவு சார்ந்த SEO சேவைகள்",
+    services_desc:"எங்கள் அணுகுமுறை முழுமையானது. வெறும் மெட்டா டேகுகளை மட்டும் மாற்றாமல், உங்கள் தளத்தின் அதிகாரத்தை ஆரம்பத்திலிருந்து கட்டமைக்கிறோம்.",
+    service1_title:"தொழில்நுட்ப கட்டமைப்பு",
+    service1_desc:"உங்கள் தளத்தின் வேகத்தை (Core Web Vitals) அதிகரிப்பது முதல் கூகுள் எளிதாக உங்கள் உள்ளடக்கத்தை கண்டறியும் வகையில் கட்டமைப்பை மேம்படுத்துவது வரை அனைத்தையும் செய்கிறோம்.",
+    service2_title:"நோக்கம் சார்ந்த ஆராய்ச்சி",
+    service2_desc:"அதிக தேடல் உள்ள சொற்களை விட, அதிக வருமானம் தரும் 'Money Keywords'-களை கண்டறிந்து உங்கள் வணிகத்தை சரியான வாடிக்கையாளர்களிடம் கொண்டு சேர்க்கிறோம்.",
+    service3_title:"உள்ளடக்க அதிகாரம்",
+    service3_desc:"SEO உள்ளடக்கம் இயந்திரத்தனமாக இருக்கக்கூடாது. உங்கள் துறையில் உங்களை ஒரு நிபுணராக மாற்றும் உயர்தர கட்டுரைகள் மற்றும் வழிகாட்டிகளை நாங்கள் உருவாக்குகிறோம்.",
+    contact_title:"உங்கள் இணையதளத்தை ஆராய்வோம்",
+    contact_desc:"முடிவுகளைக் காட்டாத 'SEO நிபுணர்களால்' நீங்கள் சோர்வாக இருக்கிறீர்களா? உங்கள் இணையதள முகவரியை பகிருங்கள். விரிவான அறிக்கையை நாங்கள் வழங்குகிறோம்."
   }
 };
 
-let splitInstance;
+let split;
 
-function initHeroAnimation() {
-    // 1. Re-split the text (needed if language changes)
-    if (splitInstance) splitInstance.revert();
-    splitInstance = new SplitType('#hero-main-title', { types: 'chars' });
-
-    // 2. Timeline
-    const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-
-    tl.set('#hero-main-title', { opacity: 1 }); // Ensure title is visible for split
+function runHeroAnimation() {
+    if (split) split.revert();
+    split = new SplitType('#hero-title', { types: 'chars' });
     
+    const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+    
+    tl.set('#hero-title', { opacity: 1 });
     tl.to('.char', {
         y: 0,
         stagger: 0.02,
         duration: 1.5,
-        delay: 0.2
+        delay: 0.1
     })
-    .to('#hero-main-desc', {
+    .to('#hero-desc', {
         opacity: 1,
         y: -10,
-        duration: 1.2
-    }, "-=1")
-    .to('#hero-main-cta', {
-        opacity: 1,
-        y: -5,
         duration: 1
-    }, "-=1");
+    }, "-=1")
+    .to('#hero-cta', {
+        opacity: 1,
+        y: 0,
+        duration: 1
+    }, "-=0.8");
 }
 
 function setLang(lang){
   localStorage.setItem("lang",lang);
   document.documentElement.lang=lang;
   document.querySelectorAll("[data-i18n]").forEach(el=>{
-    el.textContent=content[lang][el.dataset.i18n];
+    const key = el.dataset.i18n;
+    if(content[lang][key]) {
+        el.textContent=content[lang][key];
+    }
   });
-  // Re-run animation for the new language text
-  initHeroAnimation();
+  runHeroAnimation();
 }
 
 function reveal(){
@@ -303,24 +335,17 @@ function reveal(){
   });
 }
 
-// ON LOAD
 window.addEventListener('DOMContentLoaded', () => {
-    setLang(localStorage.getItem("lang")||"en");
+    setLang(localStorage.getItem("lang") || "en");
     reveal();
 });
 
-window.addEventListener('scroll', reveal);
+window.addEventListener('scroll',reveal);
 
-// SUBTLE PARALLAX MOUSE EFFECT
 document.addEventListener('mousemove', (e) => {
-    const xPos = (e.clientX / window.innerWidth - 0.5) * 15;
-    const yPos = (e.clientY / window.innerHeight - 0.5) * 15;
-    gsap.to('.hero-bg .blob', {
-        x: xPos * 2,
-        y: yPos * 2,
-        duration: 2,
-        ease: "power2.out"
-    });
+    const x = (e.clientX / window.innerWidth - 0.5) * 40;
+    const y = (e.clientY / window.innerHeight - 0.5) * 40;
+    gsap.to('.blob', { x: x, y: y, duration: 2, ease: "power2.out" });
 });
 </script>
 
