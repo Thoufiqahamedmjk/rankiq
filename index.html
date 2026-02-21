@@ -6,7 +6,6 @@
 
 <title>RANKIQ | Structured SEO Framework by Thoufiq Ahamed</title>
 <meta name="description" content="RANKIQ is a structured SEO framework by Thoufiq Ahamed. Engineering-led SEO focused on long-term authority, technical clarity, and sustainable organic visibility.">
-
 <link rel="canonical" href="https://thoufiqahamed.in/">
 
 <meta property="og:title" content="RANKIQ | Structured SEO Framework">
@@ -20,87 +19,89 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
     font-family:'Inter',sans-serif;
-    background:#f8fafc;
-    color:#0f172a;
+    background:#0f172a;
+    color:#e2e8f0;
     line-height:1.8;
 }
 header{
-    background:#ffffff;
     padding:22px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border-bottom:1px solid #e2e8f0;
+    background:#111827;
 }
 nav a{
     text-decoration:none;
-    color:#334155;
+    color:#cbd5e1;
     margin-left:25px;
     font-weight:500;
 }
-nav a:hover{color:#2563eb;}
-
+nav a:hover{color:#38bdf8;}
 .hero{
-    padding:120px 8%;
+    padding:130px 8%;
     text-align:center;
-    background:linear-gradient(to bottom,#ffffff,#eef2ff);
+    background:linear-gradient(135deg,#0f172a,#1e293b);
 }
 .hero h1{
     font-size:56px;
     font-weight:800;
     margin-bottom:25px;
+    color:#ffffff;
 }
 .hero p{
     font-size:20px;
     max-width:900px;
     margin:auto;
-    color:#475569;
+    color:#cbd5e1;
 }
-.cta{
-    margin-top:45px;
-}
+.cta{margin-top:45px;}
 .cta a{
-    background:#2563eb;
-    color:white;
+    background:#38bdf8;
+    color:#0f172a;
     padding:15px 35px;
     border-radius:10px;
     text-decoration:none;
-    font-weight:600;
+    font-weight:700;
 }
-.cta a:hover{background:#1e40af;}
-
+.cta a:hover{background:#0ea5e9;}
 .section{padding:100px 8%;}
-.section h2{font-size:38px;margin-bottom:30px;}
-.section p{max-width:950px;margin-bottom:22px;}
-.light{background:#ffffff;}
-.soft{background:#f1f5f9;}
-
+.section h2{
+    font-size:38px;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:35px;
-    margin-top:50px;
 }
 .card{
-    background:#ffffff;
+    background:#1e293b;
     padding:35px;
     border-radius:16px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.05);
+    transition:0.3s;
 }
+.card:hover{
+    transform:translateY(-6px);
+    background:#273449;
+}
+.card h3{margin-bottom:15px;color:#ffffff;}
 
 .faq-item{
-    margin-bottom:20px;
-    border-bottom:1px solid #e2e8f0;
-    padding-bottom:15px;
+    margin-bottom:25px;
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
 }
 .faq-question{
     cursor:pointer;
     font-weight:600;
+    color:#38bdf8;
 }
 .faq-answer{
     display:none;
     margin-top:10px;
-    color:#475569;
+    color:#cbd5e1;
 }
 
 form{
@@ -113,29 +114,24 @@ input,textarea{
     padding:12px;
     margin-bottom:15px;
     border-radius:8px;
-    border:1px solid #cbd5e1;
-    font-family:'Inter',sans-serif;
+    border:none;
 }
 button{
-    background:#2563eb;
-    color:white;
+    background:#38bdf8;
+    color:#0f172a;
     padding:14px;
     border:none;
     border-radius:8px;
-    font-weight:600;
+    font-weight:700;
     cursor:pointer;
 }
-button:hover{background:#1e40af;}
+button:hover{background:#0ea5e9;}
 
 footer{
-    background:#0f172a;
-    color:#cbd5e1;
+    background:#111827;
     text-align:center;
     padding:45px 8%;
-}
-footer a{
-    color:#93c5fd;
-    text-decoration:none;
+    color:#94a3b8;
 }
 </style>
 
@@ -146,6 +142,7 @@ function toggleFAQ(element){
 }
 </script>
 
+<!-- Person + Organization Schema -->
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
@@ -174,6 +171,56 @@ function toggleFAQ(element){
 }
 </script>
 
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How long does SEO take to show results?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "SEO is a compounding process. Initial visibility can appear within weeks, but strong authority usually develops over 3–6 months."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why is technical SEO important?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Without technical clarity, search engines struggle to understand your site structure."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is entity-based SEO?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Entity SEO focuses on contextual meaning around a brand or concept rather than just keywords."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do backlinks still matter?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. High-quality backlinks remain a strong authority signal in search algorithms."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can SEO guarantee rankings?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No ethical SEO can guarantee rankings because algorithms evolve continuously."
+   }
+  }
+ ]
+}
+</script>
+
 </head>
 <body>
 
@@ -181,75 +228,83 @@ function toggleFAQ(element){
 <div><strong>RANKIQ</strong></div>
 <nav>
 <a href="#framework">Framework</a>
-<a href="#blog">Insights</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>SEO Is Infrastructure, Not a Shortcut</h1>
-<p>RANKIQ is a structured SEO framework built to create long-term authority. It aligns technical optimization, semantic clarity, and search intent mapping into a scalable growth system.</p>
+<h1>Authority Is Engineered. Not Hacked.</h1>
+<p>RANKIQ transforms SEO into structured infrastructure. Technical clarity, semantic depth, and conversion alignment engineered for sustainable organic growth.</p>
 <div class="cta">
-<a href="#contact">Start Building Authority</a>
+<a href="#contact">Build Your Search Authority</a>
 </div>
 </section>
 
-<section id="framework" class="section light">
-<h2>The RANKIQ Framework</h2>
+<section id="framework" class="section">
+<h2>The RANKIQ Growth Architecture</h2>
 <div class="grid">
 <div class="card">
-<h3>Technical Foundation</h3>
-<p>Clean crawl paths, optimized indexing, structured data implementation, and performance optimization.</p>
+<h3>Technical SEO Infrastructure</h3>
+<p>Optimized crawling, structured data, clean indexing signals and performance engineering.</p>
 </div>
 <div class="card">
-<h3>Intent-Based Content</h3>
-<p>Content aligned with real search behavior rather than random keyword stuffing.</p>
+<h3>Semantic Content Mapping</h3>
+<p>Search intent alignment using entity relationships instead of outdated keyword stuffing.</p>
 </div>
 <div class="card">
-<h3>Authority Signals</h3>
-<p>Backlinks, brand mentions, and entity consistency across the web ecosystem.</p>
+<h3>Authority Amplification</h3>
+<p>Strategic backlinks, brand citations, and ecosystem consistency across platforms.</p>
 </div>
 <div class="card">
-<h3>Conversion Alignment</h3>
-<p>Optimizing user journeys from search result click to inquiry submission.</p>
+<h3>Conversion Optimization</h3>
+<p>Aligning search visibility with user trust and inquiry generation.</p>
 </div>
 </div>
 </section>
 
-<section id="blog" class="section soft">
-<h2>SEO Insights</h2>
-<p>Upcoming articles will explain technical SEO, ranking systems, entity-based optimization, and long-term authority development.</p>
-</section>
-
-<section id="faq" class="section light">
+<section id="faq" class="section">
 <h2>Frequently Asked Questions</h2>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">Why does SEO take time?</div>
-<div class="faq-answer">Search engines evaluate trust and authority gradually. Sustainable ranking growth requires consistent signals over time.</div>
+<div class="faq-question" onclick="toggleFAQ(this)">How long does SEO take to show results?</div>
+<div class="faq-answer">SEO is a compounding process. Strong authority usually develops over 3–6 months.</div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">Is SEO better than paid ads?</div>
-<div class="faq-answer">SEO builds long-term organic visibility. Paid ads provide immediate exposure. Strategic growth often combines both approaches.</div>
+<div class="faq-question" onclick="toggleFAQ(this)">Why is technical SEO important?</div>
+<div class="faq-answer">Technical clarity ensures search engines can crawl, understand, and index your website efficiently.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">What is entity-based SEO?</div>
+<div class="faq-answer">Entity SEO builds contextual meaning around a brand rather than focusing only on keywords.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">Do backlinks still matter?</div>
+<div class="faq-answer">Yes. Quality backlinks remain a major authority signal.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">Can SEO guarantee rankings?</div>
+<div class="faq-answer">No ethical SEO guarantees rankings due to algorithm changes and competition.</div>
 </div>
 
 </section>
 
-<section id="contact" class="section soft">
-<h2>Request Consultation</h2>
+<section id="contact" class="section">
+<h2>Start Your SEO Growth Strategy</h2>
 <form action="mailto:contact@thoufiqahamed.in" method="post" enctype="text/plain">
 <input type="text" name="Name" placeholder="Your Name" required>
 <input type="email" name="Email" placeholder="Your Email" required>
 <textarea name="Message" rows="5" placeholder="Describe your project"></textarea>
-<button type="submit">Submit Inquiry</button>
+<button type="submit">Request Consultation</button>
 </form>
 </section>
 
 <footer>
 <p>© 2026 RANKIQ | Structured SEO by Thoufiq Ahamed</p>
-<p>Email: contact@thoufiqahamed.in | WhatsApp: +91 9884795585</p>
 </footer>
 
 </body>
