@@ -1,97 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-1488001824666458">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rankiq – Ethical SEO That Works</title>
+<title>Rankiq – Ethical SEO That Works</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://unpkg.com/split-type"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    body{
-      font-family:Inter,system-ui,sans-serif;
-      scroll-behavior:smooth;
-      background:#f6f7ff;
-    }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
 
-    /* ===== BACKGROUND ===== */
-    .hero-bg{
-      position:relative;
-      overflow:hidden;
-      background:radial-gradient(circle at top,#e0e7ff,#ffffff);
-    }
-    .blob{
-      position:absolute;
-      width:420px;height:420px;
-      border-radius:50%;
-      filter:blur(100px);
-      opacity:.35;
-      animation:blob 18s infinite alternate ease-in-out;
-    }
-    .blob.blue{background:#6366f1;top:-120px;left:-120px;}
-    .blob.purple{background:#8b5cf6;bottom:-150px;right:-120px;animation-delay:5s;}
+<style>
+body{
+  font-family:Inter,system-ui,sans-serif;
+  scroll-behavior:smooth;
+  background:#f6f7ff;
+}
 
-    @keyframes blob{
-      from{transform:translate(0,0)}
-      to{transform:translate(80px,60px)}
-    }
+/* ===== BACKGROUND ===== */
+.hero-bg{
+  position:relative;
+  overflow:hidden;
+  background:radial-gradient(circle at top,#e0e7ff,#ffffff);
+}
+.blob{
+  position:absolute;
+  width:420px;height:420px;
+  border-radius:50%;
+  filter:blur(100px);
+  opacity:.35;
+  animation:blob 18s infinite alternate ease-in-out;
+}
+.blob.blue{background:#6366f1;top:-120px;left:-120px;}
+.blob.purple{background:#8b5cf6;bottom:-150px;right:-120px;animation-delay:5s;}
 
-    /* ===== GLASS ===== */
-    .glass{
-      background:rgba(255,255,255,.78);
-      backdrop-filter:blur(14px);
-      border:1px solid rgba(255,255,255,.45);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.6),
-        0 20px 40px rgba(0,0,0,.08);
-    }
+@keyframes blob{
+  from{transform:translate(0,0)}
+  to{transform:translate(80px,60px)}
+}
 
-    /* ===== FLOAT ===== */
-    @keyframes float{
-      0%{transform:translateY(0)}
-      50%{transform:translateY(-14px)}
-      100%{transform:translateY(0)}
-    }
-    .float{animation:float 7s ease-in-out infinite}
+/* ===== GLASS ===== */
+.glass{
+  background:rgba(255,255,255,.78);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.6),
+    0 20px 40px rgba(0,0,0,.08);
+}
 
-    /* ===== REVEAL ===== */
-    .reveal{opacity:0;transform:translateY(40px);transition:.9s ease}
-    .reveal.active{opacity:1;transform:translateY(0)}
+/* ===== FLOAT ===== */
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-14px)}
+  100%{transform:translateY(0)}
+}
+.float{animation:float 7s ease-in-out infinite}
 
-    /* ===== BUTTON ===== */
-    .glossy-btn{
-      background:linear-gradient(135deg,#2563eb,#7c3aed);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.45),
-        0 18px 36px rgba(79,70,229,.4);
-    }
-    .glossy-btn:hover{
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.6),
-        0 26px 52px rgba(79,70,229,.55);
-    }
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(40px);transition:.9s ease}
+.reveal.active{opacity:1;transform:translateY(0)}
 
-    /* ===== CARD ===== */
-    .card{transition:.4s ease}
-    .card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 30px 60px rgba(0,0,0,.12);
-    }
+/* ===== BUTTON ===== */
+.glossy-btn{
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.45),
+    0 18px 36px rgba(79,70,229,.4);
+}
+.glossy-btn:hover{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.6),
+    0 26px 52px rgba(79,70,229,.55);
+}
 
-    /* CINEMATIC TEXT REVEAL CSS */
-    .title-clip {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    .char {
-        transform: translateY(115%);
-        display: inline-block;
-    }
-  </style>
+/* ===== CARD ===== */
+.card{transition:.4s ease}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 60px rgba(0,0,0,.12);
+}
+
+/* NEW ANIMATION STYLES */
+.title-container {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.char {
+    transform: translateY(115%);
+}
+</style>
 </head>
 
 <body class="text-gray-800">
@@ -130,17 +129,17 @@
   <div class="blob blue"></div>
   <div class="blob purple"></div>
 
-  <div class="title-clip">
-    <h1 id="hero-main-title" class="text-4xl md:text-6xl font-extrabold mb-6" data-i18n="hero_title">
+  <div class="title-container">
+    <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold mb-6" data-i18n="hero_title">
       SEO That Gets You Found, Not Just Promised
     </h1>
   </div>
 
-  <p id="hero-main-desc" class="max-w-3xl mx-auto text-gray-600 mb-10 opacity-0" data-i18n="hero_desc">
+  <p id="hero-desc" class="max-w-3xl mx-auto text-gray-600 mb-10 opacity-0" data-i18n="hero_desc">
     Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through ethical SEO systems.
   </p>
 
-  <a href="#contact" id="hero-main-cta" class="glossy-btn text-white px-10 py-4 rounded font-bold opacity-0 inline-block" data-i18n="hero_cta">
+  <a href="#contact" id="hero-cta" class="glossy-btn text-white px-10 py-4 rounded font-bold opacity-0 inline-block" data-i18n="hero_cta">
     Get Free SEO Review
   </a>
 </section>
@@ -255,34 +254,32 @@ const content={
   }
 };
 
-let splitInstance;
+let split;
 
-function initHeroAnimation() {
-    // 1. Re-split the text (needed if language changes)
-    if (splitInstance) splitInstance.revert();
-    splitInstance = new SplitType('#hero-main-title', { types: 'chars' });
-
-    // 2. Timeline
-    const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-
-    tl.set('#hero-main-title', { opacity: 1 }); // Ensure title is visible for split
+// NEW: Animation Trigger Function
+function runHeroAnimation() {
+    if (split) split.revert();
+    split = new SplitType('#hero-title', { types: 'chars' });
     
+    const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+    
+    tl.set('#hero-title', { opacity: 1 });
     tl.to('.char', {
         y: 0,
         stagger: 0.02,
         duration: 1.5,
-        delay: 0.2
+        delay: 0.1
     })
-    .to('#hero-main-desc', {
+    .to('#hero-desc', {
         opacity: 1,
         y: -10,
-        duration: 1.2
-    }, "-=1")
-    .to('#hero-main-cta', {
-        opacity: 1,
-        y: -5,
         duration: 1
-    }, "-=1");
+    }, "-=1")
+    .to('#hero-cta', {
+        opacity: 1,
+        y: 0,
+        duration: 1
+    }, "-=0.8");
 }
 
 function setLang(lang){
@@ -291,8 +288,8 @@ function setLang(lang){
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     el.textContent=content[lang][el.dataset.i18n];
   });
-  // Re-run animation for the new language text
-  initHeroAnimation();
+  // Trigger animation after language update
+  runHeroAnimation();
 }
 
 function reveal(){
@@ -303,24 +300,19 @@ function reveal(){
   });
 }
 
-// ON LOAD
+// Ensure it runs after DOM is ready
 window.addEventListener('DOMContentLoaded', () => {
-    setLang(localStorage.getItem("lang")||"en");
+    setLang(localStorage.getItem("lang") || "en");
     reveal();
 });
 
-window.addEventListener('scroll', reveal);
+window.addEventListener('scroll',reveal);
 
-// SUBTLE PARALLAX MOUSE EFFECT
+// Interactive Parallax for Background Blobs
 document.addEventListener('mousemove', (e) => {
-    const xPos = (e.clientX / window.innerWidth - 0.5) * 15;
-    const yPos = (e.clientY / window.innerHeight - 0.5) * 15;
-    gsap.to('.hero-bg .blob', {
-        x: xPos * 2,
-        y: yPos * 2,
-        duration: 2,
-        ease: "power2.out"
-    });
+    const x = (e.clientX / window.innerWidth - 0.5) * 40;
+    const y = (e.clientY / window.innerHeight - 0.5) * 40;
+    gsap.to('.blob', { x: x, y: y, duration: 2, ease: "power2.out" });
 });
 </script>
 
