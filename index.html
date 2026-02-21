@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-1488001824666458">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rankiq – Search Engine Optimization Systems</title>
+  <title>Rankiq – Global Search Engine Optimization Systems</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,6 +14,10 @@
   <style>
     :root { --accent: #6366f1; }
     body { font-family: 'Inter', system-ui, sans-serif; background: #ffffff; color: #0f172a; overflow-x: hidden; }
+
+    /* Fix for Google Translate Header */
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0px !important; }
 
     .reveal {
       opacity: 0;
@@ -68,6 +72,13 @@
 
     .audit-bar { @apply h-2 bg-slate-100 rounded-full overflow-hidden mb-4; }
     .audit-progress { @apply h-full bg-indigo-500 transition-all duration-1000 w-0; }
+
+    /* Hide Google Language Label */
+    #google_translate_element select {
+        @apply bg-slate-100 border border-slate-200 rounded-lg px-3 py-1 text-xs font-bold outline-none cursor-pointer;
+    }
+    .goog-logo-link { display:none !important; } 
+    .goog-te-gadget { color: transparent !important; }
   </style>
 </head>
 <body>
@@ -77,16 +88,13 @@
     <div class="font-black text-2xl tracking-tighter text-indigo-600">RANKIQ</div>
     
     <nav class="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
-      <a href="#home" class="hover:text-indigo-600 transition-colors" data-i18n="n_home">Home</a>
-      <a href="#about" class="hover:text-indigo-600 transition-colors" data-i18n="n_about">About</a>
-      <a href="#services" class="hover:text-indigo-600 transition-colors" data-i18n="n_services">Services</a>
-      <a href="#contact" class="hover:text-indigo-600 transition-colors" data-i18n="n_contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </nav>
 
-    <div class="flex gap-1 bg-slate-100 p-1 rounded-full border border-slate-200">
-      <button onclick="setLang('en')" id="en-btn" class="px-4 py-1.5 text-[10px] font-black rounded-full transition-all">EN</button>
-      <button onclick="setLang('ta')" id="ta-btn" class="px-4 py-1.5 text-[10px] font-black rounded-full transition-all">தமிழ்</button>
-    </div>
+    <div id="google_translate_element"></div>
   </div>
 </header>
 
@@ -96,15 +104,15 @@
 
   <div class="max-w-5xl text-center relative z-10">
     <div class="title-clip mb-6">
-      <h1 id="hero-title" class="text-5xl md:text-8xl font-black leading-[1.05] tracking-tight text-slate-900" data-i18n="h_title">
+      <h1 id="hero-title" class="text-5xl md:text-8xl font-black leading-[1.05] tracking-tight text-slate-900">
         Search Engine Optimization That Gets You Found
       </h1>
     </div>
-    <p id="hero-desc" class="text-slate-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-0 translate-y-4" data-i18n="h_desc">
-        Stop chasing algorithm trends and start building a digital asset. Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through transparent, ethical Search Engine Optimization systems.
+    <p id="hero-desc" class="text-slate-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-0 translate-y-4">
+        Build a global digital asset. Rankiq helps businesses grow visibility, enquiries, and long-term trust through transparent, ethical Search Engine Optimization systems.
     </p>
     <div id="hero-cta" class="opacity-0 translate-y-4">
-      <a href="#contact" class="btn-primary text-white px-12 py-5 rounded-2xl font-black text-lg inline-block tracking-tight" data-i18n="h_cta">
+      <a href="#contact" class="btn-primary text-white px-12 py-5 rounded-2xl font-black text-lg inline-block tracking-tight">
         Start My Free Audit
       </a>
     </div>
@@ -113,74 +121,79 @@
 
 <section id="about" class="py-24 px-6 max-w-7xl mx-auto border-b border-slate-100">
   <div class="text-center mb-16 reveal">
-    <h2 class="text-4xl font-black mb-4 tracking-tight" data-i18n="m_title">The Science of Search Engine Optimization</h2>
-    <p class="text-slate-500 max-w-3xl mx-auto" data-i18n="m_desc">To outrank your competitors, you must first understand how Google perceives value. We replace the mystery of "ranking magic" with a hierarchy of technical and creative needs.</p>
+    <h2 class="text-4xl font-black mb-4 tracking-tight">The Science of Search Engine Optimization</h2>
+    <p class="text-slate-500 max-w-3xl mx-auto">To outrank your competitors, you must first understand how search engines perceive value. We replace the mystery of "ranking magic" with engineering logic.</p>
   </div>
 
   <div class="grid lg:grid-cols-2 gap-20 items-center">
     <div class="reveal">
-      <h3 class="text-3xl font-black mb-6" data-i18n="a_title">Engineering Logic Over Mystery</h3>
+      <h3 class="text-3xl font-black mb-6">Logic Over Myth</h3>
       <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
-        <p data-i18n="a_desc1"> Rankiq treats Search Engine Optimization as a data science. We analyze over 200 signals to ensure your website is mathematically optimized for search crawlers while remaining delightful for human readers.</p>
-        <p data-i18n="a_desc2">We break the myth that Search Engine Optimization is a "secret trick." In reality, it is the disciplined process of proving to a search engine that your website is the most reliable, fastest, and most authoritative answer to a user's question. By following Google's search quality evaluator guidelines, we build sustainable authority.</p>
+        <p>Rankiq treats Search Engine Optimization as a data science. We analyze over 200 technical signals to ensure your website is mathematically optimized for search crawlers while remaining delightful for human readers.</p>
+        <p>We break the <strong>Hidden Myth</strong>: Search Engine Optimization is not a "secret trick" or keyword stuffing. It is the disciplined process of proving to a search engine that your website is the most reliable, fastest, and most authoritative answer to a user's question.</p>
       </div>
 
       <div class="mt-12 space-y-4">
-          <div class="p-6 rounded-2xl bg-rose-50 border border-rose-100 flex gap-4 shadow-sm">
-              <div class="shrink-0"><span class="myth-pill" data-i18n="myth_l">Myth</span></div>
-              <p class="text-sm font-bold text-slate-700" data-i18n="myth_p">"Search Engine Optimization is just about repeating keywords to trick the system."</p>
+          <div class="p-6 rounded-2xl bg-rose-50 border border-rose-100 flex gap-4">
+              <div class="shrink-0"><span class="myth-pill">Myth</span></div>
+              <p class="text-sm font-bold text-slate-700">"SEO is just about repeating keywords to trick Google."</p>
           </div>
-          <div class="p-6 rounded-2xl bg-emerald-50 border border-emerald-100 flex gap-4 shadow-sm">
-              <div class="shrink-0"><span class="truth-pill" data-i18n="truth_l">Reality</span></div>
-              <p class="text-sm font-bold text-slate-700" data-i18n="truth_p">"Google rewards Site Speed, Secure Architecture, and deep E-E-A-T (Expertise, Experience, Authoritativeness, Trustworthiness)."</p>
+          <div class="p-6 rounded-2xl bg-emerald-50 border border-emerald-100 flex gap-4">
+              <div class="shrink-0"><span class="truth-pill">Reality</span></div>
+              <p class="text-sm font-bold text-slate-700">"Modern search rewards Site Speed, Security, and deep E-E-A-T (Expertise, Experience, Authority, Trust)."</p>
           </div>
       </div>
     </div>
-    <div class="reveal">
+    <div class="reveal text-center">
         
-        <p class="text-[10px] text-center mt-4 text-slate-400 font-black uppercase tracking-widest" data-i18n="pyramid_cap">Educational Reference: The Hierarchy of Search Engine Optimization Needs</p>
-    </div>
+        <p class="text-[10px] text-center mt-4 text-slate-400 font-black uppercase tracking-widest">Global Reference: The Priority Hierarchy</p>
   </div>
 </section>
 
 <section id="services" class="py-24 px-6 bg-slate-50/30">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-20 reveal">
-      <h2 class="text-4xl font-black mb-4 tracking-tighter" data-i18n="s_title">3-Phase Technical Roadmap</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto" data-i18n="s_desc">Phase-by-phase detailing of how we rebuild your site's digital authority from the technical basement to the authority penthouse.</p>
+      <h2 class="text-4xl font-black mb-4 tracking-tighter">3-Phase Technical Roadmap</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto">A deep-dive detailing of how we rebuild your site's digital authority from the technical basement to the authority penthouse.</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 mb-20">
       <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-indigo-500 flex flex-col h-full">
-        <h3 class="text-xl font-black mb-4" data-i18n="s1_t">Phase 1: Technical Integrity</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-6" data-i18n="s1_d">Before a site can rank, it must be readable. We optimize crawl budgets and Core Web Vitals so search bots navigate your site with zero resistance.</p>
-        
-        <div class="mt-8 space-y-2">
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c1">Crawlability & Indexing Audit</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c2">Schema Markup & Structured Data</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c3">Site Speed & Server Health</span></div>
+        <h3 class="text-xl font-black mb-4">Phase 1: Technical Integrity</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-6">Before a site can rank, it must be readable. We optimize crawl budgets and Core Web Vitals so search bots navigate your site with zero resistance.</p>
+        <div class="mb-8 overflow-hidden rounded-xl bg-white p-4 shadow-inner">
+            
+        </div>
+        <div class="mt-auto space-y-2">
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Crawlability & Indexing Audit</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Schema Markup & Structured Data</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Site Speed & Server Health</span></div>
         </div>
       </div>
 
       <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-purple-500 flex flex-col h-full" style="transition-delay: 0.1s">
-        <h3 class="text-xl font-black mb-4" data-i18n="s2_t">Phase 2: Intent Engineering</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-6" data-i18n="s2_d">Traffic is useless if it's the wrong people. We identify 'Money Keywords' by mapping the Search Intent of your specific buyer journey.</p>
-        
-        <div class="mt-8 space-y-2">
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c4">Semantic Keyword Clustering</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c5">User Experience (UX) Analysis</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c6">Competitor Visibility Gap</span></div>
+        <h3 class="text-xl font-black mb-4">Phase 2: Intent Engineering</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-6">Traffic is useless if it's the wrong people. We identify 'Money Keywords' by mapping the Search Intent of your specific buyer journey.</p>
+        <div class="mb-8 overflow-hidden rounded-xl bg-white p-4 shadow-inner">
+            
+        </div>
+        <div class="mt-auto space-y-2">
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Semantic Keyword Clustering</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>User Experience (UX) Analysis</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Competitor Visibility Gap</span></div>
         </div>
       </div>
 
       <div class="reveal glass p-10 rounded-[2.5rem] card-hover border-t-4 border-emerald-500 flex flex-col h-full" style="transition-delay: 0.2s">
-        <h3 class="text-xl font-black mb-4" data-i18n="s3_t">Phase 3: Digital Authority</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-6" data-i18n="s3_d">The final phase is Trust. We earn natural mentions from industry leaders, signaling to Google that you are a legitimate market expert.</p>
-        
-        <div class="mt-auto space-y-2 pt-8">
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c7">E-E-A-T Signal Reinforcement</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c8">Digital PR & Footprint Building</span></div>
-            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="c9">Conversion Rate Mastery</span></div>
+        <h3 class="text-xl font-black mb-4">Phase 3: Digital Authority</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-6">The final phase is Trust. We earn natural mentions from industry leaders, signaling to engines that you are a legitimate market expert.</p>
+        <div class="mb-8 overflow-hidden rounded-xl bg-white p-4 shadow-inner">
+            
+        </div>
+        <div class="mt-auto space-y-2 pt-8 border-t border-slate-100">
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>E-E-A-T Signal Reinforcement</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Digital PR & Reference Building</span></div>
+            <div class="check-item"><i class="fa-solid fa-check-circle"></i> <span>Conversion Rate Mastery</span></div>
         </div>
       </div>
     </div>
@@ -191,57 +204,27 @@
   <div class="glass p-12 rounded-[3rem] shadow-xl reveal">
     <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-            <h2 class="text-3xl font-black mb-6" data-i18n="audit_title">Interactive Audit Simulator</h2>
-            <p class="text-slate-500 text-sm mb-8" data-i18n="audit_desc">See the itemized checklist we use during a professional Search Engine Optimization health check. Every tick represents a vital signal to search algorithms.</p>
+            <h2 class="text-3xl font-black mb-6">Interactive Audit Simulator</h2>
+            <p class="text-slate-500 text-sm mb-8">Test your knowledge. These are the items we check during a professional Search Engine Optimization health check. Every tick represents a vital signal.</p>
             <div class="space-y-4">
                 <label class="flex items-center gap-3 cursor-pointer group">
                     <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 audit-check">
-                    <span class="text-sm font-bold text-slate-700 group-hover:text-indigo-600 transition-colors" data-i18n="chk_1">Optimized Meta Descriptions</span>
+                    <span class="text-sm font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Optimized Meta Descriptions</span>
                 </label>
                 <label class="flex items-center gap-3 cursor-pointer group">
                     <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 audit-check">
-                    <span class="text-sm font-bold text-slate-700 group-hover:text-indigo-600 transition-colors" data-i18n="chk_2">Structured Data (JSON-LD)</span>
+                    <span class="text-sm font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Structured Data (JSON-LD)</span>
                 </label>
                 <label class="flex items-center gap-3 cursor-pointer group">
                     <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 audit-check">
-                    <span class="text-sm font-bold text-slate-700 group-hover:text-indigo-600 transition-colors" data-i18n="chk_3">Mobile-First Response Check</span>
+                    <span class="text-sm font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Mobile-First Response Check</span>
                 </label>
             </div>
         </div>
         <div class="text-center">
             <div class="audit-bar"><div class="audit-progress" id="audit-progress"></div></div>
             <div class="text-6xl font-black text-indigo-600 mb-2"><span id="audit-score">0</span>%</div>
-            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest" data-i18n="score_label">Technical Optimization Score</p>
-        </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-12 px-6">
-  <div class="max-w-4xl mx-auto glass p-8 md:p-12 rounded-[3rem] shadow-2xl reveal border-2 border-indigo-50">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <h2 class="text-3xl font-black mb-4 text-slate-900" data-i18n="calc_title">The ROI of Search Engine Optimization</h2>
-            <p class="text-slate-500 text-sm mb-6" data-i18n="calc_desc">Calculate the impact of professional Search Engine Optimization on your bottom line. Visibility isn't just vanity—it's profit.</p>
-            <div class="space-y-4">
-                <div>
-                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 block" data-i18n="calc_l1">Monthly Traffic</label>
-                    <input type="number" id="roi-traffic" value="5000" class="roi-input" oninput="calculateROI()">
-                </div>
-                <div>
-                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 block" data-i18n="calc_l2">Conversion Rate (%)</label>
-                    <input type="number" id="roi-conv" value="2" class="roi-input" oninput="calculateROI()">
-                </div>
-                <div>
-                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 block" data-i18n="calc_l3">Avg. Order Value (₹)</label>
-                    <input type="number" id="roi-val" value="5000" class="roi-input" oninput="calculateROI()">
-                </div>
-            </div>
-        </div>
-        <div class="bg-indigo-600 rounded-[2rem] p-8 text-white text-center">
-            <p class="text-indigo-200 text-xs font-bold uppercase tracking-widest mb-2" data-i18n="calc_res_tag">Projected Monthly Revenue</p>
-            <div class="text-5xl font-black mb-4">₹<span id="roi-result">10,00,000</span></div>
-            <p class="text-indigo-100 text-xs opacity-80" data-i18n="calc_note">Calculated based on 2x visibility growth via Search Engine Optimization.</p>
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Your Optimization Score</p>
         </div>
     </div>
   </div>
@@ -249,8 +232,8 @@
 
 <section id="contact" class="py-24 px-6 max-w-5xl mx-auto">
   <div class="reveal text-center mb-16">
-    <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight" data-i18n="c_title">Claim Your Audit</h2>
-    <p class="text-slate-500 text-lg" data-i18n="c_desc">Submit your URL for a comprehensive technical Search Engine Optimization review. No myths, just data.</p>
+    <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight">Claim Your Audit</h2>
+    <p class="text-slate-500 text-lg">Submit your URL for a comprehensive technical Search Engine Optimization review. No myths, just data.</p>
   </div>
 
   <form action="https://formspree.io/f/mwvnenkk" method="POST" class="reveal space-y-4">
@@ -259,7 +242,7 @@
       <input id="f_email" name="email" required type="email" placeholder="Business Email" class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all">
     </div>
     <textarea id="f_msg" name="message" required placeholder="Tell us about your website goals..." class="w-full px-6 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-indigo-500 transition-all h-40"></textarea>
-    <button class="btn-primary w-full text-white font-black py-5 rounded-xl text-lg uppercase tracking-widest" data-i18n="c_btn">Send My Audit</button>
+    <button class="btn-primary w-full text-white font-black py-5 rounded-xl text-lg uppercase tracking-widest">Send My Audit</button>
   </form>
 </section>
 
@@ -267,84 +250,21 @@
   <p>© 2026 Rankiq. Designed and Crafted by Thoufiq Ahamed.</p>
 </footer>
 
-<script>
-const translations = {
-  en: {
-    n_home: "Home", n_about: "About", n_services: "Services", n_contact: "Contact",
-    h_title: "Search Engine Optimization That Gets You Found",
-    h_desc: "Stop chasing algorithm trends and start building a digital asset. Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through transparent, ethical Search Engine Optimization systems.",
-    h_cta: "Start My Free Audit",
-    m_title: "The Science of Search Engine Optimization",
-    m_desc: "To outrank your competitors, you must first understand how Google perceives value. We replace the mystery of 'ranking magic' with a hierarchy of technical and creative needs.",
-    a_title: "Engineering Logic Over Mystery",
-    a_desc1: "Founded by Thoufiq Ahamed, Rankiq treats Search Engine Optimization as a data science. We analyze over 200 signals to ensure your website is mathematically optimized.",
-    a_desc2: "We break the myth that Search Engine Optimization is a 'secret trick.' In reality, it is the process of proving your site is the most authoritative answer to a user's question.",
-    myth_l: "Myth", myth_p: "'SEO is just about repeating keywords to trick the system.'",
-    truth_l: "Reality", truth_p: "'Google rewards Site Speed, Security, and deep E-E-A-T signals above all else.'",
-    pyramid_cap: "Educational Reference: The Hierarchy of Search Engine Optimization Needs",
-    s_title: "3-Phase Technical Roadmap",
-    s_desc: "Phase-by-phase detailing of how we rebuild your site's digital authority from the ground up.",
-    s1_t: "Phase 1: Technical Integrity", s1_d: "Before a site can rank, it must be readable. We optimize crawl budgets and Core Web Vitals.",
-    c1: "Crawlability & Indexing Audit", c2: "Schema Markup & Structured Data", c3: "Site Speed & Server Health",
-    s2_t: "Phase 2: Intent Engineering", s2_d: "Traffic is useless if it's the wrong people. We identify 'Money Keywords' by mapping intent.",
-    c4: "Semantic Keyword Clustering", c5: "User Experience (UX) Analysis", c6: "Competitor Visibility Gap",
-    s3_t: "Phase 3: Digital Authority", s3_d: "The final phase is Trust. We earn natural mentions from industry leaders, signaling you are a trusted expert.",
-    c7: "E-E-A-T Signal Reinforcement", c8: "Digital PR & Footprint Building", c9: "Conversion Rate Mastery",
-    audit_title: "Interactive Audit Simulator",
-    audit_desc: "See the itemized checklist we use during a professional Search Engine Optimization audit.",
-    chk_1: "Optimized Meta Descriptions", chk_2: "Structured Data (JSON-LD)", chk_3: "Mobile-First Response Check",
-    score_label: "Technical Optimization Score",
-    calc_title: "The ROI of Search Engine Optimization",
-    calc_desc: "Calculate the impact of professional Search Engine Optimization on your bottom line.",
-    calc_l1: "Monthly Traffic", calc_l2: "Conversion Rate (%)", calc_l3: "Avg. Order Value (₹)",
-    calc_res_tag: "Projected Monthly Revenue", calc_note: "Calculated based on 2x visibility growth via Search Engine Optimization.",
-    c_title: "Claim Your Audit",
-    c_desc: "Submit your URL for a comprehensive technical Search Engine Optimization review. No myths, just data.",
-    c_btn: "Send My Audit",
-    ph_name: "Full Name", ph_email: "Business Email", ph_msg: "Tell us about your website goals..."
-  },
-  ta: {
-    n_home: "முகப்பு", n_about: "எங்களை பற்றி", n_services: "சேவைகள்", n_contact: "தொடர்பு",
-    h_title: "உங்களைத் தேடுபவர்களுக்கு உங்களைக் காட்டும் தேடல் பொறி உகப்பாக்கம்",
-    h_desc: "அல்காரிதம் மாற்றங்களை கண்டு அஞ்சாமல், உங்கள் வணிகத்திற்கான நிரந்தர டிஜிட்டல் சொத்தை உருவாக்குங்கள்.",
-    h_cta: "இலவச தணிக்கை",
-    m_title: "தேடல் பொறி உகப்பாக்கத்தின் பின்னால் உள்ள அறிவியல்",
-    m_desc: "வெற்றி பெற, கூகுள் எதை முக்கியமாகக் கருதுகிறது என்பதை நீங்கள் முதலில் புரிந்து கொள்ள வேண்டும்.",
-    a_title: "மர்மத்தை விட பொறியியல் தர்க்கமே மேலானது",
-    a_desc1: "தௌஃபிக் அகமது அவர்களால் தொடங்கப்பட்ட Rankiq, தேடல் பொறி உகப்பாக்கத்தை ஒரு தரவு சார்ந்த சவாலாக அணுகுகிறது.",
-    a_desc2: "இது ஒரு 'ரகசிய வித்தை' அல்ல; வாடிக்கையாளருக்குச் சிறந்த அனுபவத்தை வழங்குவதே இதன் அடிப்படை.",
-    myth_l: "கற்பிதம்", myth_p: "'கீவேர்டுகளைத் திரும்பத் திரும்பப் பயன்படுத்தினால் கூகுளை ஏமாற்றலாம்.'",
-    truth_l: "உண்மை", truth_p: "'கூகுள் வேகம், பாதுகாப்பு மற்றும் நிபுணத்துவத்தை மட்டுமே விரும்புகிறது.'",
-    pyramid_cap: "தேடல் பொறி உகப்பாக்கத்தின் முன்னுரிமை பிரமிடு",
-    s_title: "3-படி தொழில்நுட்ப திட்டவரைபடம்",
-    s_desc: "ஒவ்வொரு நிலையிலும் நாங்கள் என்ன செய்கிறோம் என்பதை நீங்கள் அறிந்து கொள்வீர்கள்.",
-    s1_t: "நிலை 1: தொழில்நுட்பத் தரம்", s1_d: "கூகுள் உங்கள் தளத்தை எளிதாகப் படிக்கும் வகையில் தொழில்நுட்பக் குறைகளைச் சரிசெய்தல்.",
-    c1: "Crawl மற்றும் Indexing தணிக்கை", c2: "ஸ்க்கீமா மார்க்கப் அமைத்தல்", c3: "வேகம் மற்றும் சர்வர் ஆரோக்கியம்",
-    s2_t: "நிலை 2: தேடல் நோக்கம்", s2_d: "வாடிக்கையாளரை ஈர்க்கும் லாபகரமான சொற்களைக் கண்டறிதல்.",
-    c4: "கீவேர்ட் கிளஸ்டரிங்", c5: "பயனர் அனுபவ ஆய்வு", c6: "போட்டியாளர் ஆய்வு",
-    s3_t: "நிலை 3: டிஜிட்டல் நம்பகத்தன்மை", s3_d: "உங்களை ஒரு சிறந்த நிபுணராக இணையத்தில் நிலைநிறுத்துதல்.",
-    c7: "E-E-A-T நம்பகத்தன்மை கட்டமைப்பு", c8: "டிஜிட்டல் அடையாளங்களை உருவாக்குதல்", c9: "விற்பனை மாற்றத்தை அதிகரித்தல்",
-    audit_title: "தணிக்கை சிமுலேட்டர்",
-    audit_desc: "முறையான தேடல் பொறி உகப்பாக்கத்தில் நாங்கள் சரிபார்க்கும் அம்சங்கள்.",
-    chk_1: "உகந்த மெட்டா விவரங்கள்", chk_2: "JSON-LD ஸ்கீமா தரவு", chk_3: "மொபைல் ரெஸ்பான்சிவ் சோதனை",
-    score_label: "தொழில்நுட்ப மதிப்பீடு",
-    calc_title: "தேடல் பொறி உகப்பாக்கத்தின் வருமானம்",
-    calc_desc: "முறையான சேவையின் மூலம் உங்கள் வணிகத்தில் ஏற்படும் மாற்றத்தைக் காணுங்கள்.",
-    calc_l1: "மாதாந்திர வருகை", calc_l2: "மாற்ற விகிதம் (%)", calc_l3: "சராசரி ஆர்டர் மதிப்பு (₹)",
-    calc_res_tag: "எதிர்பார்க்கப்படும் வருவாய்", calc_note: "வருகை அதிகரிப்பு வருவாயில் பெரிய மாற்றத்தை ஏற்படுத்தும்."
-  }
-};
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<script>
 let split;
 function animateHero() {
   if (split) split.revert();
-  const isTa = document.documentElement.lang === 'ta';
-  split = new SplitType('#hero-title', { types: isTa ? 'words' : 'chars' });
-  const targets = isTa ? '.word' : '.char';
-
+  split = new SplitType('#hero-title', { types: 'chars' });
   const tl = gsap.timeline();
   tl.set('#hero-title', { opacity: 1 });
-  tl.to(targets, { y: 0, stagger: 0.02, duration: 0.35, ease: "power4.out" })
+  tl.to('.char', { y: 0, stagger: 0.02, duration: 0.35, ease: "power4.out" })
     .to('#hero-desc', { opacity: 1, y: 0, duration: 0.4 }, "-=0.2")
     .to('#hero-cta', { opacity: 1, y: 0, duration: 0.4 }, "-=0.3");
 }
@@ -357,35 +277,6 @@ function updateAudit() {
     document.getElementById('audit-progress').style.width = score + '%';
 }
 
-function setLang(lang) {
-  document.documentElement.lang = lang;
-  localStorage.setItem('pref_lang', lang);
-
-  const btns = { en: document.getElementById('en-btn'), ta: document.getElementById('ta-btn') };
-  Object.keys(btns).forEach(k => {
-    btns[k].className = k === lang ? "px-4 py-1.5 text-[10px] font-black rounded-full bg-white shadow-sm text-indigo-600 border border-slate-200" : "px-4 py-1.5 text-[10px] font-black rounded-full text-slate-400";
-  });
-
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.dataset.i18n;
-    if (translations[lang][key]) el.innerText = translations[lang][key];
-  });
-
-  document.getElementById('f_name').placeholder = translations[lang].ph_name;
-  document.getElementById('f_email').placeholder = translations[lang].ph_email;
-  document.getElementById('f_msg').placeholder = translations[lang].ph_msg;
-
-  animateHero();
-}
-
-function calculateROI() {
-    const traffic = document.getElementById('roi-traffic').value;
-    const conv = document.getElementById('roi-conv').value / 100;
-    const val = document.getElementById('roi-val').value;
-    const result = Math.round((traffic * 2) * conv * val);
-    document.getElementById('roi-result').innerText = result.toLocaleString('en-IN');
-}
-
 function reveal() {
   document.querySelectorAll('.reveal').forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight * 0.9) el.classList.add('active');
@@ -394,9 +285,8 @@ function reveal() {
 
 window.addEventListener('scroll', reveal);
 window.addEventListener('DOMContentLoaded', () => {
-  setLang(localStorage.getItem('pref_lang') || 'en');
+  animateHero();
   reveal();
-  calculateROI();
   updateAudit();
 });
 
