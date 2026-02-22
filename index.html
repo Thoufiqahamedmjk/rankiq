@@ -3,162 +3,68 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- 🔥 SEO Title -->
+    <title>Thoufiq Ahamed — Portfolio, Web Developer & Digital Solutions</title>
 
-    <title>Search Engine Optimization Systems</title>
+    <!-- 🔥 Meta Description -->
+    <meta name="description" content="Thoufiq Ahamed — Portfolio website showcasing projects, skills, contact info, and digital solutions. Reach out at contact@thoufiqahamed.in or call 9385352585." />
 
-    <meta name="description" content="Search Engine Optimization Systems – Professional SEO strategies, keyword systems, website audits, content optimization and growth systems designed to increase visibility and performance.">
+    <!-- 🔥 Canonical -->
+    <link rel="canonical" href="https://thoufiqahamed.in" />
 
-    <!-- OpenGraph -->
-    <meta property="og:title" content="Search Engine Optimization Systems">
-    <meta property="og:description" content="Professional SEO systems engineered for long-term visibility and traffic growth.">
-    <meta property="og:type" content="website">
+    <!-- 🔥 Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 🔥 OpenGraph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="Thoufiq Ahamed — Portfolio & Digital Solutions" />
+    <meta property="og:description" content="Explore the portfolio, skills, and contact details of Thoufiq Ahamed." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thoufiqahamed.in" />
+    <meta property="og:image" content="https://thoufiqahamed.in/og-image.jpg" />
 
-    <!-- GSAP + SplitType -->
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- 🔥 Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Thoufiq Ahamed — Portfolio & Digital Solutions" />
+    <meta name="twitter:description" content="Explore the portfolio of Thoufiq Ahamed." />
+    <meta name="twitter:image" content="https://thoufiqahamed.in/og-image.jpg" />
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- 🔥 JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Thoufiq Ahamed",
+      "url": "https://thoufiqahamed.in",
+      "image": "https://thoufiqahamed.in/og-image.jpg",
+      "email": "mailto:contact@thoufiqahamed.in",
+      "telephone": "+919385352585",
+      "jobTitle": "Web Developer",
+      "sameAs": [
+        "https://wa.me/919385352585"
+      ]
+    }
+    </script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 800px; margin: auto; }
+        h1 { font-size: 32px; }
+        .contact a { display: block; padding: 5px 0; }
+    </style>
 </head>
-<body class="bg-black text-white font-sans">
 
-    <!-- Fixed Header -->
-    <header class="fixed w-full top-0 left-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
-            <h1 class="text-xl font-semibold tracking-tight">SEO Systems</h1>
-            <nav class="hidden md:flex gap-8">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#process" class="nav-link">Process</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
+<body>
+    <div class="container">
+        <h1>Welcome to Thoufiq Ahamed’s Portfolio</h1>
+        <p>This is the official website of Thoufiq Ahamed — Web Developer & Digital Solutions provider.</p>
+
+        <h2>Contact</h2>
+        <div class="contact">
+            <a href="mailto:contact@thoufiqahamed.in">📧 Email: contact@thoufiqahamed.in</a>
+            <a href="tel:+919385352585">📞 Call: 93853 52585</a>
+            <a href="https://wa.me/919385352585">💬 WhatsApp: 93853 52585</a>
         </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="relative overflow-hidden pt-[110px] pb-20 px-6 text-center">
-        <div class="absolute inset-0 bg-gradient-to-b from-purple-600/10 to-transparent pointer-events-none"></div>
-
-        <h2 id="hero-title"
-            class="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight max-w-3xl mx-auto">
-            Search Engine Optimization Systems
-        </h2>
-
-        <p class="mt-6 max-w-2xl mx-auto text-lg text-white/80">
-            Results-driven SEO engineered for visibility, authority, and scalable long-term growth.
-        </p>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="py-20 px-6 max-w-6xl mx-auto">
-        <h3 class="section-title">Our Services</h3>
-
-        <div class="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="card">
-                <h4 class="card-title">Full SEO Audit</h4>
-                <p class="card-text">Complete visibility analysis, performance mapping, and opportunity discovery.</p>
-            </div>
-
-            <div class="card">
-                <h4 class="card-title">Keyword Systems</h4>
-                <p class="card-text">Intent-based keyword frameworks engineered for ranking and conversion.</p>
-            </div>
-
-            <div class="card">
-                <h4 class="card-title">Technical Fixes</h4>
-                <p class="card-text">Speed, indexing, core vitals, structured data, crawling optimization.</p>
-            </div>
-
-            <div class="card">
-                <h4 class="card-title">Content Optimization</h4>
-                <p class="card-text">Semantic expansion, topical authority, and high-performance content refinement.</p>
-            </div>
-
-            <div class="card">
-                <h4 class="card-title">On-Page SEO</h4>
-                <p class="card-text">Precision tuning of pages, metadata, internal links, and structure.</p>
-            </div>
-
-            <div class="card">
-                <h4 class="card-title">SEO Systems & Strategy</h4>
-                <p class="card-text">Long-term SEO frameworks for reliable, compounding growth.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process -->
-    <section id="process" class="py-20 px-6 bg-white/5 border-y border-white/10">
-        <div class="max-w-6xl mx-auto text-center">
-            <h3 class="section-title">Our 3-Phase System</h3>
-
-            <div class="grid gap-10 mt-12 sm:grid-cols-2 lg:grid-cols-3">
-                <div class="phase-card">
-                    <span class="phase-number">01</span>
-                    <h4 class="phase-title">Diagnosis</h4>
-                    <p class="phase-text">We identify ranking gaps, performance weaknesses, and missed opportunities.</p>
-                </div>
-
-                <div class="phase-card">
-                    <span class="phase-number">02</span>
-                    <h4 class="phase-title">Optimization</h4>
-                    <p class="phase-text">We optimize structure, signals, content, and indexing paths.</p>
-                </div>
-
-                <div class="phase-card">
-                    <span class="phase-number">03</span>
-                    <h4 class="phase-title">Expansion</h4>
-                    <p class="phase-text">We build systems that scale traffic, authority, and long-term growth.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-20 px-6 max-w-4xl mx-auto">
-        <h3 class="section-title text-center">FAQ</h3>
-
-        <div class="mt-12 space-y-6">
-            <details class="faq-box">
-                <summary>How long does SEO take?</summary>
-                <p>Most clients see results between 30–90 days depending on competition and site condition.</p>
-            </details>
-
-            <details class="faq-box">
-                <summary>Do you guarantee rankings?</summary>
-                <p>No legitimate SEO guarantees rankings — but we guarantee performance improvement.</p>
-            </details>
-
-            <details class="faq-box">
-                <summary>Can you fix my existing SEO issues?</summary>
-                <p>Yes — we specialize in diagnosing and repairing broken SEO systems.</p>
-            </details>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-20 px-6 max-w-xl mx-auto">
-        <h3 class="section-title text-center">Contact Us</h3>
-
-        <form class="mt-12 space-y-6">
-            <input type="text" placeholder="Your name" class="input-field">
-            <input type="email" placeholder="Your email" class="input-field">
-            <textarea placeholder="Write your message..." rows="5" class="input-field"></textarea>
-
-            <button class="submit-btn">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Floating Action Bar -->
-    <div class="action-bar">
-        <a href="https://wa.me/" class="action-btn">WhatsApp</a>
-        <a href="tel:" class="action-btn">Call</a>
-        <a href="mailto:" class="action-btn">Email</a>
     </div>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
 </body>
 </html>
