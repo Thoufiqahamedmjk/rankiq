@@ -1,328 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="google-adsense-account" content="ca-pub-1488001824666458">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rankiq – Ethical SEO Operations (2026)</title>
 
-<!-- SEO Tags -->
-<meta name="description" content="Rankiq – Ethical SEO Agency in India helping businesses grow visibility, enquiries, and long-term trust.">
-<meta name="keywords" content="Rankiq, SEO services, Technical SEO, Keyword Strategy, Content SEO, India SEO, Business SEO">
-<meta name="author" content="Rankiq">
-<meta name="robots" content="index, follow">
+    <!-- Primary SEO -->
+    <meta name="description" content="Rankiq provides ethical SEO operations, technical audits, keyword research, ranking strategies, and deep SEO education for business owners.">
+    <meta name="keywords" content="Rankiq, SEO 2026, ethical SEO, website audit, SEO education, keyword research, technical SEO, on-page optimization, ranking strategies">
 
-<title>Rankiq – Ethical SEO That Works</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rankiq – Ethical SEO Operations">
+    <meta property="og:description" content="Ethical SEO operations with deep educational content to empower business owners.">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:type" content="website">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-body {
-  font-family: Inter, system-ui, sans-serif;
-  scroll-behavior: smooth;
-  background: #f6f7ff;
-}
-
-/* ===== BACKGROUND ===== */
-.hero-bg {
-  position: relative;
-  overflow: hidden;
-  background: radial-gradient(circle at top, #e0e7ff, #ffffff);
-}
-
-.blob {
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: .35;
-  animation: blob 18s infinite alternate ease-in-out;
-}
-
-.blob.blue {
-  background: #6366f1;
-  top: -120px;
-  left: -120px;
-}
-
-.blob.purple {
-  background: #8b5cf6;
-  bottom: -150px;
-  right: -120px;
-  animation-delay: 5s;
-}
-
-@keyframes blob {
-  from {
-    transform: translate(0, 0)
-  }
-
-  to {
-    transform: translate(80px, 60px)
-  }
-}
-
-/* ===== GLASS ===== */
-.glass {
-  background: rgba(255, 255, 255, .78);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, .45);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .6),
-    0 20px 40px rgba(0, 0, 0, .08);
-}
-
-/* ===== FLOAT ===== */
-@keyframes float {
-  0% {
-    transform: translateY(0)
-  }
-
-  50% {
-    transform: translateY(-14px)
-  }
-
-  100% {
-    transform: translateY(0)
-  }
-}
-
-.float {
-  animation: float 7s ease-in-out infinite
-}
-
-/* ===== REVEAL ===== */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: .9s ease
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0)
-}
-
-/* ===== BUTTON ===== */
-.glossy-btn {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .45),
-    0 18px 36px rgba(79, 70, 229, .4);
-}
-
-.glossy-btn:hover {
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .6),
-    0 26px 52px rgba(79, 70, 229, .55);
-}
-
-/* ===== CARD ===== */
-.card {
-  transition: .4s ease
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, .12);
-}
-</style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="text-gray-800">
+<body>
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 glass px-6 py-4 flex justify-between items-center">
-  <div class="font-bold italic text-lg">Rankiq</div>
-
-  <div class="flex items-center gap-6 text-sm font-semibold">
-    <nav class="flex gap-5">
-      <a href="#home" data-i18n="nav_home">Home</a>
-      <a href="#about" data-i18n="nav_about">About</a>
-      <a href="#services" data-i18n="nav_services">Services</a>
-      <a href="#contact" data-i18n="nav_contact">Contact</a>
+<header class="header">
+    <h1 class="logo">Rankiq</h1>
+    <nav>
+        <a href="#services">SEO Operations</a>
+        <a href="#about">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
-
-    <!-- LANGUAGE -->
-    <div class="flex gap-2 text-xs font-bold">
-      <button onclick="setLang('en')">EN</button> |
-      <button onclick="setLang('ta')">தமிழ்</button>
-    </div>
-  </div>
 </header>
 
-<!-- FLOAT CONTACT -->
-<div class="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
-  <a href="tel:+919884795585" class="glass p-3 rounded-full text-indigo-600 float">
-    <i class="fa-solid fa-phone"></i>
-  </a>
-  <a href="mailto:contact@thoufiqahamed.in" class="glass p-3 rounded-full text-indigo-600 float" style="animation-delay:.4s">
-    <i class="fa-solid fa-envelope"></i>
-  </a>
-  <a href="https://wa.me/919884795585" class="glass p-3 rounded-full text-indigo-600 float" style="animation-delay:.8s">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-</div>
-
-<!-- HERO -->
-<section id="home" class="hero-bg text-center py-32 px-6">
-  <div class="blob blue"></div>
-  <div class="blob purple"></div>
-
-  <h1 class="text-4xl md:text-6xl font-extrabold mb-6 reveal" data-i18n="hero_title">
-    SEO That Gets You Found, Not Just Promised
-  </h1>
-
-  <p class="max-w-3xl mx-auto text-gray-600 mb-10 reveal" data-i18n="hero_desc">
-    Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through ethical SEO systems.
-  </p>
-
-  <a href="#contact" class="glossy-btn text-white px-10 py-4 rounded font-bold reveal" data-i18n="hero_cta">
-    Get Free SEO Review
-  </a>
+<section class="hero">
+    <h2>Data-Driven SEO. Ethical Methods. Real Education.</h2>
+    <p>Rankiq helps businesses understand how SEO truly works in 2026.  
+    No black-hat shortcuts — only transparent operations backed by deep data and strategy.</p>
+    <a href="#services" class="btn">Explore SEO Services</a>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-14 items-center">
-  <div class="reveal">
-    <h2 class="text-3xl font-bold mb-4" data-i18n="about_title">Why Businesses Trust Rankiq</h2>
-    <p class="text-gray-500 leading-relaxed" data-i-i18n="about_desc">
-      We avoid shortcuts. Rankiq builds SEO foundations that compound growth, credibility, and inbound leads over time.
-    </p>
-  </div>
+<section id="services" class="services">
+    <h2>SEO Operations (2026) — Deep Explanation</h2>
 
-  <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1000" loading="lazy" class="rounded-3xl shadow-xl float reveal">
+    <div class="service-grid">
+
+        <div class="card">
+            <h3>🔍 Keyword Research (Search Intent 2026)</h3>
+            <p>We break down keyword classes: informational, commercial, transactional, and navigational.  
+            You learn why users behave differently and how Google evaluates intent-match.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚙️ Technical SEO & Crawl Engineering</h3>
+            <p>Modern SEO relies on crawl budget, Core Web Vitals, rendering delays, schema, and indexation pathways.  
+            You learn how search engines discover, parse, and evaluate your site technically.</p>
+        </div>
+
+        <div class="card">
+            <h3>📄 On-Page SEO Science</h3>
+            <p>We teach semantic layers: topical clustering, entity relationships, internal linking flow, E-E-A-T signals, and trust indicators.</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Complete Website Audit (Deep Technical)</h3>
+            <p>We provide a 360° audit covering performance, structure, crawl maps, canonical layers, schema validation, and ranking gaps.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Ranking Roadmap (Zero Confusion)</h3>
+            <p>You get a month-wise ranking plan based on keyword groups, authority building, internal link flow, and competitive gap analysis.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎓 SEO Education for Business Owners</h3>
+            <p>We teach everything: how algorithms behave, how ranking shifts happen, how search volumes fluctuate, and how to measure your real SEO ROI.</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="py-28 px-6 bg-gradient-to-b from-indigo-50 to-white text-center">
-  <h2 class="text-3xl font-bold mb-4 reveal" data-i18n="services_title">SEO Services</h2>
-  <p class="text-gray-500 max-w-3xl mx-auto mb-16 reveal" data-i18n="services_desc">
-    From technical fixes to intent-driven content, our SEO work focuses on real business outcomes.
-  </p>
-
-  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-    <div class="glass card p-6 rounded-3xl reveal">
-      <h3 class="font-bold mb-3" data-i18n="service1_title">Technical SEO</h3>
-      <p class="text-sm text-gray-500" data-i18n="service1_desc">
-        Speed, structure, indexing, and crawl optimization.
-      </p>
-    </div>
-
-    <div class="glass card p-6 rounded-3xl reveal">
-      <h3 class="font-bold mb-3" data-i18n="service2_title">Keyword Strategy</h3>
-      <p class="text-sm text-gray-500" data-i18n="service2_desc">
-        Buyer-intent keyword planning focused on enquiries.
-      </p>
-    </div>
-
-    <div class="glass card p-6 rounded-3xl reveal">
-      <h3 class="font-bold mb-3" data-i18n="service3_title">Content SEO</h3>
-      <p class="text-sm text-gray-500" data-i18n="service3_desc">
-        Content built to rank, educate, and convert.
-      </p>
-    </div>
-  </div>
+<section id="about" class="about">
+    <h2>About Rankiq</h2>
+    <p>Rankiq exists to simplify SEO for business owners. We remove confusion by teaching the logic behind every ranking factor, why Google behaves the way it does, and how sustainable ranking works.</p>
+    <p>Our mission is to empower you — not hide behind technical jargon.</p>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-28 px-6 bg-gradient-to-t from-violet-50 to-white">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-    <div class="reveal">
-      <h2 class="text-3xl font-bold mb-4" data-i18n="contact_title">Get a Free SEO Review</h2>
-      <p class="text-gray-500 mb-8" data-i18n="contact_desc">
-        Share your website. We’ll respond with honest SEO insights — no pressure.
-      </p>
-
-      <form action="https://formspree.io/f/mwvnenkk" method="POST" class="space-y-6">
-        <input required placeholder="Name" class="w-full border-b py-2 bg-transparent outline-none">
-        <input required type="email" placeholder="Email" class="w-full border-b py-2 bg-transparent outline-none">
-        <textarea required placeholder="Tell us about your business" class="w-full border-b py-2 bg-transparent outline-none"></textarea>
-        <button class="glossy-btn text-white px-10 py-3 rounded font-bold">
-          Submit
-        </button>
-      </form>
+<footer>
+    <p>© 2026 Rankiq. All Rights Reserved.</p>
+    <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="contact.html">Contact</a>
     </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="text-center py-10 text-xs text-gray-500 border-t">
-
-  <div class="flex justify-center gap-6 mb-4 font-semibold text-gray-600">
-    <a href="index.html">Rankiq</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </div>
-
-  © 2026 Rankiq. All rights reserved.
+    <p>Email: <a href="mailto:contact@thoufiqahamed.in">contact@thoufiqahamed.in</a></p>
 </footer>
-
-<script>
-const content={
-  en:{
-    nav_home:"Home",nav_about:"About",nav_services:"Services",nav_contact:"Contact",
-    hero_title:"SEO That Gets You Found, Not Just Promised",
-    hero_desc:"Rankiq helps Indian businesses grow visibility, enquiries, and long-term trust through ethical SEO systems.",
-    hero_cta:"Get Free SEO Review",
-    about_title:"Why Businesses Trust Rankiq",
-    about_desc:"We avoid shortcuts. Rankiq builds SEO foundations that compound growth, credibility, and inbound leads over time.",
-    services_title:"SEO Services",
-    services_desc:"From technical fixes to intent-driven content, our SEO work focuses on real business outcomes.",
-    service1_title:"Technical SEO",
-    service1_desc:"Speed, structure, indexing, and crawl optimization.",
-    service2_title:"Keyword Strategy",
-    service2_desc:"Buyer-intent keyword planning focused on enquiries.",
-    service3_title:"Content SEO",
-    service3_desc:"Content built to rank, educate, and convert.",
-    contact_title:"Get a Free SEO Review",
-    contact_desc:"Share your website. We’ll respond with honest SEO insights — no pressure."
-  },
-  ta:{
-    nav_home:"முகப்பு",nav_about:"எங்களை பற்றி",nav_services:"சேவைகள்",nav_contact:"தொடர்பு",
-    hero_title:"உங்களை கண்டுபிடிக்க உதவும் SEO — வெறும் வாக்குறுதி அல்ல",
-    hero_desc:"Rankiq இந்திய நிறுவனங்களுக்கு பார்வை, விசாரணைகள் மற்றும் நீண்டகால நம்பிக்கையை உருவாக்க உதவுகிறது.",
-    hero_cta:"இலவச SEO மதிப்பாய்வு",
-    about_title:"ஏன் Rankiq-ஐ நம்புகிறார்கள்",
-    about_desc:"Rankiq குறுக்குவழிகளை தவிர்த்து நிலையான SEO அடித்தளத்தை உருவாக்குகிறது.",
-    services_title:"SEO சேவைகள்",
-    services_desc:"உண்மையான வணிக வளர்ச்சிக்கான SEO தீர்வுகள்.",
-    service1_title:"தொழில்நுட்ப SEO",
-    service1_desc:"வேகம், அமைப்பு மற்றும் crawl மேம்பாடு.",
-    service2_title:"முக்கிய சொல் திட்டம்",
-    service2_desc:"வாங்கத் தயாரான பயனர்களுக்கான சொற்கள்.",
-    service3_title:"உள்ளடக்க SEO",
-    service3_desc:"தரவரிசை பெறும் மற்றும் நம்பிக்கை உருவாக்கும் உள்ளடக்கம்.",
-    contact_title:"இலவச SEO மதிப்பாய்வு",
-    contact_desc:"உங்கள் இணையதளத்தை பகிருங்கள். தெளிவான ஆலோசனைகள் வழங்கப்படும்."
-  }
-};
-
-function setLang(lang){
-  localStorage.setItem("lang",lang);
-  document.documentElement.lang=lang;
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    el.textContent=content[lang][el.dataset.i18n];
-  });
-}
-setLang(localStorage.getItem("lang")||"en");
-
-function reveal(){
-  document.querySelectorAll('.reveal').forEach(el=>{
-    if(el.getBoundingClientRect().top<window.innerHeight-100){
-      el.classList.add('active');
-    }
-  });
-}
-window.addEventListener('scroll',reveal);
-reveal();
-</script>
 
 </body>
 </html>
