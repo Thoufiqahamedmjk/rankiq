@@ -1,195 +1,267 @@
-/* ===== GLOBAL RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
+/* =========================================================
+   B-MAX PREMIUM 2026 THEME
+   For: Rankiq – Ethical SEO Agency
+   Made for Thoufiq Ahamed
+   Version: 2026.1
+   ========================================================= */
 
-/* ===== AUTO LIGHT / DARK THEME ===== */
+
+/* ------------------------------
+   ROOT VARIABLES
+------------------------------ */
 :root {
-  --bg-light: #f4f4f4;
-  --text-light: #1a1a1a;
+  --bg-main: #f4f6ff;
+  --bg-card: rgba(255, 255, 255, 0.65);
+  --bg-glass-border: rgba(255, 255, 255, 0.38);
 
-  --bg-dark: #0c0117;
-  --text-dark: #ffffff;
+  --gradient-1: linear-gradient(135deg, #4f46e5, #9333ea);
+  --gradient-2: linear-gradient(135deg, #6366f1, #a855f7);
 
-  --glass-dark: rgba(255,255,255,0.08);
-  --glass-light: rgba(0,0,0,0.05);
+  --text-dark: #1f1f1f;
+  --text-light: #ffffff;
+
+  --radius-lg: 26px;
+  --radius-xl: 38px;
+
+  --shadow-soft: 0 10px 40px rgba(0,0,0,0.08);
+  --shadow-strong: 0 30px 80px rgba(0,0,0,0.18);
 }
 
-/* Light Theme */
-@media (prefers-color-scheme: light) {
-  body {
-    background: var(--bg-light);
-    color: var(--text-light);
-  }
-}
-
-/* Dark Theme */
+/* ------------------------------
+   DARK MODE SUPPORT
+------------------------------ */
 @media (prefers-color-scheme: dark) {
-  body {
-    background: var(--bg-dark);
-    color: var(--text-dark);
+  :root {
+    --bg-main: #10121a;
+    --bg-card: rgba(255, 255, 255, 0.08);
+    --bg-glass-border: rgba(255,255,255,0.12);
+
+    --text-dark: #f5f5f5;
   }
 }
 
-/* ===== DIAGONAL B-MAX ANIMATION ===== */
-.hero {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* ------------------------------
+   BASE RESET
+------------------------------ */
+* { margin:0; padding:0; box-sizing:border-box; }
 
-  background: linear-gradient(45deg,
-    #38004b,
-    #8900c2,
-    #5e00ff,
-    #38004b);
-  background-size: 400% 400%;
-
-  animation: diagonalMove 7s linear infinite;
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-dark);
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+  line-height:1.6;
 }
 
-@keyframes diagonalMove {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
+img { max-width:100%; display:block; border-radius: var(--radius-lg); }
+
+/* ------------------------------
+   ANIMATED BACKGROUND
+------------------------------ */
+.hero-bg {
+  position:relative;
+  padding:120px 24px;
+  text-align:center;
+  overflow:hidden;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  backdrop-filter: blur(12px);
-  z-index: 10;
+.bg-blob {
+  position:absolute;
+  width:480px;
+  height:480px;
+  border-radius:50%;
+  filter: blur(120px);
+  opacity:0.4;
+  animation: blobMove 16s infinite alternate ease-in-out;
 }
 
-.navbar a {
-  color: inherit;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-  opacity: 0.85;
+.bg-blob.blue { background:#6366f1; top:-120px; left:-140px; }
+.bg-blob.purple { background:#9333ea; bottom:-160px; right:-140px; animation-delay:4s; }
+
+@keyframes blobMove {
+  0% { transform:translate(0,0); }
+  100% { transform:translate(120px,80px); }
 }
 
-.navbar a:hover {
-  opacity: 1;
+/* ------------------------------
+   HEADER
+------------------------------ */
+header {
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(14px);
+  background:rgba(255,255,255,0.65);
+  border-bottom:1px solid var(--bg-glass-border);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 28px;
 }
 
-/* ===== HERO TEXT ===== */
-.hero-content {
-  max-width: 800px;
-  padding: 20px;
+header nav a {
+  margin-left:22px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  color: var(--text-dark);
+  transition:.3s;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+header nav a:hover {
+  color:#4f46e5;
+  transform:translateY(-2px);
 }
 
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.85;
-  margin-bottom: 30px;
+/* ------------------------------
+   FLOATING CONTACT BUTTONS
+------------------------------ */
+.float-btn {
+  position:fixed;
+  right:20px;
+  padding:16px;
+  font-size:20px;
+  color:#4f46e5;
+  border-radius:50%;
+  background:var(--bg-card);
+  border:1px solid var(--bg-glass-border);
+  box-shadow: var(--shadow-soft);
+  text-align:center;
+  transition:.3s;
 }
 
-.hero-buttons .btn {
-  padding: 12px 26px;
-  border-radius: 8px;
-  margin: 6px;
-  text-decoration: none;
-  display: inline-block;
+.float-btn:hover {
+  transform:scale(1.1);
+  box-shadow:var(--shadow-strong);
 }
 
-.primary {
-  background: #ffffff;
-  color: #6200ff;
-  font-weight: bold;
+.float-stack {
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  z-index:100;
 }
 
-.secondary {
-  border: 1px solid #fff;
-  color: #fff;
-}
-
-/* ===== SECTIONS ===== */
-.section {
-  padding: 80px 30px;
-  text-align: center;
-}
-
-/* ===== TITLES ===== */
+/* ------------------------------
+   TITLES
+------------------------------ */
 .section-title {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
+  font-size:38px;
+  font-weight:800;
+  margin-bottom:18px;
 }
 
-/* ===== SERVICE CARDS ===== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  padding: 20px;
+.section-sub {
+  color:#5b5d6a;
+  max-width:600px;
+  margin:0 auto 40px;
+  font-size:16px;
 }
 
+/* ------------------------------
+   BUTTONS
+------------------------------ */
+.btn-primary {
+  padding:14px 38px;
+  border-radius:50px;
+  background: var(--gradient-1);
+  color:white;
+  font-weight:700;
+  font-size:16px;
+  border:none;
+  cursor:pointer;
+  box-shadow:0 18px 40px rgba(79,70,229,0.35);
+  transition:.35s;
+}
+
+.btn-primary:hover {
+  transform:translateY(-4px);
+  box-shadow:0 24px 60px rgba(79,70,229,0.55);
+}
+
+/* ------------------------------
+   GLASS CARD
+------------------------------ */
 .card {
-  padding: 25px;
-  border-radius: 14px;
-  backdrop-filter: blur(14px);
+  padding:32px;
+  background:var(--bg-card);
+  border-radius:var(--radius-xl);
+  border:1px solid var(--bg-glass-border);
+  box-shadow: var(--shadow-soft);
+  transition:.35s;
 }
 
-@media (prefers-color-scheme: dark) {
-  .card {
-    background: var(--glass-dark);
-  }
+.card:hover {
+  transform:translateY(-10px);
+  box-shadow:var(--shadow-strong);
 }
 
-@media (prefers-color-scheme: light) {
-  .card {
-    background: var(--glass-light);
-  }
+/* ------------------------------
+   SERVICES GRID
+------------------------------ */
+.services {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:26px;
+  padding:40px 0;
 }
 
-/* ===== CONTACT ===== */
+/* ------------------------------
+   CONTACT FORM
+------------------------------ */
 .contact-box {
-  max-width: 900px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  max-width:540px;
+  margin:auto;
+  padding:32px;
+  background:var(--bg-card);
+  border:1px solid var(--bg-glass-border);
+  border-radius:var(--radius-xl);
+  box-shadow:var(--shadow-soft);
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  border: none;
+.contact-box input,
+.contact-box textarea {
+  width:100%;
+  padding:12px 0;
+  margin-bottom:20px;
+  border:none;
+  border-bottom:2px solid #c7c8d4;
+  background:transparent;
+  outline:none;
+  font-size:15px;
+  color:var(--text-dark);
 }
 
-.direct-email {
-  margin-top: 20px;
+.contact-box textarea {
+  height:140px;
+  resize:none;
 }
 
-.email-link {
-  color: #6200ff;
-  font-weight: bold;
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer {
+  text-align:center;
+  padding:40px 0;
+  font-size:13px;
+  color:#6d6e7a;
+  margin-top:60px;
+  border-top:1px solid var(--bg-glass-border);
 }
 
-/* ===== FOOTER ===== */
-.footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.8;
+/* ------------------------------
+   REVEAL ON SCROLL
+------------------------------ */
+.reveal {
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
 }
-.footer a {
-  margin: 0 10px;
-  color: inherit;
+
+.reveal.active {
+  opacity:1;
+  transform:translateY(0);
 }
