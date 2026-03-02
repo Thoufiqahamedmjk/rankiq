@@ -1,326 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RankiQ – Ethical SEO That Actually Works</title>
-
-<!-- SEO META -->
-<meta name="description" content="RankiQ: Ethical SEO, technical optimization and long-term search visibility. Built for Indian businesses with clean, trusted SEO.">
-<meta name="author" content="RankiQ">
-<meta name="robots" content="index, follow">
-
-<!-- OG -->
-<meta property="og:title" content="RankiQ – Ethical SEO That Works">
-<meta property="og:description" content="Get clean, long-term SEO growth with ethical strategies.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.thoufiqahamed.in">
-<meta property="og:image" content="https://cdn3d.iconscout.com/3d/premium/thumb/search-analytics-3d-icon-9876543.png">
-
-<!-- FONT & ICONS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RankIQ – SEO Optimization Agency</title>
 
 <style>
-/* ==========================================================
-   GLOBAL DARK NEON + MIDNIGHT BLUE GLASS THEME
-========================================================== */
-body{
-  margin:0;
-  font-family:Inter,system-ui,sans-serif;
-  background:#0a0d16;
-  color:#e8e8e8;
-  overflow-x:hidden;
-}
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #f7f7fb;
+        color: #222;
+    }
 
-a{text-decoration:none;color:inherit}
+    /* --- HERO SECTION --- */
+    .hero {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        padding: 80px 20px;
+        text-align: center;
+        color: white;
+    }
+    .hero h1 {
+        font-size: 38px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+    .hero p {
+        font-size: 18px;
+        max-width: 600px;
+        margin: auto;
+        opacity: 0.9;
+    }
+    .hero img {
+        width: 90%;
+        max-width: 480px;
+        margin-top: 30px;
+        border-radius: 14px;
+        box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    }
 
-/* Background Glow */
-.neon-bg{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(0,120,255,0.18), transparent 55%),
-    radial-gradient(circle at 85% 75%, rgba(120,0,255,0.18), transparent 55%);
-  z-index:-1;
-}
+    /* --- SECTION WRAPPERS --- */
+    .section {
+        padding: 60px 20px;
+        max-width: 1100px;
+        margin: auto;
+    }
 
-/* ==========================================================
-   HEADER
-========================================================== */
-header{
-  position:sticky;
-  top:0;z-index:100;
-  backdrop-filter:blur(14px);
-  background:rgba(0,0,0,0.45);
-  border-bottom:1px solid rgba(255,255,255,0.06);
-  padding:18px 32px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.logo{
-  font-size:24px;
-  font-weight:800;
-  color:#4dcaff;
-  letter-spacing:-0.5px;
-}
-nav a{
-  margin:0 14px;
-  font-weight:600;
-  opacity:.85;
-  transition:.3s;
-}
-nav a:hover{
-  color:#4dcaff;
-  opacity:1;
-}
-
-/* ==========================================================
-   HERO (Split Layout)
-========================================================== */
-.hero{
-  padding:140px 24px;
-  max-width:1250px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:40px;
-}
-
-.hero-left{
-  flex:1;
-}
-
-.hero-left h1{
-  font-size:46px;
-  font-weight:800;
-  margin-bottom:12px;
-  background:linear-gradient(90deg,#4dcaff,#a176ff);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-.hero-left p{
-  opacity:.8;
-  line-height:1.6;
-  font-size:18px;
-  max-width:480px;
-}
-
-.cta-btn{
-  margin-top:28px;
-  padding:14px 34px;
-  font-size:17px;
-  background:linear-gradient(90deg,#7e33ff,#00baff);
-  border:none;
-  border-radius:40px;
-  color:white;
-  font-weight:700;
-  cursor:pointer;
-  transition:.35s;
-}
-.cta-btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 0 22px #00caff99;
-}
-
-.hero-right{
-  flex:1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-/* Hero Illustration Glass Frame */
-.hero-image-box{
-  padding:28px;
-  width:100%;
-  max-width:500px;
-  border-radius:22px;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.12);
-  backdrop-filter:blur(18px);
-  box-shadow:0 0 45px rgba(0,150,255,0.25);
-}
-
-/* Placeholder until Base64 loads */
-.hero-image{
-  width:100%;
-  border-radius:16px;
-}
-
-/* Reveal Anim */
-.reveal{opacity:0;transform:translateY(40px);transition:1s}
-.reveal.active{opacity:1;transform:translateY(0)}
+    /* --- CARDS --- */
+    .card-grid {
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+    .card img {
+        width: 70px;
+        margin-bottom: 15px;
+    }
+    .section-title {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #333;
+    }
 </style>
 </head>
 
 <body>
 
-<div class="neon-bg"></div>
+<!-- HERO -->
+<section class="hero">
+    <h1>Boost Your Website Rankings with RankIQ</h1>
+    <p>Advanced SEO strategies to increase traffic, visibility and conversions — trusted by brands in Tamil Nadu.</p>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">RankiQ</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <!-- SEO Growth Illustration -->
+    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/seo-growth-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--chart-arrow-optimization-marketing-pack-business-illustrations-10113259.png" alt="SEO Growth Illustration">
+</section>
 
-<!-- HERO SECTION -->
-<section id="home" class="hero reveal">
-  <div class="hero-left">
-    <h1>SEO That Gets You Seen & Trusted</h1>
-    <p>RankiQ helps businesses in Erode, Tamil Nadu grow visibility, traffic and trust using clean, ethical SEO systems that work in 2026 and beyond.</p>
+<!-- ABOUT US -->
+<section class="section">
+    <h2 class="section-title">About RankIQ</h2>
 
-    <a href="#contact"><button class="cta-btn">Get a Free SEO Review</button></a>
-  </div>
+    <div class="card">
+        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/seo-analytics-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--graph-chart-data-pack-business-illustrations-10113041.png" width="120">
 
-  <div class="hero-right">
-    <div class="hero-image-box">
+        <p>
+            RankIQ is a premium SEO Optimization agency based in <b>Erode, Tamil Nadu</b>.
+            We specialise in keyword research, on-page SEO, backlink building, website audits
+            and complete search engine optimization solutions.
+        </p>
+        <p>
+            Our mission is simple — **boost your business visibility and get your website ranked on Google**.
+        </p>
+    </div>
+</section>
 
-      <!-- 🔥 BASE64 IMAGE WILL BE INSERTED HERE IN PART 2 -->
-      <img class="hero-image" src="data:image/png;base64,{{BASE64_HERO_IMAGE}}" alt="SEO Dashboard Illustration">
+<!-- SERVICES -->
+<section class="section">
+    <h2 class="section-title">Our SEO Services</h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/keyword-research-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--analysis-find-search-seo-pack-business-illustrations-10113010.png">
+            <h3>Keyword Research</h3>
+            <p>Hyper-targeted keywords to get maximum traffic and conversions.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/optimization-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--seo-settings-configuration-pack-business-illustrations-10113253.png">
+            <h3>On-Page Optimization</h3>
+            <p>Title tags, meta descriptions, schema, internal links — fully optimized.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/backlinks-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--link-building-seo-pack-business-illustrations-10113058.png">
+            <h3>Backlink Building</h3>
+            <p>High-quality authoritative backlinks to boost domain authority.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/seo-audit-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--analysis-website-review-pack-business-illustrations-10229295.png">
+            <h3>Website SEO Audit</h3>
+            <p>Complete technical analysis with ranking improvement roadmap.</p>
+        </div>
 
     </div>
-  </div>
-</section>
-<!-- ===== HERO SECTION ===== -->
-<section 
-  style="
-    width:100%;
-    min-height:90vh;
-    background:url('https://images.unsplash.com/photo-1526378722445-4a4e1b9e8c0f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    color:#fff;
-    padding:40px;
-  "
->
-  <div style="max-width:700px;">
-    <h1 style="font-size:48px; font-weight:700; margin-bottom:20px;">
-      Accelerate Your Online Presence
-    </h1>
-    <p style="font-size:18px; line-height:1.6; margin-bottom:30px;">
-      Rank faster on Google with clean SEO, optimized content, and powerful web performance strategies crafted for modern businesses.
-    </p>
-    <a 
-      href="#contact"
-      style="
-        display:inline-block;
-        background:#ff9800;
-        padding:14px 26px;
-        color:#000;
-        font-weight:600;
-        border-radius:6px;
-        text-decoration:none;
-      "
-    >
-      Get Started
-    </a>
-  </div>
 </section>
 
-<!-- ===== ABOUT SECTION ===== -->
-<section style="padding:60px 20px; max-width:1100px; margin:auto;">
-  <h2 style="font-size:32px; font-weight:700; margin-bottom:20px; text-align:center;">
-    About Me
-  </h2>
-  <p style="font-size:18px; line-height:1.7; text-align:center; max-width:800px; margin:auto;">
-    I’m a digital strategist helping brands enhance search visibility, optimize website performance, 
-    and build content that ranks. With expertise in technical SEO, content structure, keyword strategy, 
-    and web optimization, I bring actionable solutions to scale your online presence.
-  </p>
-</section>
-<!-- ==========================
-         ABOUT SECTION
-    =========================== -->
-    <section id="about" class="about">
-        <h2>About RankIQ SEO</h2>
-        <p>
-            We help businesses grow through data-driven SEO strategies — covering technical SEO,
-            content optimization, backlink building, and complete website audits.
-        </p>
+<!-- FEATURES -->
+<section class="section">
+    <h2 class="section-title">Why Choose RankIQ?</h2>
 
-        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900"
-             alt="SEO analysis dashboard">
-    </section>
+    <div class="card-grid">
 
-
-    <!-- ==========================
-         SERVICES SECTION
-    =========================== -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-
-        <div class="service-grid">
-
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600"
-                     alt="Technical SEO">
-                <h3>Technical SEO</h3>
-                <p>Fix crawling issues, speed, sitemaps, schema and improve site health.</p>
-            </div>
-
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600"
-                     alt="Content Optimization">
-                <h3>Content Optimization</h3>
-                <p>Keyword research, semantic SEO, and high-ranking content structure.</p>
-            </div>
-
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600"
-                     alt="Backlinks">
-                <h3>Authority Backlinks</h3>
-                <p>Safe, white-hat backlink strategies for long-term ranking.</p>
-            </div>
-
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?w=600"
-                     alt="SEO Reports">
-                <h3>SEO Reports</h3>
-                <p>Detailed SEO audits with actionable steps to rank faster.</p>
-            </div>
-
+        <div class="card">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/fast-delivery-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--speed-service-pack-business-illustrations-10112946.png">
+            <h3>Fast Results</h3>
+            <p>Optimised strategies for quicker ranking improvements.</p>
         </div>
-    </section>
 
-
-    <!-- ==========================
-         CONTACT SECTION
-    =========================== -->
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-
-        <div class="contact-box">
-            <div class="contact-info">
-                <p><strong>Email:</strong> support@rankiqseo.com</p>
-                <p><strong>Phone:</strong> +91 98765 43210</p>
-            </div>
-
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+        <div class="card">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/support-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--customer-service-help-pack-business-illustrations-10112937.png">
+            <h3>Dedicated Support</h3>
+            <p>We work closely with clients to deliver consistent performance.</p>
         </div>
-    </section>
 
+        <div class="card">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/value-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--pricing-money-pack-business-illustrations-10113286.png">
+            <h3>Great Value</h3>
+            <p>Affordable pricing with premium SEO results.</p>
+        </div>
 
-    <!-- ==========================
-         FOOTER
-    =========================== -->
-    <footer class="footer">
-        <p>© 2026 RankIQ SEO — All rights reserved.</p>
-    </footer>
+    </div>
+</section>
+<!-- PRICING SECTION -->
+<section class="section">
+    <h2 class="section-title">Our Pricing Plans</h2>
+
+    <div class="card-grid">
+
+        <!-- Basic Plan -->
+        <div class="card">
+            <h3>Starter SEO</h3>
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/wallet-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--money-finance-pack-business-illustrations-10112951.png" width="80">
+            <p>Best for small businesses getting started with SEO.</p>
+            <h2 style="color:#6a11cb;">₹4,999 / month</h2>
+            <ul style="text-align:left; list-style: none; padding: 0;">
+                <li>✔ Keyword Research</li>
+                <li>✔ On-Page Optimization</li>
+                <li>✔ Technical Fixes</li>
+                <li>✔ Monthly Report</li>
+            </ul>
+        </div>
+
+        <!-- Growth Plan -->
+        <div class="card" style="border:2px solid #6a11cb;">
+            <h3>Growth SEO</h3>
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/growth-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--chart-progress-business-illustrations-10113279.png" width="80">
+            <p>Perfect for growing businesses wanting higher Google visibility.</p>
+            <h2 style="color:#2575fc;">₹9,999 / month</h2>
+            <ul style="text-align:left; list-style: none; padding: 0;">
+                <li>✔ Everything in Starter</li>
+                <li>✔ Backlink Outreach</li>
+                <li>✔ Content Optimization</li>
+                <li>✔ Rank Tracking Dashboard</li>
+                <li>✔ Priority Support</li>
+            </ul>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="card">
+            <h3>Premium SEO</h3>
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/rocket-launch-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--boost-startup-marketing-business-illustrations-10229279.png" width="80">
+            <p>For brands who want aggressive, long-term SEO domination.</p>
+            <h2 style="color:#6a11cb;">₹17,999 / month</h2>
+            <ul style="text-align:left; list-style: none; padding: 0;">
+                <li>✔ Full SEO Strategy</li>
+                <li>✔ High-Quality Backlinks</li>
+                <li>✔ Landing Page Optimization</li>
+                <li>✔ Competitor Analysis</li>
+                <li>✔ Weekly Reports</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="card">
+        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/contact-us-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--support-communication-customer-service-pack-business-illustrations-10113223.png" width="120">
+
+        <p><b>RankIQ – SEO Optimization Agency</b></p>
+        <p>📍 Erode, Tamil Nadu</p>
+        <p>📞 <b>9884795585</b></p>
+        <p>📩 <b>contact@thoufiqahamed.in</b></p>
+
+        <br>
+
+        <form action="https://formspree.io/f/mwvnenkk" method="POST">
+            <input type="text" name="name" placeholder="Your Name"
+                style="width:100%; padding:12px; margin-bottom:10px; border-radius:8px; border:1px solid #ccc;">
+            
+            <input type="email" name="email" placeholder="Your Email"
+                style="width:100%; padding:12px; margin-bottom:10px; border-radius:8px; border:1px solid #ccc;">
+            
+            <textarea name="message" placeholder="Message"
+                style="width:100%; padding:12px; height:120px; margin-bottom:10px; border-radius:8px; border:1px solid #ccc;"></textarea>
+            
+            <button type="submit"
+                style="background:#6a11cb; color:white; padding:12px 20px; width:100%;
+                border:none; border-radius:8px; font-size:16px; cursor:pointer;">
+                Send Message
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#111; color:white; text-align:center; padding:25px; margin-top:40px;">
+    <p>© 2026 RankIQ – All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
