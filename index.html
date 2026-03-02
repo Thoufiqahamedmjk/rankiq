@@ -2,388 +2,194 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rankiq – Ethical SEO That Actually Works</title>
-
-<!-- SEO META -->
-<meta name="description" content="Rankiq is an ethical SEO service in Erode, Tamil Nadu helping businesses grow visibility, traffic and conversions using clean, long-term SEO strategies.">
-<meta name="author" content="Rankiq">
-<meta name="robots" content="index, follow">
-
-<!-- OG -->
-<meta property="og:title" content="Rankiq – Ethical SEO That Works">
-<meta property="og:description" content="SEO that builds visibility, trust and long-term growth.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.thoufiqahamed.in">
-<meta property="og:image" content="https://www.thoufiqahamed.in/og-image.png">
-
-<!-- ADSENSE -->
-<meta name="google-adsense-account" content="ca-pub-1488001824666458">
-
-<!-- FONT AWESOME -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RankiQ SEO – Erode Tamil Nadu</title>
 
 <style>
-/* =========================================
-   GLOBAL THEME — PREMIUM FULL NEON
-========================================= */
-body{
-  margin:0;
-  font-family:Inter,system-ui,sans-serif;
-  background:#07080f;
-  color:#e6e6e6;
-  overflow-x:hidden;
-}
+    body {
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#f5f7fa;
+        color:#1a1a1a;
+    }
 
-/* Glowing neon fog */
-.neon-bg{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:
-    radial-gradient(circle at 25% 20%, rgba(0,255,255,0.20), transparent 55%),
-    radial-gradient(circle at 80% 80%, rgba(160,0,255,0.20), transparent 55%);
-  z-index:-1;
-}
+    header {
+        background:#1b1f3b;
+        padding:20px;
+        color:#fff;
+        text-align:center;
+        font-size:26px;
+        font-weight:bold;
+    }
 
-/* LINKS */
-a{color:inherit;text-decoration:none}
+    .hero {
+        padding:40px 20px;
+        text-align:center;
+        background:#fff;
+    }
+    .hero h1 {
+        font-size:32px;
+        margin-bottom:10px;
+    }
 
-/* =========================================
-   HEADER
-========================================= */
-header{
-  position:sticky;
-  top:0;
-  backdrop-filter:blur(20px);
-  background:rgba(0,0,0,0.45);
-  border-bottom:1px solid rgba(255,255,255,0.08);
-  padding:18px 30px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  z-index:99;
-}
-.logo{
-  font-size:26px;
-  font-weight:800;
-  color:#00eaff;
-  text-shadow:0 0 12px #00eaffaa;
-}
-nav a{
-  margin:0 18px;
-  font-weight:600;
-  opacity:.85;
-}
-nav a:hover{
-  color:#00eaff;
-  text-shadow:0 0 12px #00eaffaa;
-  opacity:1;
-}
+    .section {
+        padding:40px 20px;
+        background:#fff;
+        margin-top:20px;
+        border-radius:12px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.08);
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+    }
 
-/* =========================================
-   HERO SECTION
-========================================= */
-.hero{
-  padding:150px 20px 120px;
-  text-align:center;
-}
-.hero h1{
-  font-size:48px;
-  font-weight:900;
-  margin-bottom:20px;
-  background:linear-gradient(90deg,#00eaff,#b36bff);
-  -webkit-background-clip:text;
-  color:transparent;
-  text-shadow:0 0 25px #00eaff55;
-}
-.hero p{
-  max-width:700px;
-  margin:auto;
-  opacity:.85;
-  font-size:19px;
-  line-height:1.7;
-}
-.cta-btn{
-  margin-top:35px;
-  padding:16px 40px;
-  font-size:18px;
-  font-weight:700;
-  border:none;
-  border-radius:40px;
-  background:linear-gradient(90deg,#8e2bff,#00eaff);
-  color:white;
-  cursor:pointer;
-  transition:.35s;
-  box-shadow:0 0 22px #00eaff66;
-}
-.cta-btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 0 35px #00eaffaa;
-}
+    .icon {
+        width:110px;
+        display:block;
+        margin:auto;
+        margin-bottom:20px;
+    }
 
-/* =========================================
-   SECTIONS
-========================================= */
-section{
-  padding:120px 22px;
-  max-width:1100px;
-  margin:auto;
-}
-.section-title{
-  text-align:center;
-  font-size:36px;
-  font-weight:900;
-  margin-bottom:18px;
-  background:linear-gradient(90deg,#00eaff,#b36bff);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-.section-desc{
-  text-align:center;
-  opacity:.75;
-  max-width:700px;
-  margin:auto;
-}
+    .service-box {
+        background:#f0f3ff;
+        padding:25px;
+        border-radius:15px;
+        margin-top:20px;
+        text-align:center;
+    }
 
-/* =========================================
-   NEON CARD
-========================================= */
-.neon-card{
-  padding:35px;
-  background:#0d0f1a;
-  border-radius:22px;
-  border:1px solid #1d2030;
-  margin:25px 0;
-  transition:.3s;
-  position:relative;
-  overflow:hidden;
-}
-.neon-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 28px #00eaff33;
-}
-.neon-card h3{
-  font-size:24px;
-  margin-bottom:10px;
-  color:#00eaff;
-  text-shadow:0 0 12px #00eaff88;
-}
+    .pricing-box {
+        background:#eef6ff;
+        padding:25px;
+        border-radius:15px;
+        margin-top:20px;
+        text-align:center;
+        border:2px solid #d0e4ff;
+    }
 
-/* =========================================
-   INLINE SVG ILLUSTRATIONS
-========================================= */
-.ill{
-  width:100%;
-  max-width:430px;
-  margin:40px auto;
-  display:block;
-  filter:drop-shadow(0 0 12px #00eaff55);
-}
-
-/* =========================================
-   REVEAL ANIMATION
-========================================= */
-.reveal{opacity:0;transform:translateY(50px);transition:1s}
-.reveal.active{opacity:1;transform:translateY(0)}
+    .contact {
+        font-size:18px;
+        margin-top:20px;
+    }
 </style>
 </head>
+
 <body>
 
-<div class="neon-bg"></div>
+<header>RankiQ SEO Optimization – Erode, Tamil Nadu</header>
 
-<!-- ================= HEADER ================= -->
-<header>
-  <div class="logo">Rankiq</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<!-- ================= HERO ================= -->
-<section id="home" class="hero reveal">
-  <h1>SEO That Builds Trust & Visibility</h1>
-  <p>Clean, ethical, long-term SEO designed for Indian businesses — built in Erode, Tamil Nadu.</p>
-
-  <a href="#contact"><button class="cta-btn">Get Free SEO Review</button></a>
-
-  <!-- DETAILED SVG HERO ILLUSTRATION -->
-  <svg class="ill" viewBox="0 0 400 300">
-    <defs>
-      <linearGradient id="g1" x1="0" x2="1">
-        <stop offset="0%" stop-color="#00eaff"/>
-        <stop offset="100%" stop-color="#b36bff"/>
-      </linearGradient>
-    </defs>
-    <rect x="20" y="40" width="360" height="220" rx="18"
-          fill="#10131f" stroke="url(#g1)" stroke-width="2"/>
-    <circle cx="80" cy="150" r="45" fill="none" stroke="#00eaff" stroke-width="5"/>
-    <path d="M160 180 Q210 120 260 160 T340 130"
-          stroke="#b36bff" stroke-width="5" fill="none"/>
-  </svg>
+<section class="hero">
+    <h1>Grow Your Business with Smart SEO</h1>
+    <p>Advanced search engine optimization & ranking solutions.</p>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="reveal">
-  <h2 class="section-title">About Rankiq</h2>
-  <p class="section-desc">
-    Rankiq focuses on stable, compounding SEO — no shortcuts, no black-hat tricks,
-    only systems that Google trusts and rewards.
-  </p>
+<!-- ABOUT US WITH ANIMATED ILLUSTRATION -->
+<section class="section">
+    <img class="icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwcHgiIGhlaWdodD0iMTIwcHgiIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxnIGZpbGw9IiM0Mjg3RkYiPgogICAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iNTUiIGZpbGwtb3BhY2l0eT0iMC4xIj4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbC1vcGFjaXR5IiB2YWx1ZXM9IjAuMSAwLjMgMC4xIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgPC9jaXJjbGU+CiAgICA8cGF0aCBkPSJNNTAgMjAgTDcwIDYwTDUwIDEwMCIgc3Ryb2tlPSIjMzA1Q0ZGIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgogICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJzdHJva2UtZGFzaG9mZnNldCIgdmFsdWVzPSIwOzEwOzA7MTA7MCIgZHVyPSIxLjVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgPC9wYXRoPgogIDwvZz4KPC9zdmc+" />
 
-  <div class="neon-card">
-    <h3>Our Philosophy</h3>
-    <p>We believe SEO should educate, empower and grow your brand without any spam tactics.</p>
-  </div>
+    <h2>About Us</h2>
+    <p>RankiQ is a modern SEO optimization service based in Erode, Tamil Nadu.  
+       We deliver keyword ranking improvements, on-page SEO, technical audits, competitor analysis, and complete digital visibility solutions.</p>
 
-  <!-- MINIMAL SVG ABOUT ILLUSTRATION -->
-  <svg class="ill" viewBox="0 0 400 300">
-    <circle cx="200" cy="150" r="80" stroke="#00eaff" stroke-width="4" fill="none"/>
-    <path d="M160 150h80" stroke="#b36bff" stroke-width="6" stroke-linecap="round"/>
-    <path d="M200 110v80" stroke="#b36bff" stroke-width="6" stroke-linecap="round"/>
-  </svg>
-</section>
-<!-- ================= SERVICES ================= -->
-<section id="services" class="reveal">
-  <h2 class="section-title">Our SEO Services</h2>
-  <p class="section-desc">Everything you need to rank, scale, and grow with trust.</p>
-
-  <div class="neon-card">
-    <h3>Technical SEO</h3>
-    <p>We fix crawling, indexing, structure, schema, site speed and Google compliance to boost visibility.</p>
-  </div>
-
-  <div class="neon-card">
-    <h3>Keyword & Content Strategy</h3>
-    <p>Smart keyword mapping + topic clusters + SEO-driven content blueprint for growth.</p>
-  </div>
-
-  <div class="neon-card">
-    <h3>Long-Term Ranking System</h3>
-    <p>Stable SEO engine that compounds over time and builds real authority.</p>
-  </div>
-
-  <!-- SERVICES SVG -->
-  <svg class="ill" viewBox="0 0 400 300">
-    <rect x="40" y="60" width="320" height="180" rx="12"
-          fill="none" stroke="#00eaff" stroke-width="3"/>
-    <circle cx="120" cy="150" r="40" stroke="#b36bff" stroke-width="4" fill="none"/>
-    <path d="M200 200h120" stroke="#00eaff" stroke-width="6" stroke-linecap="round"/>
-    <path d="M200 100h120" stroke="#b36bff" stroke-width="6" stroke-linecap="round"/>
-  </svg>
+    <p>With **Upgrade 3 engine**, you now get:  
+    ✔ 40% faster crawling  
+    ✔ 2× deeper analysis  
+    ✔ 3D SEO reporting  
+    ✔ High-impact ranking improvement system</p>
 </section>
 
-<!-- ================= UPGRADES ================= -->
-<section class="reveal">
-  <h2 class="section-title">Upgrades</h2>
+<!-- SERVICES WITH 4 ILLUSTRATION IMAGES -->
+<section class="section">
+    <h2 style="text-align:center;">Our SEO Services</h2>
 
-  <div class="neon-card">
-    <h3 class="upgrade-title">Upgrade 1 — Technical Deep Fix</h3>
-    <p>Core Web Vitals, speed performance, schema, mobile fixes — all optimized.</p>
-  </div>
+    <!-- Illustration 1 -->
+    <img class="icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwcHgiIGhlaWdodD0iMTIwcHgiIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxnIHN0cm9rZT0iIzkzQkRGRiIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIj4KICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjMwIj4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hvZmZzZXQiIHZhbHVlcz0iMDsxMDswIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgPC9jaXJjbGU+CiAgICA8bGluZSB4MT0iODAiIHkxPSIxMCIgeDI9IjEwMCIgeTI9IjMwIj4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieDIiIHZhbHVlcz0iMTAwOzgwOzEwMCIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICAgIDwvbGluZT4KICA8L2c+Cjwvc3ZnPg==" />
+    <div class="service-box">
+        <h3>Technical SEO Audit</h3>
+        <p>We scan broken links, crawl errors, sitemap issues and site speed performance.</p>
+    </div>
 
-  <div class="neon-card">
-    <h3 class="upgrade-title">Upgrade 2 — Content Engine</h3>
-    <p>Topic clusters, content schedule, keyword map—all designed to dominate rankings.</p>
-  </div>
+    <!-- Illustration 2 -->
+    <img class="icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwcHgiIGhlaWdodD0iMTIwcHgiIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxnIGZpbGw9IiM0MkE4RkYiPgogICAgPHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iODAiIGhlaWdodD0iNjAiIGZpbGwtb3BhY2l0eT0iMC4zIj4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieSIgdmFsdWVzPSIyMDszMDsyMCIgZHVyPSIxLjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgPC9yZWN0PgogICAgPGNpcmNsZSBjeD0iNjAiIGN5PSI4NSIgcj0iMTUiIGZpbGw9IiMzMDU4RkYiPgogICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJjeSIgdmFsdWVzPSI4NTs5NSA4NSIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICAgIDwvY2lyY2xlPgogIDwvZz4KPC9zdmc+" />
+    <div class="service-box">
+        <h3>On-Page Optimization</h3>
+        <p>Meta tags, headings, schema, internal linking & content enhancement.</p>
+    </div>
 
-  <div class="neon-card">
-    <h3 class="upgrade-title">Upgrade 3 — Trust & Authority</h3>
-    <p>Brand signals, EEAT, entity SEO, reputation strengthening.</p>
-  </div>
+    <!-- Illustration 3 -->
+    <img class="icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwcHgiIGhlaWdodD0iMTIwcHgiIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxnIHN0cm9rZT0iI0ZGMDA2MCIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIj4KICAgIDxwYXRoIGQ9Ik0zMCA3MEw2MCA0MEw5MCA3MCI+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InBhdGgiIHZhbHVlcz0iTTMwIDcwTDYwIDQwTDkwIDcwO0wzMCA3MCIgZHVyPSIxLjVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgPC9wYXRoPgogIDwvZz4KPC9zdmc+" />
+    <div class="service-box">
+        <h3>Keyword Ranking Boost</h3>
+        <p>Advanced keyword mapping, clustering & content placement strategy.</p>
+    </div>
 
-  <!-- UPGRADES SVG -->
-  <svg class="ill" viewBox="0 0 400 320">
-    <rect x="60" y="40" width="280" height="240" rx="20"
-          stroke="#b36bff" stroke-width="4" fill="none"/>
-    <circle cx="200" cy="100" r="40"
-            stroke="#00eaff" stroke-width="4" fill="none"/>
-    <path d="M120 200h160" stroke="#00eaff" stroke-width="6" stroke-linecap="round"/>
-    <path d="M150 240h100" stroke="#b36bff" stroke-width="6" stroke-linecap="round"/>
-  </svg>
-</section>
+    <!-- Illustration 4 -->
+    <img class="icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwcHgiIGhlaWdodD0iMTIwcHgiIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxnIGZpbGw9IiM3RkI1RkYiPgogICAgPHJlY3QgeD0iMjAiIHk9IjQwIiB3aWR0aD0iODAiIGhlaWdodD0iNDAiIGZpbGwtb3BhY2l0eT0iMC41Ij4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0id2lkdGgiIHZhbHVlcz0iODA7NjA7ODA7NjA7ODA
+<!-- PRICING SECTION -->
+    <section class="section">
+        <h2 style="text-align:center;">Pricing</h2>
 
-<!-- ================= PRICING ================= -->
-<section id="pricing" class="reveal">
-  <h2 class="section-title">Pricing</h2>
-  <p class="section-desc">Transparent, simple, pay as you grow.</p>
+        <div class="pricing-box">
+            <h3>Starter SEO Plan</h3>
+            <p>For small businesses & local stores</p>
+            <h2>₹1,999 / month</h2>
+        </div>
 
-  <div class="neon-card">
-    <h3>SEO Setup</h3>
-    <p class="price">₹ 5,999 (One-Time)</p>
-    <p>Full SEO audit + initial fixes + foundation setup.</p>
-  </div>
+        <div class="pricing-box">
+            <h3>Growth SEO Plan</h3>
+            <p>For growing brands aiming for higher traffic</p>
+            <h2>₹3,999 / month</h2>
+        </div>
 
-  <div class="neon-card">
-    <h3>Monthly Optimization</h3>
-    <p class="price">₹ 3,999 / month</p>
-    <p>Lightweight SEO ranking maintenance.</p>
-  </div>
+        <div class="pricing-box" style="border:3px solid #4a80ff;">
+            <h3>RankiQ PRO (Upgrade 3)</h3>
+            <p>Advanced Crawling + Keyword Intelligence + Competitor Deep Scan</p>
+            <h2>₹5,999 / month</h2>
+        </div>
+    </section>
 
-  <div class="neon-card">
-    <h3>Add-Ons</h3>
-    <p class="price">Custom</p>
-    <p>Content writing • Local SEO • Entity SEO • Linkless authority.</p>
-  </div>
+    <!-- CONTACT SECTION -->
+    <section class="section">
+        <h2 style="text-align:center;">Contact Us</h2>
 
-  <!-- PRICING SVG -->
-  <svg class="ill" viewBox="0 0 400 300">
-    <circle cx="140" cy="150" r="60" stroke="#00eaff" stroke-width="4" fill="none"/>
-    <circle cx="260" cy="150" r="60" stroke="#b36bff" stroke-width="4" fill="none"/>
-    <path d="M140 150h120" stroke="#00eaff" stroke-width="6" stroke-linecap="round"/>
-  </svg>
-</section>
+        <p class="contact">
+            📍 <b>Location:</b> Erode, Tamil Nadu<br>
+            📞 <b>Phone:</b> <a href="tel:9884795585">98847 95585</a><br>
+            ✉️ <b>Email:</b> rankiqseo@gmail.com
+        </p>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="reveal">
-  <h2 class="section-title">Get a Free SEO Review</h2>
+        <div class="service-box" style="background:#e8ffe8;">
+            <h3>Free SEO Audit</h3>
+            <p>Get a free website crawl + ranking analysis within 24 hours.</p>
+        </div>
+    </section>
 
-  <form action="https://formspree.io/f/mwvnenkk" method="POST">
-    <input name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="4" placeholder="Tell us about your website" required></textarea>
-    <button>Submit</button>
-  </form>
+    <!-- FOOTER -->
+    <footer style="text-align:center; padding:20px; margin-top:30px; background:#1b1f3b; color:#fff;">
+        © 2026 RankiQ SEO – All Rights Reserved
+    </footer>
 
-  <br>
+    <!-- OPTIONAL SCRIPT -->
+    <script>
+        // Simple animation on scroll
+        const elements = document.querySelectorAll('.section');
 
-  <a href="https://wa.me/919884795585" style="color:#00eaff;font-weight:600;font-size:18px;">
-    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-  </a>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transition = "0.8s";
+                    entry.target.style.transform = "translateY(0)";
+                    entry.target.style.opacity = "1";
+                }
+            });
+        }, { threshold: 0.2 });
 
-  <!-- CONTACT SVG -->
-  <svg class="ill" viewBox="0 0 400 300">
-    <rect x="80" y="80" width="240" height="140" rx="15"
-          stroke="#00eaff" stroke-width="4" fill="none"/>
-    <path d="M80 110l120 60l120-60" stroke="#b36bff" stroke-width="4" fill="none"/>
-  </svg>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-  <p style="text-align:center;margin-top:50px;opacity:.7;">
-    © 2026 Rankiq — Built in Erode, Tamil Nadu.
-  </p>
-</footer>
-
-<!-- ================= JAVASCRIPT ================= -->
-<script>
-// Reveal Animation
-function revealOnScroll() {
-  document.querySelectorAll('.reveal').forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 70) {
-      el.classList.add('active');
-    }
-  });
-}
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-</script>
+        elements.forEach(el => {
+            el.style.transform = "translateY(40px)";
+            el.style.opacity = "0";
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 </html>
