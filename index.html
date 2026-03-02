@@ -5,179 +5,171 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>RankIQ – Ethical SEO Operations (2026)</title>
 
+<meta name="description" content="RankIQ delivers ethical, data-driven SEO operations with precise ranking workflows, technical optimization, modern strategy models, and real-time performance insights.">
+<meta name="keywords" content="SEO, RankIQ, digital marketing, optimization, ranking strategy, content optimization, audits">
+
 <style>
-/* ---------- Global ---------- */
-* {
+/* ----------------------------------------------------
+   GLOBAL DESIGN (Premium UI – Blue Accent)
+---------------------------------------------------- */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-}
-
-body {
-    background: #f0f2f8;
-    color: #333;
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f5f6fb;
+    color: #1a1a1a;
     line-height: 1.6;
 }
 
-/* ---------- Navbar ---------- */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 22px;
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-}
-
-.logo {
-    font-size: 22px;
+h1, h2, h3 {
     font-weight: 700;
-    color: #222;
-}
-
-.nav-links a {
-    margin-left: 14px;
-    text-decoration: none;
-    font-weight: 500;
-    color: #444;
-}
-
-.nav-links a:hover {
     color: #111;
 }
 
-/* ---------- Hero Section ---------- */
+a {
+    text-decoration: none;
+    color: #3b57ff;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ----------------------------------------------------
+   NAVBAR
+---------------------------------------------------- */
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e3e3e3;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* ----------------------------------------------------
+   HERO
+---------------------------------------------------- */
 .hero {
-    padding: 40px 22px;
-    background: linear-gradient(to bottom right, #eef2ff, #f9faff);
+    background: linear-gradient(to bottom right, #eef0ff, #f7f8ff);
+    padding: 90px 20px;
+    text-align: left;
 }
 
 .hero h1 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 12px;
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    color: #555;
-    margin-bottom: 18px;
+    font-size: 17px;
+    max-width: 600px;
+    margin-bottom: 30px;
 }
 
-.cta-buttons a {
-    margin-right: 18px;
+.hero a {
     font-weight: 600;
-    color: #4a4aff;
-    text-decoration: underline;
+    padding: 10px 16px;
+    margin-right: 15px;
+    display: inline-block;
 }
 
-/* ---------- Services Section ---------- */
-.section-title {
-    font-size: 24px;
-    font-weight: 700;
-    padding: 0 22px;
-    margin-top: 28px;
-    margin-bottom: 12px;
-}
-
-.service-card {
-    background: #ffffff;
-    padding: 18px;
-    margin: 12px 20px;
-    border-radius: 18px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-}
-
-.service-card h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 6px;
-}
-
-.service-card p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* ---------- About Section ---------- */
-#about {
-    padding: 20px 22px;
-}
-
-#about p {
-    color: #555;
-    margin-top: 8px;
-}
-
-/* ---------- Contact Form ---------- */
-.contact-box {
-    background: #ffffff;
-    margin: 20px 22px;
-    padding: 24px;
-    border-radius: 20px;
-    box-shadow: 0 5px 16px rgba(0,0,0,0.08);
-}
-
-.contact-box input,
-.contact-box textarea {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #bbb;
-    padding: 10px 0;
-    margin-bottom: 18px;
-    background: none;
-}
-
-.contact-box textarea {
-    height: 100px;
-}
-
-.contact-box button {
-    background: #4a4aff;
+.cta-primary {
+    background: #3b57ff;
     color: #fff;
-    padding: 12px 20px;
+    border-radius: 6px;
+}
+.cta-secondary {
+    color: #3b57ff;
+}
+
+/* ----------------------------------------------------
+   SEO OPERATION CARDS
+---------------------------------------------------- */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* ----------------------------------------------------
+   CONTACT FORM
+---------------------------------------------------- */
+.contact-box {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    background: #3b57ff;
+    color: white;
+    padding: 14px;
     border: none;
     border-radius: 8px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    width: 100%;
-    margin-top: 8px;
 }
 
-.contact-box button:hover {
-    background: #3030ff;
+button:hover {
+    opacity: 0.92;
 }
 
-.contact-box a {
-    color: #4a4aff;
-}
-
-/* ---------- Footer ---------- */
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
 footer {
     text-align: center;
-    padding: 32px 0;
-    font-size: 13px;
-    color: #666;
+    padding: 35px;
+    font-size: 14px;
+    color: #777;
 }
-
 footer a {
-    color: #444;
-    margin: 0 6px;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    color: #555;
+    margin: 0 8px;
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<!-- Navbar -->
+<!-- NAVIGATION -->
 <nav class="navbar">
     <div class="logo">RankIQ</div>
     <div class="nav-links">
@@ -187,67 +179,75 @@ footer a:hover {
     </div>
 </nav>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero">
     <h1>Ethical SEO Operations for 2026</h1>
-    <p>Precision-driven ranking workflows, modern optimization techniques, and real-time insights to grow your online visibility.</p>
+    <p>
+        Precision-driven ranking workflows, modern optimization techniques, and real-time insights to grow your online visibility with full transparency.
+    </p>
 
-    <div class="cta-buttons">
-        <a href="#services">Explore Services</a>
-        <a href="#contact">Get in Touch</a>
+    <a href="#services" class="cta-primary">Explore Services</a>
+    <a href="#contact" class="cta-secondary">Get in Touch</a>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2>Our SEO Operations</h2>
+
+    <div class="card">
+        <h3>Technical SEO</h3>
+        <p>Full crawl audits, indexing, core vitals improvement, and error elimination using structured workflows.</p>
+    </div>
+
+    <div class="card">
+        <h3>Content Optimization</h3>
+        <p>Topic authority building, intent-aligned optimization, entity-based enhancements, and SERP-driven rewrites.</p>
+    </div>
+
+    <div class="card">
+        <h3>Ranking Strategy</h3>
+        <p>Modern ranking models for 2026: multi-signal scoring, user behavior analysis, and continuous improvement loops.</p>
+    </div>
+
+    <div class="card">
+        <h3>Performance Tracking</h3>
+        <p>Real-time analytics, growth charts, ranking movements, and actionable insights delivered weekly.</p>
     </div>
 </section>
 
-<!-- Services -->
-<h2 class="section-title">Our SEO Operations</h2>
-
-<div class="service-card">
-    <h3>Technical SEO</h3>
-    <p>Full crawl audits, indexing, core vitals improvement, and error elimination using structured workflows.</p>
-</div>
-
-<div class="service-card">
-    <h3>Content Optimization</h3>
-    <p>Topic authority building, intent-aligned optimization, entity-based enhancements, and SERP-driven rewrites.</p>
-</div>
-
-<div class="service-card">
-    <h3>Ranking Strategy</h3>
-    <p>Modern ranking models for 2026: multi-signal scoring, user behavior analysis, and continuous improvement loops.</p>
-</div>
-
-<div class="service-card">
-    <h3>Performance Tracking</h3>
-    <p>Real-time analytics, ranking movements, and actionable insights delivered weekly.</p>
-</div>
-
-<!-- About -->
+<!-- ABOUT -->
 <section id="about">
-    <h2 class="section-title">About RankIQ</h2>
-    <p>RankIQ is an ethical SEO agency built for 2026 and beyond. We focus on real value—no spam, no shortcuts.</p>
+    <h2>About RankIQ</h2>
+    <p>
+        RankIQ is an ethical SEO agency built for 2026 and beyond.  
+        We focus on real value—no spam, no shortcuts.  
+        Our workflow blends technical excellence, human psychology, and modern SERP pattern recognition.
+    </p>
 </section>
 
-<!-- Contact -->
+<!-- CONTACT -->
 <section id="contact">
-    <h2 class="section-title">Contact Us</h2>
+    <h2>Contact Us</h2>
 
     <div class="contact-box">
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Your Email" />
-        <textarea placeholder="Your Message"></textarea>
-        <button>Send Message</button>
+        <form action="https://formspree.io/f/mwvnenkk" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
 
-        <p style="margin-top:12px;font-size:14px;">
-            Email us directly:
-            <a href="mailto:contact@thoufiqahamed.in">contact@thoufiqahamed.in</a>
+        <p style="margin-top: 10px; font-size: 14px;">
+            Email us directly: <a href="mailto:contact@thoufiqahamed.in">contact@thoufiqahamed.in</a>
         </p>
     </div>
 </section>
 
 <footer>
-    © 2026 RankIQ. All rights reserved.<br />
-    <a href="privacy-policy.html">Privacy Policy</a>  
-    <a href="terms.html">Terms & Conditions</a>
+    © 2026 RankIQ. All rights reserved.  
+    <br><br>
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms & Conditions</a> |
     <a href="disclaimer.html">Disclaimer</a>
 </footer>
 
