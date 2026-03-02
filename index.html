@@ -5,251 +5,243 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>RankIQ – Ethical SEO Operations (2026)</title>
 
-<meta name="description" content="RankIQ delivers ethical, data-driven SEO operations with precise ranking workflows, technical optimization, modern strategy models, and real-time performance insights.">
-<meta name="keywords" content="SEO, RankIQ, digital marketing, optimization, ranking strategy, content optimization, audits">
-
 <style>
-/* ----------------------------------------------------
-   GLOBAL DESIGN (Premium UI – Blue Accent)
----------------------------------------------------- */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', Arial, sans-serif;
-    background: #f5f6fb;
-    color: #1a1a1a;
-    line-height: 1.6;
+/* ---------------- GLOBAL RESET ---------------- */
+*{
+  margin:0; padding:0; box-sizing:border-box;
+  font-family:"Inter", sans-serif;
+}
+body{
+  background:#f5f6ff;
+  color:#1a1a1a;
+  line-height:1.6;
 }
 
-h1, h2, h3 {
-    font-weight: 700;
-    color: #111;
+/* ---------------- GLASS NAVBAR ---------------- */
+.navbar{
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,0.25);
+  border-bottom:1px solid rgba(255,255,255,0.35);
+  z-index:999;
 }
 
-a {
-    text-decoration: none;
-    color: #3b57ff;
+.navbar .logo{
+  font-weight:700;
+  font-size:22px;
+  background:linear-gradient(90deg,#4c6ef5,#9b5cff);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
+.navbar a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#222;
 }
 
-/* ----------------------------------------------------
-   NAVBAR
----------------------------------------------------- */
-.navbar {
-    width: 100%;
-    background: #ffffff;
-    padding: 18px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e3e3e3;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+.navbar a:hover{
+  color:#5a45ff;
 }
 
-.navbar .logo {
-    font-size: 22px;
-    font-weight: 700;
+/* ---------------- HERO SECTION ---------------- */
+.hero{
+  padding:150px 40px 80px;
+  background:linear-gradient(90deg,#eef1ff,#faf7ff);
+  text-align:center;
 }
 
-.nav-links a {
-    margin-left: 25px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #333;
+.hero h1{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:10px;
 }
 
-/* ----------------------------------------------------
-   HERO
----------------------------------------------------- */
-.hero {
-    background: linear-gradient(to bottom right, #eef0ff, #f7f8ff);
-    padding: 90px 20px;
-    text-align: left;
+.hero p{
+  max-width:600px;
+  margin:auto;
+  color:#555;
 }
 
-.hero h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.hero .buttons{
+  margin-top:25px;
 }
 
-.hero p {
-    font-size: 17px;
-    max-width: 600px;
-    margin-bottom: 30px;
+.btn{
+  padding:12px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:600;
+  display:inline-block;
 }
 
-.hero a {
-    font-weight: 600;
-    padding: 10px 16px;
-    margin-right: 15px;
-    display: inline-block;
+.btn-primary{
+  background:linear-gradient(90deg,#4c6ef5,#9b5cff);
+  color:white;
 }
 
-.cta-primary {
-    background: #3b57ff;
-    color: #fff;
-    border-radius: 6px;
-}
-.cta-secondary {
-    color: #3b57ff;
+.btn-secondary{
+  border:1px solid #ccc;
+  color:#333;
+  margin-left:10px;
 }
 
-/* ----------------------------------------------------
-   SEO OPERATION CARDS
----------------------------------------------------- */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 14px;
-    margin-bottom: 18px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+/* ---------------- SECTIONS ---------------- */
+.section-title{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:20px;
 }
 
-.card h3 {
-    margin-top: 0;
+.section{
+  padding:60px 40px;
 }
 
-/* ----------------------------------------------------
-   CONTACT FORM
----------------------------------------------------- */
-.contact-box {
-    background: white;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+/* ---------------- GLASS CARDS ---------------- */
+.card{
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(25px);
+  border-radius:20px;
+  padding:25px;
+  margin-bottom:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.07);
 }
 
-input, textarea {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 20px;
-    border: 1px solid #dcdcdc;
-    border-radius: 8px;
-    font-size: 15px;
+.card h3{
+  font-size:18px;
+  margin-bottom:8px;
 }
 
-button {
-    width: 100%;
-    background: #3b57ff;
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
+/* ---------------- CONTACT FORM ---------------- */
+.contact-container{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-button:hover {
-    opacity: 0.92;
+input, textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  margin-bottom:15px;
 }
 
-/* ----------------------------------------------------
-   FOOTER
----------------------------------------------------- */
-footer {
-    text-align: center;
-    padding: 35px;
-    font-size: 14px;
-    color: #777;
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(90deg,#4c6ef5,#9b5cff);
+  color:white;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
 }
-footer a {
-    color: #555;
-    margin: 0 8px;
+
+button:hover{
+  opacity:0.9;
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer{
+  text-align:center;
+  padding:40px;
+  font-size:14px;
+  color:#666;
 }
 </style>
 
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-    <div class="logo">RankIQ</div>
-    <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">RankIQ</div>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>Ethical SEO Operations for 2026</h1>
-    <p>
-        Precision-driven ranking workflows, modern optimization techniques, and real-time insights to grow your online visibility with full transparency.
-    </p>
-
-    <a href="#services" class="cta-primary">Explore Services</a>
-    <a href="#contact" class="cta-secondary">Get in Touch</a>
+  <h1>Ethical SEO Operations for 2026</h1>
+  <p>Precision-driven ranking workflows, modern optimization techniques, and real-time insights to grow your online visibility.</p>
+  
+  <div class="buttons">
+    <a href="#services" class="btn btn-primary">Explore Services</a>
+    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+  </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services">
-    <h2>Our SEO Operations</h2>
+<section id="services" class="section">
+  <h2 class="section-title">Our SEO Operations</h2>
 
-    <div class="card">
-        <h3>Technical SEO</h3>
-        <p>Full crawl audits, indexing, core vitals improvement, and error elimination using structured workflows.</p>
-    </div>
+  <div class="card">
+    <h3>Technical SEO</h3>
+    <p>Full crawl audits, indexing, core vitals improvement, and error elimination using structured workflows.</p>
+  </div>
 
-    <div class="card">
-        <h3>Content Optimization</h3>
-        <p>Topic authority building, intent-aligned optimization, entity-based enhancements, and SERP-driven rewrites.</p>
-    </div>
+  <div class="card">
+    <h3>Content Optimization</h3>
+    <p>Topic authority building, entity-aligned optimization, and SERP-driven rewrites.</p>
+  </div>
 
-    <div class="card">
-        <h3>Ranking Strategy</h3>
-        <p>Modern ranking models for 2026: multi-signal scoring, user behavior analysis, and continuous improvement loops.</p>
-    </div>
+  <div class="card">
+    <h3>Ranking Strategy</h3>
+    <p>Multi-signal scoring, user behavior analysis, and continuous improvement loops.</p>
+  </div>
 
-    <div class="card">
-        <h3>Performance Tracking</h3>
-        <p>Real-time analytics, growth charts, ranking movements, and actionable insights delivered weekly.</p>
-    </div>
+  <div class="card">
+    <h3>Performance Tracking</h3>
+    <p>Real-time analytics, ranking movements, and actionable insights delivered weekly.</p>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about">
-    <h2>About RankIQ</h2>
-    <p>
-        RankIQ is an ethical SEO agency built for 2026 and beyond.  
-        We focus on real value—no spam, no shortcuts.  
-        Our workflow blends technical excellence, human psychology, and modern SERP pattern recognition.
-    </p>
+<section id="about" class="section">
+  <h2 class="section-title">About RankIQ</h2>
+  <p>RankIQ is an ethical SEO agency built for 2026 and beyond. We focus on real value—no spam, no shortcuts.</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-    <h2>Contact Us</h2>
+<section id="contact" class="section">
+  <h2 class="section-title">Contact Us</h2>
 
-    <div class="contact-box">
-        <form action="https://formspree.io/f/mwvnenkk" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+  <div class="contact-container">
+    <form action="https://formspree.io/f/mwvnenkk" method="POST">
 
-        <p style="margin-top: 10px; font-size: 14px;">
-            Email us directly: <a href="mailto:contact@thoufiqahamed.in">contact@thoufiqahamed.in</a>
-        </p>
-    </div>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top:15px;">Email: <a href="mailto:contact@thoufiqahamed.in">contact@thoufiqahamed.in</a></p>
+  </div>
 </section>
 
-<footer>
-    © 2026 RankIQ. All rights reserved.  
-    <br><br>
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a> |
-    <a href="disclaimer.html">Disclaimer</a>
-</footer>
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 RankIQ. All rights reserved. <br>
+  <a href="privacy-policy.html">Privacy Policy</a> •
+  <a href="terms.html">Terms</a> •
+  <a href="disclaimer.html">Disclaimer</a>
+</div>
 
 </body>
 </html>
