@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact – Rankiq (2026)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Contact Rankiq</h1>
+
+<form action="https://formspree.io/f/mwvnenkk" method="POST" class="contact-form">
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Your Message</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <button type="submit" class="btn">Send Message</button>
+
+    <!-- Honeypot spam filter -->
+    <input type="text" name="_gotcha" style="display:none">
+</form>
+
+<style>
+.contact-form {
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+.contact-form button {
+    background: #4e7bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+}
+</style>
+
+</body>
+</html>
