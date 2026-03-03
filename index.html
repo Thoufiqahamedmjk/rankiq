@@ -1,337 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RankIQ – SEO Optimization Agency | Boost Rankings & Drive Organic Growth</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RankIQ – SEO Optimization Agency | Boost Rankings & Drive Organic Growth</title>
+    <meta name="description" content="RankIQ is a professional SEO optimization agency from Erode, Tamil Nadu. We deliver keyword research, technical SEO, on-page optimization, backlink building, local SEO, analytics, competitor audits, and ROI-focused strategies.">
+    <meta name="keywords" content="SEO, RankIQ, keyword research, on-page SEO, technical SEO, Erode SEO agency, Tamil Nadu SEO, Google ranking, digital marketing, backlinks, rank improvement, website audit">
+    <link rel="canonical" href="https://www.thoufiqahamed.in/">
 
-<meta name="description" content="RankIQ is a professional SEO optimization agency from Erode, Tamil Nadu. We deliver keyword research, technical SEO, on-page optimization, backlink building, local SEO, analytics, competitor audits, and ROI-focused strategies. Boost your Google rankings with RankIQ.">
+    <meta property="og:title" content="RankIQ – SEO Optimization Agency">
+    <meta property="og:description" content="Boost your rankings with RankIQ, the trusted SEO agency from Erode. Full-suite optimization services.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_IN">
 
-<meta name="keywords" content="SEO, RankIQ, keyword research, on-page SEO, technical SEO, Erode SEO agency, Tamil Nadu SEO, Google ranking, SEO optimization service, digital marketing, backlinks, rank improvement, website audit">
+    <meta name="google-adsense-account" content="ca-pub-1488001824666458">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1488001824666458" crossorigin="anonymous"></script>
 
-<link rel="canonical" href="https://www.thoufiqahamed.in/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<!-- Open Graph -->
-<meta property="og:title" content="RankIQ – SEO Optimization Agency">
-<meta property="og:description" content="Boost your rankings with RankIQ, the trusted SEO agency from Erode. Full-suite optimization services.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_IN">
+    <style>
+        /* GLOBAL & THEME VARIABLES */
+        :root {
+            --bg-color: #0d0f17;
+            --text-color: #e5e5e5;
+            --card-bg: #141826;
+            --primary: #00eaff;
+            --secondary: #8e2bff;
+        }
 
-<!-- Google AdSense Verification -->
-<meta name="google-adsense-account" content="ca-pub-1488001824666458">
+        .light-mode {
+            --bg-color: #f9f9fb;
+            --text-color: #111;
+            --card-bg: #ffffff;
+            --primary: #0047ff;
+        }
 
-<!-- Google AdSense Auto Ads -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1488001824666458" crossorigin="anonymous"></script>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', "Poppins", sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            transition: background 0.35s, color 0.35s;
+        }
 
-<!-- ==========================
-      MERGED SINGLE STYLE BLOCK
-=========================== -->
-<style>
+        .container { width: 92%; max-width: 1200px; margin: auto; }
 
-/* GLOBAL */
-body {
-    margin:0;
-    font-family:'Inter',sans-serif;
-    background:#f9f7ff;
-    color:#1a1a1a;
-    line-height:1.7;
-}
+        /* HEADER & HERO */
+        header {
+            background: linear-gradient(135deg, #4f2aff, #7b5bff);
+            color: #fff;
+            padding: 90px 20px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        header h1 { font-size: 3rem; font-weight: 800; margin: 0; }
+        .hero-img { max-width: 330px; display: block; margin: 35px auto; animation: fadeUp 1.4s ease; }
 
-/* HEADER */
-header {
-    background:linear-gradient(135deg,#6f3af7,#9c57ff);
-    color:#fff;
-    padding:35px 20px;
-    text-align:center;
-    border-bottom-left-radius:20px;
-    border-bottom-right-radius:20px;
-}
-header h1 { font-size:2.6rem;font-weight:800;margin:0; }
-header p { font-size:1.2rem;opacity:0.9;margin-top:10px; }
-.hero-img {max-width:330px;display:block;margin:25px auto;}
+        /* SECTIONS & CARDS */
+        .section, .services, .pricing, .contact, .metrics-section, .faq-section, .review-section, .trust-section, .timeline-section {
+            padding: 80px 24px;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-/* Sections & Cards */
-.section {max-width:1100px;margin:auto;padding:50px 25px;}
-.card {
-    background:#ffffff;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
-    margin-bottom:25px;
-}
-h2 {font-size:2rem;font-weight:800;margin-bottom:20px;color:#372865;}
-.services-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-    margin-top:20px;
-}
-.service-card {
-    background:white;
-    padding:20px;
-    border-radius:16px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.06);
-    transition:0.2s;
-}
-.service-card:hover {
-    transform:translateY(-6px);
-    box-shadow:0 6px 18px rgba(0,0,0,0.10);
-}
-.service-card img {width:80px;margin-bottom:15px;}
+        .card, .service-card, .price-card, .metric-box, .faq-box, .review-card, .trust-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
 
-.pricing-box {
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 5px 18px rgba(100,50,200,0.15);
-}
+        .card:hover, .service-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0, 234, 255, 0.2); }
 
-/* Pricing Grid */
-.price-card {
-    padding:40px 25px;
-    background:#fff;
-    border-radius:16px;
-    box-shadow:0 8px 22px rgba(0,0,0,0.06);
-    transition:0.3s;
-}
-.highlight {border:3px solid #4f2aff;background:#f4f0ff;}
-.price-card:hover {transform:translateY(-6px);}
-.price {font-size:28px;font-weight:700;margin:15px 0 25px;}
+        h2 { font-size: 2.2rem; font-weight: 800; text-align: center; background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; color: transparent; margin-bottom: 40px; }
 
-/* Contact */
-.contact-wrapper {display:flex;gap:40px;margin-top:40px;}
-.contact-info {flex:1;font-size:18px;}
-.contact-form {flex:1;display:flex;flex-direction:column;gap:18px;}
-.contact-form input,
-.contact-form textarea {
-    width:100%;padding:14px;border-radius:10px;
-    border:1px solid #ccc;font-size:16px;
-}
-.contact-form button {
-    padding:14px;
-    background:#4f2aff;color:#fff;
-    border:none;border-radius:10px;font-weight:600;
-}
+        /* GRIDS */
+        .service-grid, .pricing-grid, .metrics-grid, .trust-grid {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
 
-/* Footer */
-.footer {
-    background:#4f2aff;padding:25px;text-align:center;
-    color:#fff;margin-top:40px;font-size:15px;
-}
+        .service-card img { width: 70px; margin-bottom: 15px; }
 
-/* WhatsApp Float */
-.whatsapp-float {
-  position: fixed;
-  bottom: 26px;
-  left: 26px;
-  width: 62px;
-  height: 62px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 32px;
-  z-index: 999;
-  cursor: pointer;
-  box-shadow: 0 0 18px #25d366cc;
-  animation: pulseGlow 2.2s infinite ease-in-out;
-}
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 12px #25d36688; }
-  50% { box-shadow: 0 0 26px #25d366cc; }
-  100% { box-shadow: 0 0 12px #25d36688; }
-}
+        /* PRICING */
+        .price { font-size: 2.4rem; font-weight: 800; color: var(--primary); margin: 15px 0; }
+        .highlight { border: 2px solid var(--primary); background: rgba(0, 234, 255, 0.05); }
 
-/* Sticky CTA Bar */
-.sticky-cta {
-  position: fixed;
-  bottom: 0;left: 0;width: 100%;
-  background: rgba(12, 14, 22, 0.92);
-  backdrop-filter: blur(12px);
-  display: flex;justify-content: space-around;
-  padding: 14px 0;z-index: 9999;
-}
-.sticky-cta a {
-  color:white;padding:10px 18px;
-  font-size:15px;font-weight:600;
-  border-radius:14px;text-decoration:none;
-}
-.cta-call {background:linear-gradient(90deg,#00eaffaa,#0088ffdd);}
-.cta-whatsapp {background:#25d366;}
-.cta-audit {background:linear-gradient(90deg,#8e2bff,#00eaff);}
+        /* CONTACT FORM */
+        .contact-wrapper { display: flex; gap: 40px; flex-wrap: wrap; }
+        .contact-info, .contact-form { flex: 1; min-width: 300px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #333; background: #1a1e2e; color: #fff; }
+        .contact-form button { width: 100%; padding: 15px; background: var(--primary); border: none; border-radius: 10px; font-weight: 700; cursor: pointer; }
 
-/* Scroll Progress Bar */
-#scroll-progress {
-  position: fixed;top: 0;left: 0;height: 5px;width: 0%;
-  background: linear-gradient(90deg, #00eaff, #8e2bff);
-  z-index: 99999;
-}
+        /* UI ELEMENTS */
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 5px; width: 0%; background: linear-gradient(90deg, var(--primary), var(--secondary)); z-index: 10000; }
+        
+        .whatsapp-float { position: fixed; bottom: 85px; left: 26px; width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #fff; font-size: 30px; z-index: 999; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); animation: pulseGlow 2.2s infinite; }
 
-/* Responsive */
-@media (max-width:900px){
-  .service-grid{grid-template-columns:repeat(2,1fr);}
-  .pricing-grid{grid-template-columns:1fr;}
-  .contact-wrapper{flex-direction:column;}
-}
-@media (max-width:600px){
-  .service-grid{grid-template-columns:1fr;}
-}
+        .theme-toggle { position: fixed; right: 22px; bottom: 85px; width: 55px; height: 55px; border-radius: 50%; background: var(--card-bg); display: flex; justify-content: center; align-items: center; cursor: pointer; z-index: 999; border: 1px solid var(--primary); color: var(--primary); }
 
-</style>
+        .sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(13, 15, 23, 0.95); backdrop-filter: blur(10px); display: flex; padding: 12px 0; z-index: 9999; border-top: 1px solid rgba(0, 234, 255, 0.2); }
+        .sticky-cta a { flex: 1; margin: 0 8px; text-align: center; padding: 10px; border-radius: 10px; color: #fff; text-decoration: none; font-weight: 600; font-size: 14px; }
+        .cta-call { background: #0088ff; }
+        .cta-whatsapp { background: #25d366; }
+        .cta-audit { background: linear-gradient(90deg, var(--secondary), var(--primary)); }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulseGlow { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+        /* REVEAL ON SCROLL */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.6s all ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* FAQ */
+        .faq-box { margin-bottom: 10px; cursor: pointer; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: 0.3s ease; padding: 0 20px; }
+        .faq-box.active .faq-answer { max-height: 200px; padding: 20px; }
+
+        /* REVIEWS CAROUSEL */
+        .review-carousel { display: flex; overflow-x: auto; gap: 20px; padding-bottom: 15px; scroll-behavior: smooth; }
+        .review-card { min-width: 300px; }
+
+        footer { text-align: center; padding: 40px; background: #111; color: #777; margin-bottom: 60px; }
+    </style>
 </head>
-
 <body>
+
+<div id="scroll-progress"></div>
 
 <header>
     <h1>RankIQ – Smart SEO for Serious Growth</h1>
-    <p>Your trusted SEO optimization partner from Erode, Tamil Nadu</p>
-    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/seo-growth-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--search-engine-data-analysis-web-optimization-pack-people-illustrations-7618477.png" class="hero-img">
+    <p>Your trusted SEO partner from Erode, Tamil Nadu</p>
+    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/seo-growth-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--search-engine-data-analysis-web-optimization-pack-people-illustrations-7618477.png" alt="SEO Growth" class="hero-img">
 </header>
 
-<!-- ==============================
-     🔥 TOP ADSENSE (Google Recommended)
-================================= -->
-<div style="max-width:1100px;margin:auto;padding:20px 0;">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-1488001824666458"
-       data-ad-slot="7711229921"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-</div>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-<!-- ABOUT -->
-<div class="section">
-  <div class="card">
-    <h2>About RankIQ</h2>
-    <p>RankIQ is a dedicated SEO optimization agency…</p>
-  </div>
+<div class="container" style="padding: 20px 0;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1488001824666458" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
-<!-- ============================
-     🔥 MID-CONTENT ADSENSE
-============================== -->
-<div style="max-width:1100px;margin:auto;padding:20px 0;">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-1488001824666458"
-       data-ad-slot="6633882210"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-</div>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<section class="section reveal">
+    <div class="card">
+        <h2>About RankIQ</h2>
+        <p>RankIQ is a dedicated SEO agency based in Erode, Tamil Nadu. We specialize in delivering measurable search visibility, organic traffic, and real ROI aligned with the latest Google algorithm updates.</p>
+    </div>
+</section>
 
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="container">
+<section class="services reveal" id="services">
     <h2>Our Core SEO Services</h2>
-
     <div class="service-grid">
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/991/991952.png">
-        <h3>Advanced SEO Strategy</h3>
-        <p>We perform deep competitor audits…</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4305/4305439.png">
-        <h3>On-Page Optimization</h3>
-        <p>Meta tags, schema, intent alignment…</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920262.png">
-        <h3>Technical SEO</h3>
-        <p>Core Web Vitals, crawling, indexing…</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png">
-        <h3>Content & Topical Authority</h3>
-        <p>Clusters, keyword mapping…</p>
-      </div>
-
+        <div class="service-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/991/991952.png" alt="Strategy">
+            <h3>Advanced Strategy</h3>
+            <p>Deep competitor audits and keyword roadmaps aligned with your goals.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/4305/4305439.png" alt="On-Page">
+            <h3>On-Page Optimization</h3>
+            <p>Meta tags, schema, and content structure enhanced for Google compliance.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2920/2920262.png" alt="Technical">
+            <h3>Technical SEO</h3>
+            <p>Optimizing Core Web Vitals, indexing, and site speed performance.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="Content">
+            <h3>Topical Authority</h3>
+            <p>Building content clusters that establish your brand as an industry leader.</p>
+        </div>
     </div>
-  </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing" id="pricing">
-  <div class="container">
+<section class="metrics-section reveal">
+    <h2>RankIQ by the Numbers</h2>
+    <div class="metrics-grid">
+        <div class="metric-box"><div class="metric-number" data-target="120">0</div><div class="metric-label">Clients Served</div></div>
+        <div class="metric-box"><div class="metric-number" data-target="5400">0</div><div class="metric-label">Keywords Ranked</div></div>
+        <div class="metric-box"><div class="metric-number" data-target="310">0</div><div class="metric-label">Audits Completed</div></div>
+        <div class="metric-box"><div class="metric-number" data-target="180">0</div><div class="metric-label">Avg. Growth %</div></div>
+    </div>
+</section>
+
+<section class="pricing reveal" id="pricing">
     <h2>Pricing Plans</h2>
-
     <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Starter Plan</h3>
-        <p class="price">₹4,999 / month</p>
-      </div>
-
-      <div class="price-card highlight">
-        <h3>Professional Plan</h3>
-        <p class="price">₹9,999 / month</p>
-      </div>
-
-      <div class="price-card">
-        <h3>Enterprise Plan</h3>
-        <p class="price">Custom Pricing</p>
-      </div>
+        <div class="price-card">
+            <h3>Starter</h3>
+            <p class="price">₹4,999/mo</p>
+            <p>10 Keywords, On-Page, Basic Technical Fixes.</p>
+        </div>
+        <div class="price-card highlight">
+            <h3>Professional</h3>
+            <p class="price">₹9,999/mo</p>
+            <p>30 Keywords, Full Tech SEO, Schema, Competitor Intel.</p>
+        </div>
+        <div class="price-card">
+            <h3>Enterprise</h3>
+            <p class="price">Custom</p>
+            <p>End-to-end management with dedicated SEO manager.</p>
+        </div>
     </div>
-  </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
+<section class="review-section reveal">
+    <h2>What Clients Say</h2>
+    <div class="review-carousel">
+        <div class="review-card"><strong>Sathish Kumar</strong><div style="color:#ffd700">★★★★★</div><p>Leads doubled in 45 days. Ethical SEO works!</p></div>
+        <div class="review-card"><strong>Meena Tech</strong><div style="color:#ffd700">★★★★★</div><p>My site became faster and much more visible.</p></div>
+        <div class="review-card"><strong>Arun Business</strong><div style="color:#ffd700">★★★★★</div><p>No fake promises. Just data-driven results.</p></div>
+    </div>
+</section>
+
+<section class="faq-section reveal" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-box">
+        <div class="faq-question">What does RankIQ do? <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-answer">We provide white-hat SEO including audits, technical fixes, and strategy to rank your site long-term.</div>
+    </div>
+    <div class="faq-box">
+        <div class="faq-question">How long for results? <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-answer">Typically 30–90 days for content rankings, though technical fixes show results faster.</div>
+    </div>
+</section>
+
+<section class="contact reveal" id="contact">
     <h2>Contact Us</h2>
-
     <div class="contact-wrapper">
-      <div class="contact-info">
-        <p><strong>Email:</strong> contact@thoufiqahamed.in</p>
-        <p><strong>Phone:</strong> +91 98847 95585</p>
-      </div>
-
-      <form action="https://formspree.io/f/mwvnenkk" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+        <div class="contact-info">
+            <p><strong>Email:</strong> contact@thoufiqahamed.in</p>
+            <p><strong>Phone:</strong> +91 98847 95585</p>
+            <p><strong>Location:</strong> Erode, Tamil Nadu</p>
+        </div>
+        <form action="https://formspree.io/f/mwvnenkk" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
-  </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 RankIQ — Professional SEO & Digital Optimization Agency</p>
+<footer>
+    <p>© 2026 RankIQ — Professional SEO Agency</p>
 </footer>
 
-<!-- WhatsApp -->
-<a href="https://wa.me/919884795585" class="whatsapp-float" target="_blank">💬</a>
+<div class="theme-toggle" id="themeBtn"><i class="fa-solid fa-moon"></i></div>
+<a href="https://wa.me/919884795585" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
-<!-- Sticky CTA -->
 <div class="sticky-cta">
-  <a href="tel:9884795585" class="cta-call">📞 Call</a>
-  <a href="https://wa.me/919884795585" class="cta-whatsapp">💬 WhatsApp</a>
-  <a href="#contact" class="cta-audit">🚀 Free Audit</a>
+    <a href="tel:9884795585" class="cta-call">📞 Call</a>
+    <a href="https://wa.me/919884795585" class="cta-whatsapp" target="_blank">💬 WhatsApp</a>
+    <a href="#contact" class="cta-audit">🚀 Free Audit</a>
 </div>
 
-<!-- Scroll Progress -->
-<div id="scroll-progress"></div>
-
-<!-- JS -->
 <script>
-// Scroll Progress
-window.addEventListener("scroll",()=>{
-  const progress=document.getElementById("scroll-progress");
-  const scrollTop=document.documentElement.scrollTop;
-  const height=document.documentElement.scrollHeight-window.innerHeight;
-  progress.style.width=`${(scrollTop/height)*100}%`;
-});
+    // Reveal on Scroll
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            if (elementTop < windowHeight - 100) { reveals[i].classList.add("active"); }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+
+    // Scroll Progress
+    window.addEventListener("scroll", () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        document.getElementById("scroll-progress").style.width = (winScroll / height) * 100 + "%";
+    });
+
+    // Theme Toggle
+    const themeBtn = document.getElementById("themeBtn");
+    themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+        const isLight = document.body.classList.contains("light-mode");
+        themeBtn.innerHTML = isLight ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-box').forEach(box => {
+        box.addEventListener('click', () => box.classList.toggle('active'));
+    });
+
+    // Counter Animation
+    const counters = document.querySelectorAll('.metric-number');
+    let triggered = false;
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 1500 && !triggered) { // Adjusted for scroll position
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const speed = 200; 
+                    const inc = target / speed;
+                    if(count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 1);
+                    } else { counter.innerText = target; }
+                };
+                updateCount();
+            });
+            triggered = true;
+        }
+    });
+
+    // Load saved theme
+    if(localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
 </script>
 
 </body>
